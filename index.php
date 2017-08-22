@@ -1,72 +1,313 @@
-<?php 
-if(isset($_POST['pool']) && $_POST['miner']!=""){
-	$pool = $_POST['pool'];
-	header('location:'.$pool.'/?miner='.$_POST['miner']);
-	exit;
-}
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title> Pool Stats </title>
-
-	
-		
-	
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Ethermine Stats</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="framework7/css/my-app.css">
 	
 	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
 	<link rel="manifest" href="favicons/manifest.json">
 	<meta name="theme-color" content="#111111">
-
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<style type="text/css">
-		body{background: #111; color:#a6e22e; font-size:12px; }
-		a{color:#e6db74; }
-		.panel-body{padding:10px;}
-		.panel{background: #222; }
-		.panel-heading{background: #444; font-weight: bold; color:#999; font-size:13px;padding:5px; }
-		.container{max-width: 600px; }
-		hr,.table>tbody>tr>td, .table>tbody>tr>th{border-color: #444; }
-		.table>thead>tr>th{border-color: #444; }
-		.label{color:#999;font-size:12px; }
-		.form-control{border-radius: 0; background: #222; color:#a6e22e; border-color:#a6e22e;margin-bottom: 10px }
-		.form-control:focus{box-shadow: none !important; border-color:#a6e22e !important; }
-		.btn{background: #222;color:#999; }
-		.btn:hover,.btn:focus,.btn:active{background: #252525;color:#999; }
+		.data-table{
+			background:#fff;
+		}
+		.data-table td{
+			font-size:12px;
+		}
+		.framework7-root, body, html{
+			max-width: 600px;
+			margin:0 auto;
+		}
 	</style>
-</head>
-<body>
-	<div class="container">
 
-		<div class="row">
-			
-			<div class="col-md-12 text-center">
-				
-				<h1>Pool Stats</h1>
-				<p>Select your pool and enter your wallet address</p>
-				<form method="post" >
-					<select class="form-control text-center" name="pool">
-						<option value="ethermine" >ETH - ethermine.org</option>
-					</select>
-					<input class="form-control text-center" id="walletaddress" type="text" name="miner" placeholder="Enter your wallet address">
-					<br>
-					<button type="submit" class="btn btn-block">Submit</button>
-				</form>
-			</div>
-			
-		</div>
-	</div>
-	<script type="text/javascript">
-		
-	</script>
+</head>
+<body class="">
 	
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+        	<!-- Home page navbar -->
+			<div class="navbar-inner" data-page="index">			
+				<div class="center">Pool Stats</div>
+			</div>
+
+			<!-- Home page navbar -->
+			<div class="navbar-inner cached" data-page="ethermine">
+				<div class="left"><a href="#index" class="back link"><i class="icon icon-back"></i> <span>Back</span> </a></div>
+	            <div class="center">Ethermine.org</div>
+	            <div class="right"></div>
+			</div>
+
+        </div>
+
+
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through theme-purple">
+          	<!-- Home page -->
+			<div class="page" data-page="index">
+				<div class="page-content">
+					<form id="from-pool" class="list-block store-data">
+						<div class="content-block-title">Select your mining pool</div> 
+					    <div class="list-block">
+							<ul>
+							<!-- Smart select item -->
+							<li>
+							  <!-- Additional "smart-select" class -->
+							  <a href="#" class="item-link smart-select">
+							    <select name="pool" id="pool">
+							      <option value="ethermine" selected>ETH - Ethermine.org</option>
+							      <option value="nanopool" disabled="">ETH - nanopool.org</option>
+							    </select>
+							    <div class="item-content">
+							      <div class="item-inner">
+							        <div class="item-title">Pool</div>
+							        <div class="item-after">ETH - Ethermine.org</div>
+							      </div>
+							    </div>
+							  </a>
+							</li>
+							
+							</ul>
+						</div>
+						<div class="content-block-title">Wallet address</div> 
+						<div class="list-block">
+							<ul>
+								<li>
+							      <div class="item-content">
+							        <div class="item-inner">
+							          <div class="item-input">
+							            <input type="text" id="wallet_address" value="<?php echo @$_GET['miner'] ?>" placeholder="Enter your wallet address">
+							          </div>
+							        </div>
+							      </div>
+							    </li>
+							</ul>
+						</div>
+					</form>
+					<div class="content-block">
+					  <p><a href="#" class="button button-big active" id="btn-view-stats">View Stats</a></p>
+					</div>   
+				</div>
+			</div>
+			<!-- Ethermine page -->
+			<div class="page cached" data-page="ethermine" >
+				<div class="page-content" >
+					
+					<div class="content-block-title">Unpaid Balance</div> 
+					<div class="content-block">
+				      <div class="content-block-inner">
+				      	<h2 style="margin:0" id="balance"><span class="preloader"></span></h2>
+					  	<span id="next-payment" style="font-size:11px;"></span>
+					  	<span style="color:#999;font-size:11px;" id="walletaddress"></span>
+
+				      </div>
+				    </div>
+
+				    <div class="content-block-title">Hashrates</div> 
+					<div class="content-block">
+				      <div class="content-block-inner">
+				      	<div class="row">
+					  		<div class="col-33" >
+					  			<h4 id="reported-hashrate" style="margin:0"><span class="preloader"></span></h4>
+					  			<span class="">Reported</span>
+				  			</div>
+					  		<div class="col-33" >
+					  			<h4 id="effective-hashrate" style="margin:0"><span class="preloader"></span></h4>
+					  			<span class="">Effective</span>
+				  			</div>
+					  		<div class="col-33" >
+					  			<h4 id="average-hashrate" style="margin:0"><span class="preloader"></span></h4>
+					  			<span class="">Average</span>
+					  		</div>
+					  	</div>
+				      </div>
+				    </div>
+
+				    <div class="content-block-title">BX Prices</div> 
+					<div class="content-block">
+				      <div class="content-block-inner">
+				      	<div class="row">
+					  		<div class="col-50"><h4 style="margin:0" id="btc-price"><span class="preloader"></span></h4>
+							  <span class="label">BTC
+							  	<span id="btc-change"> </span>
+							  </span>
+							  </div>
+							  <div class="col-50"><h4 style="margin:0" id="eth-price"><span class="preloader"></span></h4>
+							  <span class="label">ETH
+								  <span id="eth-change"></span>
+							  </span>
+							</div>
+					  	</div>
+				      </div>
+				    </div>
+				 
+					<div class="content-block-title">My Workers</div> 
+					<div class="data-table">
+						<table>
+							<thead>
+							  <tr>
+							    <th class="label-cell" with="40%">Worker</th>
+							    <th class="numeric-cell">Reported</th>
+							    <th class="numeric-cell" >Effective</th>
+							    <th class="text-center" colspan="3" >Shares</th>
+							  </tr>
+							</thead>
+							<tbody id="workers">  
+								<tr><td colspan="4"><span class="preloader"></span></td></tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="content-block-title">Estimated Earnings</div> 
+
+					<div class="data-table">
+						<table>
+							<thead>
+							  <tr>
+							    <tr> <th>Period</th> <th>ETH</th> <th>THB</th></tr>
+							  </tr>
+							</thead>
+							<tbody id="workers">  
+								<tr>
+									<td>Day</td> 
+									<td id="day-eth"><span class="preloader"></span></td>
+									<td id="day-thb"><span class="preloader"></span></td>
+								</tr>
+								<tr>
+									<td>Week</td> 
+									<td id="week-eth"><span class="preloader"></span></td>
+									<td id="week-thb"><span class="preloader"></span></td>
+								</tr>
+								<tr>
+									<td>Month</td> 
+									<td id="month-eth"><span class="preloader"></span></td>
+									<td id="month-thb"><span class="preloader"></span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="content-block-title">Last 10 Payouts</div> 
+					<div class="data-table">
+						<table>
+							<thead>
+							  <tr>
+							    <th>Paid On</th>
+								<th>Duration</th>
+								<th>Amount</th>
+								
+							  </tr>
+							</thead>
+							<tbody id="payouts"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+        </div>
+        
+      </div>
+    </div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="framework7/js/framework7.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	// Initialize App  
+	var myApp = new Framework7();
+	        
+	// Initialize View          
+	var mainView = myApp.addView('.view-main', {
+	  dynamicNavbar: true,
+	  domCache: true
+	}) 
+
+	var $$ = Dom7;
+
+	var storedData = myApp.formGetData('from-pool');
+	if(storedData) {
+		$("#wallet_address").val(storedData.wallet_address);
+		//alert(JSON.stringify(storedData));
+	}
+	
+
+	$$('#btn-view-stats').on('click', function(){
+
+		var storedData = myApp.formStoreData('from-pool', {
+		    'pool':  $("#pool").val(),
+		    'wallet_address': $("#wallet_address").val()
+		});
+
+		getData();
+		setInterval(function(){
+			getData()
+		},30000)
+
+
+		mainView.router.load({pageName: 'ethermine'});
+	});
+
+
+	function getData(){
+		var pool = $("#pool").val()
+		$.ajax({
+			url:pool+'/api.php',
+			type:'get',
+			data:{miner: $("#wallet_address").val()},
+			dataType:'json',
+			success:function(data){
+				$('#walletaddress').text(data.wallet_address);
+				$('#balance').text(data.balance);
+				$('#reported-hashrate').text(data.hashrates.reported);
+				$('#effective-hashrate').text(data.hashrates.effective);
+				$('#average-hashrate').text(data.hashrates.average);
+				$('#btc-price').text(data.bx_price.BTC.price);
+				$('#btc-change').html(data.bx_price.BTC.change);
+				$('#eth-price').text(data.bx_price.ETH.price);
+				$('#eth-change').html(data.bx_price.ETH.change);
+
+				var worker_html ="";
+				$.each(data.workers, function(index, value) {
+				    worker_html +="<tr><td class='label-cell'><span style=''>"+value.worker+"</span></td>";
+					worker_html +="<td class='numeric-cell'><span style=''>"+value.reportedHashRate+"</span></td>";
+					worker_html +="<td class='numeric-cell'><span style=''>"+value.hashrate+"</span></td>";
+					worker_html +="<td class='numeric-cell' ><span style=''>"+value.validShares+"</span></td>";
+					worker_html +="<td class='numeric-cell'><span style=color:orange>"+value.staleShares+"</span>   </td>";
+					worker_html +="<td class='numeric-cell'><span style=color:red>"+value.invalidShares+"</span></td></tr>";
+				});
+				$("#workers").html(worker_html);
+				$("#day-eth").html(data.earning.day.eth);
+				$("#day-thb").html(data.earning.day.thb);
+				$("#week-eth").html(data.earning.week.eth);
+				$("#week-thb").html(data.earning.week.thb);
+				$("#month-eth").html(data.earning.month.eth);
+				$("#month-thb").html(data.earning.month.thb);
+				$("#next-payment").html(data.next_payment_minute);
+
+				var payout_html = "";
+				$.each(data.payouts, function(index, value) {
+					payout_html +="<tr><td>"+value.date+" <span class='label'>"+value.time+" </span></td>";
+					payout_html +="<td> "+value.duration+" </td>";
+					payout_html +="<td>"+value.amount+"</td>";
+					//payout_html +="<td><a target=_blank class= href='"+value.tx+"'><i class='f7-icons'>chevron_right</i></a></td></tr>";
+				});
+				$("#payouts").html(payout_html);
+			}
+		})
+	}
+</script>
 </body>
 </html>

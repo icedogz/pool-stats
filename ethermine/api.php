@@ -75,7 +75,7 @@ if(isset($_GET['miner']) && $_GET['miner']!=""){
 		$d = new DateTime($pay->paidOn);
 		$d->setTimezone(new DateTimeZone('GMT+7'));
 
-		$payouts[$key]['date'] = $d->format('d M Y');
+		$payouts[$key]['date'] = $d->format('d M y');
 		$payouts[$key]['time'] = $d->format('H:i');
 		$payouts[$key]['duration'] = $duration;
 		$payouts[$key]['amount'] = number_format($pay->amount/1000000000000000000,5).' ETH';
