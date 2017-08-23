@@ -19,7 +19,7 @@
 	<meta name="theme-color" content="#111111">
 	<style type="text/css">
 		.data-table{
-			background:#fff;
+			
 		}
 		.data-table td{
 			font-size:12px;
@@ -28,10 +28,21 @@
 			max-width: 600px;
 			margin:0 auto;
 		}
+		a,.layout-dark .content-block-title,.layout-dark .login-screen-content, .layout-dark .page, .layout-dark .panel, .page.layout-dark, .panel.layout-dark{
+			color: #a6e22e;
+		}
+		.button.active{
+			background: #222;
+			color:#a6e22e;
+			border-color: #a6e22e;
+		}
+		.layout-dark .card-footer, .layout-dark .card-header{
+			color:#999;
+		}
 	</style>
 
 </head>
-<body class="">
+<body class="layout-dark">
 	
     <!-- Views-->
     <div class="views">
@@ -60,7 +71,7 @@
 			<div class="page" data-page="index">
 				<div class="page-content">
 					<form id="from-pool" class="list-block store-data">
-					
+						<img src="favicons/apple-touch-icon.png" style="border-radius: 100px;border:solid 1px #333;margin:30px auto 0;display: block;">
 					    <div class="list-block">
 							<ul>
 								<li>
@@ -119,15 +130,15 @@
 						        <div class="row">
 							  		<div class="col-33" >
 							  			<h4 id="reported-hashrate" style="margin:0"><span class="preloader"></span></h4>
-							  			<span class="">Reported</span>
+							  			<span class="" style="color:#999">Reported</span>
 						  			</div>
 							  		<div class="col-33" >
 							  			<h4 id="effective-hashrate" style="margin:0"><span class="preloader"></span></h4>
-							  			<span class="">Effective</span>
+							  			<span class="" style="color:#999">Effective</span>
 						  			</div>
 							  		<div class="col-33" >
 							  			<h4 id="average-hashrate" style="margin:0"><span class="preloader"></span></h4>
-							  			<span class="">Average</span>
+							  			<span class="" style="color:#999">Average</span>
 							  		</div>
 							  	</div>
 					        </div>
@@ -140,12 +151,12 @@
 					        <div class="card-content-inner">
 						        <div class="row">
 							  		<div class="col-50"><h4 style="margin:0" id="btc-price"><span class="preloader"></span></h4>
-									  <span class="label">BTC
+									  <span class="label" style="color:#999">BTC
 									  	<span id="btc-change"> </span>
 									  </span>
 									  </div>
 									  <div class="col-50"><h4 style="margin:0" id="eth-price"><span class="preloader"></span></h4>
-									  <span class="label">ETH
+									  <span class="label" style="color:#999">ETH
 										  <span id="eth-change"></span>
 									  </span>
 									</div>
