@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Ethermine Stats</title>
+    <title>Pool Stats</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="framework7/css/framework7.ios.colors.min.css">
@@ -60,39 +60,32 @@
 			<div class="page" data-page="index">
 				<div class="page-content">
 					<form id="from-pool" class="list-block store-data">
-						<div class="content-block-title">Select your mining pool</div> 
+					
 					    <div class="list-block">
 							<ul>
-							<!-- Smart select item -->
-							<li>
-							  <!-- Additional "smart-select" class -->
-							  <a href="#" class="item-link smart-select">
-							    <select name="pool" id="pool">
-							      <option value="ethermine" selected>ETH - Ethermine.org</option>
-							      <option value="nanopool" disabled="">ETH - nanopool.org</option>
-							    </select>
-							    <div class="item-content">
-							      <div class="item-inner">
-							        <div class="item-title">Pool</div>
-							        <div class="item-after">ETH - Ethermine.org</div>
-							      </div>
-							    </div>
-							  </a>
-							</li>
-							
-							</ul>
-						</div>
-						<div class="content-block-title">Wallet address</div> 
-						<div class="list-block">
-							<ul>
 								<li>
-							      <div class="item-content">
-							        <div class="item-inner">
-							          <div class="item-input">
-							            <input type="text" id="wallet_address" value="<?php echo @$_GET['miner'] ?>" placeholder="Enter your wallet address">
-							          </div>
-							        </div>
-							      </div>
+								  <a href="#" class="item-link smart-select">
+								    <select name="pool" id="pool">
+								      <option value="ethermine" selected>ETH - Ethermine.org</option>
+								      <option value="nanopool" disabled="">ETH - nanopool.org</option>
+								    </select>
+								    <div class="item-content">
+								      <div class="item-inner">
+								        <div class="item-title">Pool</div>
+								        <div class="item-after">ETH - Ethermine.org</div>
+								      </div>
+								    </div>
+								  </a>
+								</li>
+								<li>
+							      	<div class="item-content">
+								        <div class="item-inner">
+								        	<div class="item-title label">Wallet</div>
+								            <div class="item-input">
+								            	<input type="text" id="wallet_address" value="<?php echo @$_GET['miner'] ?>" placeholder="Enter your wallet address">
+								            </div>
+								        </div>
+								      </div>
 							    </li>
 							</ul>
 						</div>
@@ -106,62 +99,69 @@
 			<div class="page cached" data-page="ethermine" >
 				<div class="page-content" >
 					
-					<div class="content-block-title">Unpaid Balance</div> 
-					<div class="content-block">
-				      <div class="content-block-inner">
-				      	<h2 style="margin:0" id="balance"><span class="preloader"></span></h2>
-					  	<span id="next-payment" style="font-size:11px;"></span>
-					  	<span style="color:#999;font-size:11px;" id="walletaddress"></span>
+					
+				    <div class="card">
+					    <div class="card-header">Unpaid Balance</div>
+					    <div class="card-content">
+					        <div class="card-content-inner">
+						        <h2 style="margin:0" id="balance"><span class="preloader"></span></h2>
+							  	<span id="next-payment" style="font-size:12px;"></span><br>
+							  	<span style="color:#999;font-size:12px;" id="walletaddress"></span>
+					        </div>
+					    </div>
+					   
+					</div> 
 
-				      </div>
-				    </div>
+					<div class="card">
+					    <div class="card-header">Hashrates</div>
+					    <div class="card-content">
+					        <div class="card-content-inner">
+						        <div class="row">
+							  		<div class="col-33" >
+							  			<h4 id="reported-hashrate" style="margin:0"><span class="preloader"></span></h4>
+							  			<span class="">Reported</span>
+						  			</div>
+							  		<div class="col-33" >
+							  			<h4 id="effective-hashrate" style="margin:0"><span class="preloader"></span></h4>
+							  			<span class="">Effective</span>
+						  			</div>
+							  		<div class="col-33" >
+							  			<h4 id="average-hashrate" style="margin:0"><span class="preloader"></span></h4>
+							  			<span class="">Average</span>
+							  		</div>
+							  	</div>
+					        </div>
+					    </div>
+					</div> 
 
-				    <div class="content-block-title">Hashrates</div> 
-					<div class="content-block">
-				      <div class="content-block-inner">
-				      	<div class="row">
-					  		<div class="col-33" >
-					  			<h4 id="reported-hashrate" style="margin:0"><span class="preloader"></span></h4>
-					  			<span class="">Reported</span>
-				  			</div>
-					  		<div class="col-33" >
-					  			<h4 id="effective-hashrate" style="margin:0"><span class="preloader"></span></h4>
-					  			<span class="">Effective</span>
-				  			</div>
-					  		<div class="col-33" >
-					  			<h4 id="average-hashrate" style="margin:0"><span class="preloader"></span></h4>
-					  			<span class="">Average</span>
-					  		</div>
-					  	</div>
-				      </div>
-				    </div>
-
-				    <div class="content-block-title">BX Prices</div> 
-					<div class="content-block">
-				      <div class="content-block-inner">
-				      	<div class="row">
-					  		<div class="col-50"><h4 style="margin:0" id="btc-price"><span class="preloader"></span></h4>
-							  <span class="label">BTC
-							  	<span id="btc-change"> </span>
-							  </span>
-							  </div>
-							  <div class="col-50"><h4 style="margin:0" id="eth-price"><span class="preloader"></span></h4>
-							  <span class="label">ETH
-								  <span id="eth-change"></span>
-							  </span>
-							</div>
-					  	</div>
-				      </div>
-				    </div>
-				 
+					<div class="card">
+					    <div class="card-header">BX Prices</div>
+					    <div class="card-content">
+					        <div class="card-content-inner">
+						        <div class="row">
+							  		<div class="col-50"><h4 style="margin:0" id="btc-price"><span class="preloader"></span></h4>
+									  <span class="label">BTC
+									  	<span id="btc-change"> </span>
+									  </span>
+									  </div>
+									  <div class="col-50"><h4 style="margin:0" id="eth-price"><span class="preloader"></span></h4>
+									  <span class="label">ETH
+										  <span id="eth-change"></span>
+									  </span>
+									</div>
+							  	</div>
+					        </div>
+					    </div>
+					</div>
+									 
 					<div class="content-block-title">My Workers</div> 
-					<div class="data-table">
+					<div class="data-table card">
 						<table>
 							<thead>
 							  <tr>
 							    <th class="label-cell" with="40%">Worker</th>
-							    <th class="numeric-cell">Reported</th>
-							    <th class="numeric-cell" >Effective</th>
+							    <th class="numeric-cell">Report</th>
+							    <th class="numeric-cell" >Effect</th>
 							    <th class="text-center" colspan="3" >Shares</th>
 							  </tr>
 							</thead>
@@ -173,7 +173,7 @@
 
 					<div class="content-block-title">Estimated Earnings</div> 
 
-					<div class="data-table">
+					<div class="data-table card">
 						<table>
 							<thead>
 							  <tr>
@@ -201,7 +201,7 @@
 					</div>
 
 					<div class="content-block-title">Last 10 Payouts</div> 
-					<div class="data-table">
+					<div class="data-table card">
 						<table>
 							<thead>
 							  <tr>
