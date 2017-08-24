@@ -561,8 +561,8 @@
                 html +="      <div class='item-title-row'>";
                 html +="        <div class='item-title' style='font-size:14px;'>"+value.name+" ("+value.symbol+")</div>";
                 html +="      </div>";
-                html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+value.market_cap_thb+" THB</div>";
-                html +="      <div class='item-subtitle' style='color:#ccc;font-size:11px;'>"+value.price_thb+" THB ("+change+")</div>";
+                html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+nFormatter(parseFloat(value.market_cap_thb),1)+" THB</div>";
+                html +="      <div class='item-subtitle' style='color:#ddd;font-size:13px;'>"+parseFloat(value.price_thb).formatMoney(0, '.', ',')+" THB ("+change+")</div>";
                 html +="    </div>";
                 html +="  </div>";
                 html +="</li>";
@@ -619,6 +619,19 @@
             }
         });
     }
+    function nFormatter(num, digits) {
+	  var si = [
+	    { value: 1E6,  symbol: "M" },
+	    { value: 1E3,  symbol: "k" }
+	  ], rx = /\.0+$|(\.[0-9]*[1-9])0+$/, i;
+	  for (i = 0; i < si.length; i++) {
+	    if (num >= si[i].value) {
+	      return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+	    }
+	  }
+	  return num.toFixed(digits).replace(rx, "$1");
+	}
+
 
 </script>
 </body>
