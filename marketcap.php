@@ -23,6 +23,6 @@ function callService($url,$cache=0){
     return  json_decode($output);    
 }
 
-$data = callService('https://api.coinmarketcap.com/v1/ticker/?limit=200',2);
+$data = callService('https://api.coinmarketcap.com/v1/ticker/',5);
 header('Content-Type: application/json');
 echo json_encode($data);exit;

@@ -249,16 +249,38 @@
         <div id="tab2" class="view tab view-marketcap">
             <!-- Top Navbar-->
             <div class="navbar">
-                <!-- Home page navbar -->
-                <div class="navbar-inner" data-page="index">            
+                <!-- Market page navbar -->
+                <div class="navbar-inner" data-page="marketcap">            
                     <div class="center">Market Cap</div>
-                    <div class="right"><a href="#" class="refresh-marketcap link" ><i class="framework7-icons">refresh</i> </a></div>
+                    <div class="right"><a href="#select-marketcap" class="more-marketcap link" ><i class="framework7-icons">more_vertical_round</i> </a></div>
+                </div>
+                <!-- Select coin page navbar -->
+                <div class="navbar-inner cached" data-page="select-marketcap">
+                    <div class="left"><a href="#marketcap" class="back link"><i class="framework7-icons">left</i> <span>Back</span> </a></div>
+                    <div class="center">Select Coin</div>
+                    <div class="right"></div>
                 </div>
             </div>
             <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
             <div class="pages navbar-through toolbar-through">
                 <!-- Market Cap page -->
                 <div class="page" data-page="marketcap">
+                    <!-- Search Bar overlay -->
+                    <div class="searchbar-overlay"></div>
+
+                    <div class="page-content pull-to-refresh-content pull-marketcap">
+                        <!-- Default pull to refresh layer-->
+                        <div class="pull-to-refresh-layer">
+                          <div class="pull-to-refresh-arrow"></div>
+                        </div>
+                        <div class="list-block list-block-search media-list" id="marketcap-list" style="margin:0">
+                         
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Market Cap page -->
+                <div class="page cached" data-page="select-marketcap">
                     <!-- Search Bar -->
                     <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
                         <div class="searchbar-input">
@@ -269,18 +291,14 @@
                     <!-- Search Bar overlay -->
                     <div class="searchbar-overlay"></div>
 
-                    <div class="page-content pull-to-refresh-content pull-marketcap">
-                        <!-- Default pull to refresh layer-->
-                        <div class="pull-to-refresh-layer">
-                          <div class="pull-to-refresh-arrow"></div>
-                        </div>
+                    <div class="page-content">
+                        
                         <!-- This block will be displayed if nothing found -->
                         <div class="content-block searchbar-not-found">
                           <div class="content-block-inner">Nothing found</div>
                         </div>
                         
-                        <div class="list-block list-block-search media-list" id="marketcap-list" style="margin:0">
-                         
+                        <div class="list-block list-block-search media-list" id="select-marketcap-list" style="margin:0">							       
                         </div>
                     </div>
 
@@ -346,7 +364,7 @@
                     <i class="f7-icons">cloud</i>
                 </a>
                 <a href="#tab2" class="tab-link">
-                    <i class="f7-icons">graph_round</i>
+                    <i class="f7-icons">money_dollar</i>
                 </a>
                 <a href="#tab3" class="tab-link">
                     <i class="f7-icons">list</i>
@@ -366,26 +384,22 @@
     var myApp = new Framework7();
             
     // Initialize View          
-    var mainView = myApp.addView('.view-main,.view-marketcap', {
+    var mainView = myApp.addView('.view-main', {
       dynamicNavbar: true,
       domCache: true
     }) 
 
-    
+    var marketcapView = myApp.addView('.view-marketcap', {
+      dynamicNavbar: true,
+      domCache: true
+    }) 
 
     var $$ = Dom7;
-
-
-    
 
     var storedData = myApp.formGetData('from-pool');
     if(storedData) {
         $("#wallet_address").val(storedData.wallet_address);
-        //alert(JSON.stringify(storedData));
     }
-
-    
-    
 
     $('.tab-link').on('click', function(){
         if($(this).attr('href')=="#tab2"){
@@ -419,15 +433,22 @@
             getData()
         },30000)
 
-
         mainView.router.load({pageName: 'ethermine'});
     });
 
+    
+
+ 	$$('.more-marketcap').on('click', function(){
+        marketcapView.router.load({pageName: 'select-marketcap'});
+    });
+
+
+   
 
     function getData(){
         var pool = $("#pool").val()
         $.ajax({
-            url:'https://pool-stats.herokuapp.com/'+pool+'/api.php',
+            url:pool+'/api.php',
             type:'get',
             data:{miner: $("#wallet_address").val()},
             dataType:'json',
@@ -472,45 +493,97 @@
         });
     }
 
+
     function getMarketCap(){
+    	 
+
         $("#marketcap-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
         $.ajax({
-            url:'https://pool-stats.herokuapp.com/marketcap.php',
+            url:'marketcap.php',
             type:'get',
             dataType:'json',
             cache:true,
             success:function(data){
-                var html="<ul>";
-                $.each(data, function(index, value) {
-                    var change = value.percent_change_24h>0 ? "<span style='color:#44d844'>+"+value.percent_change_24h+"%</span>" : "<span style='color:#ec2828'>"+value.percent_change_24h+"%</span>";
-                    html +="<li>";
-                    html +="  <div class='item-content'>";
-                    html +="    <div class='item-media'><img class='lazy lazy-fadein' data-src='https://files.coinmarketcap.com/static/img/coins/32x32/"+value.id+".png' width='32' height='32'></div>";
-                    html +="    <div class='item-inner'>";
-                    html +="      <div class='item-title-row'>";
-                    html +="        <div class='item-title'>"+value.rank+" - "+value.name+" ("+value.symbol+")</div>";
-                    html +="      </div>";
-                    html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+value.market_cap_usd+" USD</div>";
-                    html +="      <div class='item-subtitle' style='color:#ccc;font-size:11px;'>"+value.price_usd+" USD ("+change+")</div>";
-                    html +="    </div>";
-                    html +="  </div>";
-                    html +="</li>";
-                });
-                    html +="</ul>";
-                $("#marketcap-list").html(html);
+
+                renderMarketCapList(data);
+
 
                 myApp.initImagesLazyLoad('.view-marketcap .page-content');
 
                 var mySearchbar = $$('.searchbar')[0].f7Searchbar;
+
+                $('.label-checkbox').on('click', function(){
+                	setTimeout(function(){
+                		var selected_coin = []
+				    	$('.select-coin-checkbox:checked').each(function(index, el) {
+				    		selected_coin[index] = $(this).val();
+				    	});
+				    	myApp.formStoreData('selected_coin', selected_coin);
+				    	var selected_coin = myApp.formGetData('selected_coin');
+	                	renderMarketCapList(data,1,0);
+                	},200)
+                	
+
+			    });
                 
             }
         });
     }
 
+    function renderMarketCapList(data,marketList=1,selectCoin=1){
+    	var default_coin = ['bitcoin','ethereum','ripple','litecoin','dash','ethereum-classic','monero','omisego'];
+    	var html="<ul>";
+        var html_select="<ul>";
+    	var selected_coin = myApp.formGetData('selected_coin');
+        //console.log(selected_coin)
+        if(typeof selected_coin == "undefined" || selected_coin == null){
+        	selected_coin = default_coin;
+        }
+    	$.each(data, function(index, value) {
+
+        	if(selected_coin.indexOf(value.id)!=-1){
+                var change = value.percent_change_24h>0 ? "<span style='color:#44d844'>+"+value.percent_change_24h+"%</span>" : "<span style='color:#ec2828'>"+value.percent_change_24h+"%</span>";
+                html +="<li>";
+                html +="  <div class='item-content'>";
+                html +="    <div class='item-media'><img src='https://files.coinmarketcap.com/static/img/coins/32x32/"+value.id+".png' width='32' height='32'></div>";
+                html +="    <div class='item-inner'>";
+                html +="      <div class='item-title-row'>";
+                html +="        <div class='item-title' style='font-size:14px;'>"+value.name+" ("+value.symbol+")</div>";
+                html +="      </div>";
+                html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+value.market_cap_usd+" USD</div>";
+                html +="      <div class='item-subtitle' style='color:#ccc;font-size:11px;'>"+value.price_usd+" USD ("+change+")</div>";
+                html +="    </div>";
+                html +="  </div>";
+                html +="</li>";
+            }
+
+            var checked = selected_coin.indexOf(value.id)!=-1 ? "checked='checked'" : "";
+            html_select +="<li>";
+		    html_select +="  <label class='label-checkbox item-content'>";
+		    html_select +="    <input type='checkbox' class='select-coin-checkbox' name='selected-coin' value='"+value.id+"' "+checked+">";
+		    html_select +="    <div class='item-media'>";
+		    html_select +="      <i class='icon icon-form-checkbox'></i>";
+		    html_select +="    </div>";
+		    html_select +="    <div class='item-inner'>";
+		    html_select +="      <div class='item-title'>"+value.name+" ("+value.symbol+")</div>";
+		    html_select +="    </div>";
+		    html_select +="  </label>";
+		    html_select +="</li>";
+        });
+            html +="</ul>";
+            html_select +="</ul>";
+        if(marketList==1){
+        	$("#marketcap-list").html(html);
+        }
+        if(selectCoin==1){
+        	$("#select-marketcap-list").html(html_select);
+        }
+    }
+
     function getNews(){
         $("#news-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
         $.ajax({
-            url:'https://pool-stats.herokuapp.com/news.php',
+            url:'news.php',
             type:'get',
             dataType:'json',
             cache:true,

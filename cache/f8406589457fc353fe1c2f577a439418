@@ -12,7 +12,7 @@
 	<atom:link href="https://siamblockchain.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://siamblockchain.com</link>
 	<description>ข่าวสารบิทคอยและ Cryptocurrency เพื่อคนไทย</description>
-	<lastBuildDate>Wed, 23 Aug 2017 09:40:46 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 24 Aug 2017 03:36:27 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
@@ -26,6 +26,303 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>SegWit เปิดใช้งานบน Bitcoin แล้ว และอะไรจะเกิดขึ้นหลังจากนี้</title>
+		<link>https://siamblockchain.com/2017/08/24/segregated-witness-activates-bitcoin-what-expect/</link>
+		<comments>https://siamblockchain.com/2017/08/24/segregated-witness-activates-bitcoin-what-expect/#respond</comments>
+		<pubDate>Thu, 24 Aug 2017 03:34:28 +0000</pubDate>
+		<dc:creator><![CDATA[Beam]]></dc:creator>
+				<category><![CDATA[Featured]]></category>
+		<category><![CDATA[บทความ]]></category>
+
+		<guid isPermaLink="false">https://siamblockchain.com/?p=5094</guid>
+		<description><![CDATA[<p>ระบบช่วยทำการ scaling เหรียญ Bitcoin นามว่า Segregated Witness (SegWit) ที่ทำการอัพเกรดผ่าน soft fork ได้ถูกเปิดใช้งานบนเครือข่าย Bitcoin อย่างสมูบรณ์แบบแล้ว โดย ณ ที่บล็อกที่ 481,824 ที่ขุดได้เวลา 8 โมง 57 นาทีเวลาประเทศไทยที่ได้มีการเปิดใช้โคดของ SegWit ไปเป็นที่เรียบร้อยแล้ว อ้างอิงจากเว็บ SegWit.co ซึ่งการอัพเดตที่ว่านี้นักพัฒนาและหลายคนเชื่อว่ามันจะมาช่วยแก้ปัญหาการโอน Bitcoin กันที่ช้ามากๆ และรวมถึงทำให้ค่าธรรมเนียมถูกลง อีกข้อหนึ่งก็คือ SegWit แก้ปัญหาการคอขวดการคอนเฟิร์มธุรกรรมโดยการจุดขนาดของ &#8220;ธุรกรรม&#8221; ไม่ใช่การจัดขนาดของ &#8220;บล็อกเก็บธุรกรรม&#8221; แบบที่โพรโตคอลของ Bitcoin Cash และ SegWit2x เลือกใช้ กล่าวคือเพิ่มขนาดบล็อกเป็น 8MB และ 2MB ตามลำดับ ทว่าคำถามที่ตามมาก็คือ อะไรจะเกิดขึ้นหลังจากนี้ภายในอีกไม่กี่ชั่วโมง, วัน, สัปดาห์, เดือน และต่อๆไป? ทุกอย่างจะไม่ได้ขึ้นอยู่กับขนาดของบล็อกเก็บธุรกรรม [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/24/segregated-witness-activates-bitcoin-what-expect/">SegWit เปิดใช้งานบน Bitcoin แล้ว และอะไรจะเกิดขึ้นหลังจากนี้</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>ระบบช่วยทำการ scaling เหรียญ Bitcoin นามว่า Segregated Witness (SegWit) ที่ทำการอัพเกรดผ่าน soft fork ได้ถูกเปิดใช้งานบนเครือข่าย Bitcoin อย่างสมูบรณ์แบบแล้ว</p>
+<p>โดย ณ ที่บล็อกที่ 481,824 ที่ขุดได้เวลา 8 โมง 57 นาทีเวลาประเทศไทยที่ได้มีการเปิดใช้โคดของ SegWit ไปเป็นที่เรียบร้อยแล้ว อ้างอิงจากเว็บ <a href="http://segwit.co">SegWit.co</a> ซึ่งการอัพเดตที่ว่านี้นักพัฒนาและหลายคนเชื่อว่ามันจะมาช่วยแก้ปัญหาการโอน Bitcoin กันที่ช้ามากๆ และรวมถึงทำให้ค่าธรรมเนียมถูกลง</p>
+<p>อีกข้อหนึ่งก็คือ SegWit แก้ปัญหาการคอขวดการคอนเฟิร์มธุรกรรมโดยการจุดขนาดของ &#8220;ธุรกรรม&#8221; ไม่ใช่การจัดขนาดของ &#8220;บล็อกเก็บธุรกรรม&#8221; แบบที่โพรโตคอลของ Bitcoin Cash และ SegWit2x เลือกใช้ กล่าวคือเพิ่มขนาดบล็อกเป็น 8MB และ 2MB ตามลำดับ</p>
+<p>ทว่าคำถามที่ตามมาก็คือ อะไรจะเกิดขึ้นหลังจากนี้ภายในอีกไม่กี่ชั่วโมง, วัน, สัปดาห์, เดือน และต่อๆไป?</p>
+<h2>ทุกอย่างจะไม่ได้ขึ้นอยู่กับขนาดของบล็อกเก็บธุรกรรม แต่จะเป็นขนาดของตัวธุรกรรม</h2>
+<p>เทคนิคของ SegWit คือการจับเอาธุรกรรมหลายๆธุรกรรมขนาดราวๆ 4MB (อย่างเต็มที่) มาบีบอัดและจับยัดลงไปในบล็อกขนาด 1MB ให้พอดี ส่งผลทำให้เครือข่ายของ Bitcoin สามารถทำงานได้อย่างไหลลื่นมากขึ้น</p>
+<p>อย่างไรก็ตาม นั่นไม่ได้หมายความว่าทุกๆบล็อกจะมีธุรกรรมขนาดนั้นในทันทีในวันนี้ เพราะการที่ธุรกรรมจะได้ใช้ประโยชน์จาก SegWit นั้นมันจะต้องถูกส่งจาก address ของ SegWit ไม่ใช่การส่งไปหา address ของ SegWit เพียงอย่างเดียว</p>
+<p>ซึ่งในระหว่างที่เขียนข่าวอยู่นี้ ยังไม่มี Bitcoin ไหนถูกส่งโดย address ของ SegWit เลยสักตัว ก็ต้องรอดูกันต่อไป</p>
+<p>เรื่องสำคัญอีกอย่างก็คือกระเป๋า Bitcoin และแอพต่างๆนั้นจะต้องมีการรองรับธุรกรรม SegWit ด้วย ซึ่งผู้ให้บริการประเป๋าบางเจ้าอย่างเช่น GreenWallet อาจจะติดตั้งฟีเจอร์นี้ตั้งแต่วันแรกที่มีการเปิดใช้หรืออีกวันถัดไปหลังจากนั้น ก่อนหน้านี้นักพัฒนาของ <a href="https://greenaddress.it/">GreenAddress</a> นาม Lawrence Nahum ได้ออกมากล่าวว่า &#8220;เราได้เปิดระบบที่ว่านี้บน testnet แบบปกติมาเป็นเวลานานแล้ว&#8221;​ เขากล่าว &#8220;เราจะทำให้มันรองรับ SegWit แบบทันทีที่มาการเปิดใช้ เราแค่ต้องการที่จะแน่ใจว่าการเปิดใช้งาน SegWit นั้นไม่ติดขัดอะไรก่อนที่เราจะเปิดระบบของทางฝั่งเรา&#8221;</p>
+<p>และอาจจะมีผู้ให้บริการกระเป๋า Bitcoin แบบบนเว็บเจ้าอื่นๆอย่างเช่น BitGo หรือผู้ให้บริการเว็บเทรดอย่าง Bitstamp, Kraken และ OKCoin ที่คาดว่าจะรองรับ SegWit เร็วๆนี้แล้วเช่นกัน</p>
+<p>เนื่องด้วยการที่มันเป็น soft fork นั้น ผู้ใช้งาน Bitcoin ปัจจุบันยังสามารถที่จะส่งหา Bitcoin กันได้ตามปกติแบบไม่มีอะไรเกิดขึ้น แม้ว่าระบบที่ไม่ได้อัพเกรดให้รองรับ SegWit จะไม่ได้ใช้ฟีเจอร์ตรงส่วนนี้ไปก็ตาม</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-9369348762774300"
+     data-ad-slot="4635445870"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2>Lightning Network และอื่นๆอีกมาก</h2>
+<p>อาจกล่าวได้ว่าเป็นฟีเจอร์ที่มีผู้คนให้ความสนในมากกว่าการเพิ่มขนาดบล็อกเสียอีก ซึ่งเทคโนโลยีแบบ second-layer อย่างเช่น <a href="https://siamblockchain.com/2017/08/21/lightning-network-will-come-to-bitcoin-from-tomorrow-reports/">Lightning Network</a> ตัวนี้จะสามารถที่จะถูกนำมาติดตั้งบน Bitcoin ง่ายขึ้นกว่าเดิมเนื่องจากว่ามี SegWit แล้ว</p>
+<p>เทคโนโลยีดังกล่าวนี้ยังคงอยู่ในช่วงพัฒนาอยู่ และมันอาจจะใช้เวลาอีกประมาณสองถึงสามเดือนกว่าที่ผู้ใช้งานทั่วๆไปจะได้ใช้งานมัน กระนั้น ทางนักพัฒนาก็มีแผนการที่จะนำมันมาทดสอบบนระบบจริงของ Bitcoin ในเร็วๆนี้แล้ว อ้างอิงจาก CEO ของ Lightning Labs นามว่า Elizabeth Stark</p>
+<p>&#8220;วันนี้เราขอภูมิใจนำเสนอซอฟต์แวร์ Lightning Network Daemon เวอร์ชันอัลฟ่า 0.3 ซึ่งถือเป็นตัวเวอร์ชันสุดท้ายก่อนที่ทางเราจะออกเวอร์ชันเบต้าสำหรับขึ้นไปทดสอบบน mainnet&#8221; กล่าวโดยนาง Stark &#8220;เราไม่สามารถที่จะประมาณวันและเวลาที่แน่ชัดได้ แต่เป้าหมายของเราคือการนำมันมาติดตั้งทันทีที่มันถูกทดสอบว่าสามารถใช้งานจริงได้ เราอาจจะได้เห็นการทดสอบทำธุรกรรมบน mainnet โดยนักพัฒนา ทันทีที่มีการเปิดใช้งาน SegWit&#8221;</p>
+<p>และแม้ว่าจะมีการเปิดใช้งาน Litghtning Network แล้วนั้น มันก็อาจจะใช้เวลาพักใหญ่ๆในการเพิ่มฟีเจอร์ระดับสูงของ Lightning Network เข้ามาในอนาคต อย่างเช่น <a href="https://bitcoinmagazine.com/articles/atomic-swaps-how-the-lightning-network-extends-to-altcoins-1484157052/">atomic swaps</a> ที่ทำให้การแลกเปลี่ยนซื้อขายระหว่างเหรียญบน blockchain ที่ต่างกัน (เช่น Bitcoin และ Litecoin) สามารถทำได้อย่างรวดเร็วในทันที แบบไม่มีค่าธรรมเนียม โดยนาง Stark กล่าวว่าในขณะนี้การพัฒนาตัว ecosystem ของระบบดังกล่าวกำลังคืบหน้าไปไกลแล้ว</p>
+<p>การพัฒนาแอพของ Lightning Network กำลังคืบหน้าไปด้วยดี ซึ่งเรารู้สึกตื่นเต้นมาก และเมื่อเวอร์ชัน mainnet ถูกปล่อยตัวออกมา ทางเราคาดว่าจะมีแอพและฟีเจอร์ใหม่ๆที่มากับ Lightning Network แบบพร้อมใช้งานได้ทันที&#8221; เธอกล่าว</p>
+<h2>ความเสี่ยง</h2>
+<p>ในขณะนี้ การเปิดใช้งาน SegWit ยังคงมีความเสี่ยงสำหรับผู้ใช้งานบางคน</p>
+<p>การทำ soft fork บนเครือข่ายของ blockchain นั้นมีความเสี่ยงทุกครั้งที่ทำ ไม่ใช่แต่เฉพาะกับของ Bitcoin อย่างเดียว กล่าวคือยักขุดทุกๆคนจะต้องทำการรันซอฟต์แวร์ที่รองรับ protocol ตัวใหม่ๆนี้ ถ้าหากบางคนไม่ทำนั้น node บางตัวที่ใช้เก็บข้อมูลธุรกรรมอาจจะทำการเก็บธุรกรรมและบล็อกที่ผิด ซึ่งแม้ว่าภายหลังนั้น เครือข่ายมันจะทำการแก้ไขผ่านระบบ blockchain reorganization (“reorg”) ก็ตาม แต่ทว่าในอดีตนั้น การทำ soft fork ก่อให้เกิดปัญหาบนเครือข่ายขนาดเล็กมาแล้ว</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-9369348762774300"
+     data-ad-slot="4635445870"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>&#8220;ผมคาดว่าความเสี่ยงเรื่องของ reorg นั้นยังค่อนข้างต่ำสำหรับ full node บน SegWit ซึ่งก่อนหน้านี้เคยมีปัญหาเรื่องการตรวจสอบ mining chain-split เมื่อสองปีที่แล้ว แต่นั่นก็ไม่ได้สร้างผลกระทบให้กับ full node แต่อย่างใด&#8221; กล่าวโดยนาย Peter Todd หรือที่ปรึกษา Blockchain &#8220;ข่าวดีก็คือ Bitcoin Core นั้นได้ทำการพัฒนาระบบและความเร็วมามากแล้ว ต่างจากของในอดีตที่ไม่เคยมีการพัฒนาพวกนี้มาก่อน&#8221;</p>
+<p>ความเสี่ยงอีกข้อหนึ่งก็คือ ประมาณ 2-3 ชั่วโมงให้หลังจากการเปิดใช้ SegWit นั้นอาจจะมีความเสี่ยงด้าน<a href="https://siamblockchain.com/2017/07/07/51-percent-attack/">การโจมตี 51%</a> จากนักขุด ซึ่งทางเทคนิคแล้ว ถ้าหากมี Bitcoin เป็นจำนวนมากถูกส่งไปยัง address ที่มี SegWit รองรับหลังจากการเปิดใช้แล้วนั้น ทางนักขุดก็จะยังสามารถที่จะ roll back การทำธุรกรรมนั้นกลับมาได้ และอาจจะทำให้พวกเขาขโมยเหรียญ Bitcoin ไปได้ในท้ายสุด</p>
+<p>แต่ก็ใช่ว่าจะเป็นเรื่องง่ายเสมอไป เนื่องจากต้นทุนการจะทำการโจมตีแบบ 51% ให้สำเร็จได้นั้นถูกเพิ่มขึ้นในทุกๆบล็อกที่เกิดใหม่ ซึ่งเมื่อมีบล็อกเกิดใหม่เป็นจำนวนมากหลังจากเปิดใช้ SegWit แล้วนั้น การโจมตีแบบ 51% ก็จะสามารถทำได้ยากมาก ซึ่งนั่นก็จะใช้เวลาประมาณ 2-3 ชั่วโมงหลังจากการเปิดใช้งาน ดังนั้นผู้ใช้งาน Bitcoin จึงไม่ควรที่จะส่งธุรกรรมขนาดใหญ่เข้าไปใน address ของ SegWit ทันทีหลังจากเปิดใช้งาน และควรจะรอประมาณ 2-3 ชั่วโมงหลังจากการเปิดใช้ หรือแม้แต่เป็นระดับวัน</p>
+<p>ท้ายสุดนี้ นาย Todd ได้กล่าวว่า service บางตัวที่ไม่เคยถูกทดสอบมาก่อนอาจจะไม่สามารถทำงานได้ทันทีที่มีการเปิดใช้ SegWit เพราะเนื่องจากว่าพวกเขาทำการติดตั้งการรองรับ SegWit แบบแค่ครึ่งเดียว &#8220;ยกตัวอย่างเช่น ตัว remote procedure calls อาจจะ request ธุรกรรมของ SegWit และอาจจะทำการยกเลิกมันในขณะเดียวกันเนื่องจากระบบที่ขัดข้อง&#8221; แต่ทว่าปัญหาแบบนี้ก็สามารถที่จะถูกแก้ไขได้อย่างง่ายดาย</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/24/segregated-witness-activates-bitcoin-what-expect/">SegWit เปิดใช้งานบน Bitcoin แล้ว และอะไรจะเกิดขึ้นหลังจากนี้</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://siamblockchain.com/2017/08/24/segregated-witness-activates-bitcoin-what-expect/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>เหรียญ Dash คืออะไร? เงินสดดิจิตอลหนึ่งในเงินดิจิตอล Top 10</title>
+		<link>https://siamblockchain.com/2017/08/24/dash-one-of-the-top10/</link>
+		<comments>https://siamblockchain.com/2017/08/24/dash-one-of-the-top10/#respond</comments>
+		<pubDate>Thu, 24 Aug 2017 02:36:30 +0000</pubDate>
+		<dc:creator><![CDATA[Han]]></dc:creator>
+				<category><![CDATA[Featured]]></category>
+		<category><![CDATA[บทความ]]></category>
+
+		<guid isPermaLink="false">https://siamblockchain.com/?p=5072</guid>
+		<description><![CDATA[<p>สวัดดีครับชาว Siam Blockchain วันนี้เราจะมาแนะนำเงินดิจิตอลตัวนึงที่พุ่งแรงมากเมื่อไม่นานมานี้ นั้นก็คือ Dash เมื่อไม่นานมานี้ Application ของ Dash ก็ได้ขึ้นไปอยู่บน App store ทำให้มันถูกพูดถึงมากขึ้น Dash นั้นอ้างตัวเองว่าเป็น Digital Cash หรือเงินสดดิจิตอลเพราะความรวดเร็วของมันทำให้มันทำงานได้เหมือนเงินสด ซึ่งในขณะนี้มันมีมูลค่าอยู่ที่ 294 ดอลลาร์และอยู่ที่อันดับ 7 ของ Coinmarketcap โดยเราจะมาดูกันว่าเงินดิจิตอลตัวนี้เป็นมายังไง Dash เป็นเหรียญที่ถูกสร้างขึ้นในเดือนมกราคมปี 2014 โดยมันเป็นเหรียญที่ถูก Fork มาจาก Bitcoin โดยนาย Evan Duffield ในตอนแรกมันมีชื่อว่า XCoin หลังจากนั้นก็ได้ถูกเปลี่ยนชื่อมาเป็น Darkcoin และกลายเป็น Dash ในเดือนมีนาคมปี 2015 ซึ่ง Dash นั้นอ้างตัวเองเป็น Digital Cash หรือเงินสดดิจิตอล และแน่นอนมันไม่ได้ขึ้นกับองกรณ์ธนาคารหรือรัฐบาลใด และการที่มันถูก Fork จาก Bitcoin [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/24/dash-one-of-the-top10/">เหรียญ Dash คืออะไร? เงินสดดิจิตอลหนึ่งในเงินดิจิตอล Top 10</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>สวัดดีครับชาว Siam Blockchain วันนี้เราจะมาแนะนำเงินดิจิตอลตัวนึงที่พุ่งแรงมากเมื่อไม่นานมานี้ นั้นก็คือ Dash เมื่อไม่นานมานี้ Application ของ Dash ก็ได้ขึ้นไปอยู่บน <a href="https://siamblockchain.com/2017/07/29/dash-ceo-apples-approval-has-seen-nearly-2000-downloads-on-the-app-store/">App store</a> ทำให้มันถูกพูดถึงมากขึ้น Dash นั้นอ้างตัวเองว่าเป็น Digital Cash หรือเงินสดดิจิตอลเพราะความรวดเร็วของมันทำให้มันทำงานได้เหมือนเงินสด ซึ่งในขณะนี้มันมีมูลค่าอยู่ที่ 294 ดอลลาร์และอยู่ที่อันดับ 7 ของ Coinmarketcap โดยเราจะมาดูกันว่าเงินดิจิตอลตัวนี้เป็นมายังไง</p>
+<p><img class=" wp-image-5078 aligncenter" src="https://siamblockchain.com/wp-content/uploads/2017/08/dash.png" alt="" width="327" height="327" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/dash.png 300w, https://siamblockchain.com/wp-content/uploads/2017/08/dash-150x150.png 150w" sizes="(max-width: 327px) 100vw, 327px" /></p>
+<p>Dash เป็นเหรียญที่ถูกสร้างขึ้นในเดือนมกราคมปี 2014 โดยมันเป็นเหรียญที่ถูก Fork มาจาก Bitcoin โดยนาย Evan Duffield ในตอนแรกมันมีชื่อว่า XCoin หลังจากนั้นก็ได้ถูกเปลี่ยนชื่อมาเป็น Darkcoin และกลายเป็น Dash ในเดือนมีนาคมปี 2015 ซึ่ง Dash นั้นอ้างตัวเองเป็น Digital Cash หรือเงินสดดิจิตอล และแน่นอนมันไม่ได้ขึ้นกับองกรณ์ธนาคารหรือรัฐบาลใด และการที่มันถูก Fork จาก Bitcoin ทำให้มันมีฟังชั่นพื้นฐานที่เงินดิจิตอลทุกตัวมีอย่างการป้องกับเรื่อง Double spending</p>
+<p><img class=" wp-image-5077 aligncenter" src="https://siamblockchain.com/wp-content/uploads/2017/08/download.jpeg" alt="" width="271" height="270" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/download.jpeg 225w, https://siamblockchain.com/wp-content/uploads/2017/08/download-150x150.jpeg 150w" sizes="(max-width: 271px) 100vw, 271px" /></p>
+<h3>X11</h3>
+<p>Dash นั้นใช้อัลกอริทึ่ม X11 ต่างจาก Bitcoin ที่ใช้ SHA-256 โดย Evan Duffield เป็นผู้นำมันมาใช้กับ Dash เพราะเค้ารู้ว่านักพัฒนาของ Bitcoin ไม่มีทางที่จะยอมรับมัน เพราะมันจะเป็นการเปลี่ยนโปรโตคอร์หลัก ซึ่งเครื่องที่ขุดด้วยอัลกอริทึ่ม X11 อาทิเช่น Antminer D3 และ Baikal giant</p>
+<p><img class="aligncenter wp-image-5076 size-full" src="https://siamblockchain.com/wp-content/uploads/2017/08/download-1-1.jpeg" alt="" width="245" height="205" /></p>
+<h3>DGBB – Decentralized Governance by BlockChain</h3>
+<p>ก่อนที่ผู้คนจะรู้จัก DAO หรือ Decentralized Autonomous Organization (องกรณ์ที่ทำงานแบบอิสระไม่มีศูนย์กลาง) Dash เป็นที่แรกที่มีรูปแบบการทำงานเหมือน DAO มันคือระบบที่ระดมทุนและเป็นองกรณ์ไร้ศูนย์กลางที่มี Sybil-attack-proof (Sybil-attack คือการโจมตีในเนตเวิร์คแบบ peer to peer โดยผู้โจมตีจะหลอกระบบว่าตัวเองมีแหล่งที่มาหลายจุด) นั้นทำให้ระบบนี้สามารถป้องกันหากมีใครจะสร้างโหนดหลายๆตัวมาอ้างว่าตัวเองเป็นผู้ใช้ ทำให้มันเป็นระบบที่จะอิงเสียงข้างมากเท่านั้น (network concesus)</p>
+<p>ผู้ใช้สามารถส่งคำร้องหรือความต้องการใดๆ ที่อยากจะเปลี่ยนแปลงระบบได้ผ่านทางคอมมูนิตี้ โดยใครก็ตามที่เป็นเจ้าของ Master node จะมีสิทธิในการโหวต 1 โหวต ซึ่งหากคำร้องใดได้รับการสนับสนุนมากเพียงพอคำร้องนั้นก็จะได้รับการพัฒนา</p>
+<h3>ระบบ Ecosystem</h3>
+<p>ระบบของ Dash มีความต่างจาก Bitcoin ตรงที่ระบบของ Bitcoin จะขึ้นกับนักขุดเท่านั้น แต่ระบบของ Dash นั้นจะถูกแบ่งเป็นสองขั้นโดยมันจะขึ้นกับนักขุดและผู้รัน Masternode ซึ่งใครก็สามารถโหลดแอปพลิเคชั่นของ Dash มาเป็นติดตั้งเป็นโหนดส่วนนึงของระบบได้ แต่ Masternode จะทำมากกว่านั้น โดย Masternode จะเป็นเหมือนกระดูกสันหลังของระบบและจะเป็นหน่วยที่รันคำสั่งในฟังชั่นต่างๆซึ่งในการจะเป็น Masternode ได้นั้นผู้ใช้งานต้องค้ำประกันด้วยเหรียญ Dash 1000 Dash</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-9369348762774300"
+     data-ad-slot="4635445870"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>&nbsp;</p>
+<p><img class="aligncenter wp-image-5075 size-full" src="https://siamblockchain.com/wp-content/uploads/2017/08/Fq9LOGQ.png" alt="" width="350" height="191" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/Fq9LOGQ.png 350w, https://siamblockchain.com/wp-content/uploads/2017/08/Fq9LOGQ-300x164.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></p>
+<h3>PrivateSend</h3>
+<p>ธุรกรรมของ Dash นั้นจะมีความเป็นส่วนตัวโดยการใช้แนวคิด Coinjoin ที่จะรวมธุรกรรมหลายๆธุรกรรมไว้ในธุรกรรมเดียวโดย Masternode จะเป็นผู้จัดการ ซึ่งธุรกรรมที่รวมแล้วจะมีลิมิตอยู่ที่ 1000 Dash และยังไม่พอ Dash ได้เพิ่มความปลอดภัยเข้าไปอีกขั้นด้วยการทำให้ Masternode ส่งธุรกรรมออกไปในเน็ตเวิร์คพิเศษที่เรียกว่า DSTX เพื่อเพิ่มความเป็นส่วนตัวให้กับผู้ใช้</p>
+<h3> <img class="aligncenter wp-image-5074 size-full" src="https://siamblockchain.com/wp-content/uploads/2017/08/download-1.png" alt="" width="387" height="130" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/download-1.png 387w, https://siamblockchain.com/wp-content/uploads/2017/08/download-1-300x101.png 300w" sizes="(max-width: 387px) 100vw, 387px" /></h3>
+<h3>InstantSend</h3>
+<p>Dash ใช้เทคโนโลยี InstantSend ซึ่งทำให้การเกิดธุรกรรมนั้นเกิดขึ้นแทบจะทันทีซึ่งเท่ากับว่ามันเหมาะมากในการที่จะเป็นตัวกลางซื้อขาย และมันยังมีความเป็นส่วนตัวที่ไม่ว่าใครก็ตามไม่สามารถตรวจสอบประวัติธุรกรรมได้</p>
+<h3> <img class="aligncenter wp-image-5079 size-full" src="https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2560-08-24-at-12.08.25-AM.png" alt="" width="291" height="175" /></h3>
+<h3>Masternode &amp; Proof of Service</h3>
+<p>เนื่องจากระบบของ Dash ไม่ได้ขึ้นกับขักขุดเพียงอย่างเดียวแต่ยังขึ้นกับ Masternode ด้วยเพราะ Masternode จะช่วยดูแลระบบให้กับ Dash โดย Masternode นั้นจะสามารถ reject block ที่ผิดปกติจาก miner ได้ ทำให้มันกลายเป็นระบบสองชั้น ชั้นแรกคือนักขุด ชั้นที่สองคือ Masternode ซึ่งตัว Masternode นี้จะไม่ได้ทำการขุดใดๆแต่มันจะเป็นตัวรับรองความปลอดภัยให้ระบบและถูกค้ำประกันด้วย 1,000 Dash โดย Block reward ของ Dash นั้น 45% ของรางวัลจะถูกมอบให้แก่นักขุดอีก 45% จะถูกมอบให้กับ Masternode และอีก 10% จะถูกมอบให้แก่ระบบ ด้วยการทำงานของ Masternode ทำให้ Dash  ถูกมองว่าเป็นเหรียญที่สามรถขุดได้ด้วย Proof of service</p>
+<p>&nbsp;</p>
+<h3><img class="aligncenter wp-image-5073 size-full" src="https://siamblockchain.com/wp-content/uploads/2017/08/download-2-1.png" alt="" width="318" height="159" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/download-2-1.png 318w, https://siamblockchain.com/wp-content/uploads/2017/08/download-2-1-300x150.png 300w" sizes="(max-width: 318px) 100vw, 318px" /></h3>
+<h3>Dash Evolution</h3>
+<p>เนื่องจากรางวัล 10% จากการขุดจะกลายเป็นงบให้แก่ระบบ Dash เพื่อให้ผู้ที่มีส่วนร่วมสามารถส่งคำร้องว่าจะทำยังไรกับระบบและหนึ่งในนั้นคือ Dash evolution ซึ่งเป็นโปรเจคที่นำเงินตรงนี้มาใช้โดยโปรเจคนี้มุ่งเป้าที่จะสร้าง Application ที่เป็น Wallet ของ Dash ให้ใช้งานง่ายและทุกคนเข้าถึงได้</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-9369348762774300"
+     data-ad-slot="4635445870"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h3>50+1% Approve</h3>
+<p>ในระบบการโหวตของ Dash นั้นต้องการเสียงสนับสนุนเพียงแค่ 50+1% จาก Masternode ทั้งหมดซึ่งแตกต่างจาก Bitcoin ที่ต้องการ 95% อย่างในกรณีของเรื่อง Segwit2x ที่ผ่านมา</p>
+<h3>ธุรกรรม</h3>
+<p>ค่าธรรมเนียมของ Dash นั้นน้อยมากเมื่อเทียบกับ Bitcoin และมันยังทำธุรกรรมได้อย่างรวดเร็ว โดย Block time อยู่ที่ 2.30 นาทีซึ่งเร็วกว่า Bitcoin ถึง 4 เท่า โดยเฉลี่ยแล้วธุรกรรมของ Dash จะใช้เวลาเพียง 1.3 วินาทีในการตรวจสอบจาก Masternode  และกระจายไปยังโหนดต่างๆในเวลา 6 วินาที</p>
+<h3>สรุป</h3>
+<p>Dash เป็นหนึ่งในเงินดิจิตอลที่มีอัตราการเติบโตดีมากด้วยความสามารถของมันทำให้มันสามารถเป็นหนึ่งในตัวเลือกที่น่าสนใจของเงินดิจิตอลที่จะเอาไว้ซื้อสินค้า รวมถึงระบบ Ecosystem ที่เป็นแบบสองขั้นคือนักขุดและ Masternode แต่น่าเสียดายที่มันยังไม่เป็นที่แพร่หลายเท่าไหร่นักและอายุของมันก็ไม่ได้มาก ซึ่งเราก็ยังต้องดูกันต่อไปว่าเงินดิจิตอลตัวนี้จะมีอนาคตยังไง เพราะในวงการเงินดิจิตอลอะไรก็เกิดขึ้นได้อย่างรวดเร็ว</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/24/dash-one-of-the-top10/">เหรียญ Dash คืออะไร? เงินสดดิจิตอลหนึ่งในเงินดิจิตอล Top 10</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://siamblockchain.com/2017/08/24/dash-one-of-the-top10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>ผู้สมัครลงเลือกตั้งรัฐสภาในสหรัฐฯรับบริจาคเป็น Bitcoin เพื่อการหาเสียงเลือกตั้งปี 2018</title>
+		<link>https://siamblockchain.com/2017/08/24/congressional-candidate-now-accepting-bitcoin-donations-2018-election/</link>
+		<comments>https://siamblockchain.com/2017/08/24/congressional-candidate-now-accepting-bitcoin-donations-2018-election/#respond</comments>
+		<pubDate>Thu, 24 Aug 2017 00:30:09 +0000</pubDate>
+		<dc:creator><![CDATA[Beam]]></dc:creator>
+				<category><![CDATA[ข่าว Bitcoin]]></category>
+		<category><![CDATA[ต่างประเทศ]]></category>
+
+		<guid isPermaLink="false">https://siamblockchain.com/?p=5084</guid>
+		<description><![CDATA[<p>ผู้ลงสมัครเลือกตั้งรัฐสภาใน US House of Representatives ได้กล่าวว่าเขาจะเริ่มรับ Bitcoin เป็นช่องทางในการบริจาค นาย Patrick Nelson กำลังเตรียมตัวลงสมัครชิงตำแหน่งในเขตรัฐสภาที่ 21 ในเมืองนิวยอร์ค อ้างอิงจากรายงานหนังสือพิมพ์ The Times Union ของเมื่อเดือนกุมภาพันธ์ที่ผ่านมา ซึ่งนาย Nelson ยื่นสมัครไปแล้วเมื่อเดือนมกราคม เขายังเป็นทั้งผู้สนับสนุน Bernie Sanders และอดีตพนักงานในสภานิติบัญญัติแห่งรัฐนิวยอร์กอีกด้วย โดยนาย Nelson นั้นกำลังรุกคืบแคมเปญการหาเสียงของเขาเพื่อการเลือกตั้งที่จะมีในเดือนพฤศจิกายน 2018 ปีหน้านี้ ซึ่งเขาเป็นหนึ่งในผู้เข้าร่วมสมัครทั้งหมดสามคนที่กำลังแข่งกันให้พรรค Democratic รับเลือก อ้างอิงจากรายงาน นาย Nelson จะรับบริจาคจากผู้ช่วยเหลือและสนับสนุนเขาเป็น Bitcoin ผ่านบริการของ BitPay ซึ่งที่น่าสนใจคือในแคมเปญก่อนหน้านี้เขาก็รับบริจาคเป็น Bitcoin เช่นเดียวกัน ทว่าเขาก็ล้มเหลวในแคมเปญดังกล่าวในการลงสมัคร Stillwater Town Council เมื่อปี 2015 &#8220;เป้าหมายของเราในแคมเปญนี้ยังคงเดินหน้าต่อไปเรื่อยๆ ซึ่งเราจะนำเอานโยบายแห่งศตวรรษที่ 21 มาสู่เขตตำบลที่ 21&#8221; [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/24/congressional-candidate-now-accepting-bitcoin-donations-2018-election/">ผู้สมัครลงเลือกตั้งรัฐสภาในสหรัฐฯรับบริจาคเป็น Bitcoin เพื่อการหาเสียงเลือกตั้งปี 2018</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>ผู้ลงสมัครเลือกตั้งรัฐสภาใน US House of Representatives ได้กล่าวว่าเขาจะเริ่มรับ Bitcoin เป็นช่องทางในการบริจาค</p>
+<p>นาย Patrick Nelson กำลังเตรียมตัวลงสมัครชิงตำแหน่งในเขตรัฐสภาที่ 21 ในเมืองนิวยอร์ค อ้างอิงจากรายงานหนังสือพิมพ์ <a href="http://www.timesunion.com/tuplus-local/article/Two-years-out-Democrat-eyes-NY-21-seat-10903729.php">The Times Union</a> ของเมื่อเดือนกุมภาพันธ์ที่ผ่านมา ซึ่งนาย Nelson ยื่นสมัครไปแล้วเมื่อเดือนมกราคม</p>
+<p>เขายังเป็นทั้งผู้สนับสนุน Bernie Sanders และอดีตพนักงานในสภานิติบัญญัติแห่งรัฐนิวยอร์กอีกด้วย โดยนาย Nelson นั้นกำลังรุกคืบแคมเปญการหาเสียงของเขาเพื่อการเลือกตั้งที่จะมีในเดือนพฤศจิกายน 2018 ปีหน้านี้ ซึ่งเขาเป็นหนึ่งในผู้เข้าร่วมสมัครทั้งหมดสามคนที่กำลังแข่งกันให้พรรค Democratic รับเลือก อ้างอิงจาก<a href="https://ballotpedia.org/New_York%27s_21st_Congressional_District_election,_2018">รายงาน</a></p>
+<p>นาย Nelson จะรับบริจาคจากผู้ช่วยเหลือและสนับสนุนเขาเป็น Bitcoin ผ่านบริการของ BitPay ซึ่งที่น่าสนใจคือในแคมเปญก่อนหน้านี้เขาก็<a href="https://www.reddit.com/r/Bitcoin/comments/3or8dx/i_am_patrick_nelson_one_of_three_upstate_ny_local/">รับบริจาคเป็น Bitcoin</a> เช่นเดียวกัน ทว่าเขาก็ล้มเหลวในแคมเปญดังกล่าวในการลงสมัคร Stillwater Town Council เมื่อปี 2015</p>
+<p>&#8220;เป้าหมายของเราในแคมเปญนี้ยังคงเดินหน้าต่อไปเรื่อยๆ ซึ่งเราจะนำเอานโยบายแห่งศตวรรษที่ 21 มาสู่เขตตำบลที่ 21&#8221; กล่าวโดยนาย Nelson &#8220;นั่นหมายความว่าพวกเรากำลังหันเข้าหานวัตกรรมและเทคโนโลยีใหม่ๆอย่างเช่น Blockchain และ Bitcoin&#8221;</p>
+<p>ก่อนหน้านี้ทาง Federal Elections Commission (FEC) ได้<a href="https://www.coindesk.com/fec-approves-bitcoin-kind-donations-us-political-campaigns/">อนุมัติกฎหมาย</a>ว่าด้วยเรื่องการรับบริจาคเพื่อแคมเปญทางการเมืองเมื่อปี 2014 ที่ผ่านมาแล้ว</p>
+<p>การรับบริจาคเป็น Bitcoin นั้นจะมีเพดานของจำนวนที่บริจาคได้อยู่ที่ 100 ดอลลาร์ต่อคน และจะถือเป็นการบริจาคเพื่อการกุศล ซึ่งผู้บริจาคนั้นจะต้องบริจาคเป็นสินทรัพย์ที่มีมูลค่าที่สามารถนำไปขายได้ เมื่อขายแล้ว ผู้รับบริจาคจะมีเวลา 10 วันในการนำจำนวนเงินที่ได้จากการขายมาฝากไว้ในบัญชีสำหรับทำแคมเปญ</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-9369348762774300"
+     data-ad-slot="4635445870"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>ผู้ลงสมัครคนอื่นๆในหน่วยงานของรัฐบาลก่อนหน้านี้ก็เคยรับ Bitcoin เป็นช่องทางในการบริจาคแล้วเช่นกัน ซึ่งประกอบไปด้วยวุฒิสมาชิก <a href="https://www.coindesk.com/rand-paul-presidential-campaign-bitcoin-donations/">Rand Paul</a> ผู้ที่ทำให้กระแส cryptocurrency กระเตื้องเมื่อเขาประกาศรับบริจาคเป็นเหรียญคริปโตเมื่อปีที่แล้ว</p>
+<p>กระนั้นก่อนหน้านี้ก็ได้มีรายงานมาว่าทาง FEC ได้พิจารณากฎการบริจาคในที่ประชุมเมื่อเดือนกันยายนที่แล้ว โดยเฉพาะการใช้ Bitcoin ว่าจะจัดให้มันอยู่ในหมวดเงินสดหรือไม่</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/24/congressional-candidate-now-accepting-bitcoin-donations-2018-election/">ผู้สมัครลงเลือกตั้งรัฐสภาในสหรัฐฯรับบริจาคเป็น Bitcoin เพื่อการหาเสียงเลือกตั้งปี 2018</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://siamblockchain.com/2017/08/24/congressional-candidate-now-accepting-bitcoin-donations-2018-election/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>มูลค่าตลาดรวมเหรียญ Cryptocurrency ทะลุจุดสูงสุดในประวัติศาสตร์ 150 พันล้านดอลลาร์</title>
+		<link>https://siamblockchain.com/2017/08/23/150-billion-total-cryptocurrency-market-cap-hits-new-time-high/</link>
+		<comments>https://siamblockchain.com/2017/08/23/150-billion-total-cryptocurrency-market-cap-hits-new-time-high/#respond</comments>
+		<pubDate>Wed, 23 Aug 2017 15:41:45 +0000</pubDate>
+		<dc:creator><![CDATA[Beam]]></dc:creator>
+				<category><![CDATA[ข่าวสาร]]></category>
+		<category><![CDATA[เทคโนโลยี Blockchain]]></category>
+		<category><![CDATA[เหรียญอื่นๆ]]></category>
+
+		<guid isPermaLink="false">https://siamblockchain.com/?p=5067</guid>
+		<description><![CDATA[<p>มูลค่าตลาดรวมของเหรียญ Cryptocurrency ทั้งหมดที่ถูกซื้อขายแบบสาธารณะทั่วโลกได้ทำสถิติใหม่โดยทะลุระดับตัวเลขที่ 150 พันล้านดอลลาร์แล้ววันนี้ โดยในขณะที่กำลังรายงานข่าวอยู่นี้ มูลค่าของ ether, Bitcoin และรวมถึงเหรียญทุกๆตัวอยู่ที่ 152.8 พันล้านดอลลาร์ อ้างอิงจาก Coinmarketcap โดยรวมนั้น ตัวเลขดังกล่าวได้บ่งชี้ว่าตลาดเหรียญ cryptocurrency โดยรวมเติบโตอย่างมั่นคง ซึ่งตัวเลขที่ 152.8 พันล้านดอลลาร์นี้ถือว่าขึ้นมาราวๆเกือบ 13% จากของเมื่อ 7 วันที่แล้ว, เกือบ 67% จากเดือนที่แล้ว แฃะ 1,240% จากเมื่อปีที่แล้ว ที่น่าสนใจคือ ตัวเลขมูลค่าตลาดรวมดังกล่าวนี้มีมาในขณะที่ไม่มีเหรียญใดที่มีราคาพุ่งไปทำ new high ใหม่เลย โดย Bitcoin ที่ระดับราคา 4,186 ดอลลาร์ และ Ether ที่ราคา 318.43 ดอลลาร์ยังคงตัวอยู่แม้ว่าจะมีการพุ่งขึ้นของราคามาเป็นระยะ แต่ก็ยังไม่มีนัยสำคัญอะไรมากนักหากเทียบกับของเมื่อสองสัปดาห์ที่แล้ว รวมถึงรวมถึงเหรียญอื่นๆอย่างเช่น litecoin, monero หรือ dash ที่เป็นเหรียญยอดนิยมนั้นก็ไม่มีการเคลื่อนไหวของราคาไปทำจุดสูงสุดที่ใหม่กว่าเช่นกัน ทว่าเหรียญที่ดูเหมือนจะมีการพุ่งขึ้นของราคาอย่างรุนแรงมากในวันนี้คือ Ripple [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/150-billion-total-cryptocurrency-market-cap-hits-new-time-high/">มูลค่าตลาดรวมเหรียญ Cryptocurrency ทะลุจุดสูงสุดในประวัติศาสตร์ 150 พันล้านดอลลาร์</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>มูลค่าตลาดรวมของเหรียญ Cryptocurrency ทั้งหมดที่ถูกซื้อขายแบบสาธารณะทั่วโลกได้ทำสถิติใหม่โดยทะลุระดับตัวเลขที่ 150 พันล้านดอลลาร์แล้ววันนี้</p>
+<p>โดยในขณะที่กำลังรายงานข่าวอยู่นี้ มูลค่าของ ether, Bitcoin และรวมถึงเหรียญทุกๆตัวอยู่ที่ 152.8 พันล้านดอลลาร์ อ้างอิงจาก Coinmarketcap</p>
+<p>โดยรวมนั้น ตัวเลขดังกล่าวได้บ่งชี้ว่าตลาดเหรียญ cryptocurrency โดยรวมเติบโตอย่างมั่นคง ซึ่งตัวเลขที่ 152.8 พันล้านดอลลาร์นี้ถือว่าขึ้นมาราวๆเกือบ 13% จากของเมื่อ 7 วันที่แล้ว, เกือบ 67% จากเดือนที่แล้ว แฃะ 1,240% จากเมื่อปีที่แล้ว</p>
+<p>ที่น่าสนใจคือ ตัวเลขมูลค่าตลาดรวมดังกล่าวนี้มีมาในขณะที่ไม่มีเหรียญใดที่มีราคาพุ่งไปทำ new high ใหม่เลย</p>
+<p>โดย Bitcoin ที่ระดับราคา 4,186 ดอลลาร์ และ Ether ที่ราคา 318.43 ดอลลาร์ยังคงตัวอยู่แม้ว่าจะมีการพุ่งขึ้นของราคามาเป็นระยะ แต่ก็ยังไม่มีนัยสำคัญอะไรมากนักหากเทียบกับของเมื่อสองสัปดาห์ที่แล้ว รวมถึงรวมถึงเหรียญอื่นๆอย่างเช่น litecoin, monero หรือ dash ที่เป็นเหรียญยอดนิยมนั้นก็ไม่มีการเคลื่อนไหวของราคาไปทำจุดสูงสุดที่ใหม่กว่าเช่นกัน</p>
+<p><img class="alignnone wp-image-5068 size-full" src="https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-11.38.28-PM.png" alt="" width="1073" height="669" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-11.38.28-PM.png 1073w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-11.38.28-PM-300x187.png 300w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-11.38.28-PM-768x479.png 768w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-11.38.28-PM-1024x638.png 1024w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-11.38.28-PM-696x434.png 696w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-11.38.28-PM-1068x666.png 1068w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-11.38.28-PM-674x420.png 674w" sizes="(max-width: 1073px) 100vw, 1073px" /></p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-9369348762774300"
+     data-ad-slot="4635445870"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>ทว่าเหรียญที่ดูเหมือนจะมีการพุ่งขึ้นของราคาอย่างรุนแรงมากในวันนี้คือ Ripple หรือเหรียญที่ถูกสร้างขึ้นโดยบริษัทสตาร์ทอัพจากแคลิฟอร์เนีย เป็นเหรียญที่ใช้ Blockchain ส่วนตัวไม่สามารถขุดได้ โดยราคานั้นได้พุ่งไปถึง 42.57% ไปอยู่ที่ 0.288 ดอลลาร์ และยังมีเหรียญ Ethereum Classic หรือเหรียญ hard fork ของ Ethereum ที่ราคาพุ่งไปถึง 11.25% ไปอยู่ที่ 15.61 ดอลลาร์เช่นกัน</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/150-billion-total-cryptocurrency-market-cap-hits-new-time-high/">มูลค่าตลาดรวมเหรียญ Cryptocurrency ทะลุจุดสูงสุดในประวัติศาสตร์ 150 พันล้านดอลลาร์</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://siamblockchain.com/2017/08/23/150-billion-total-cryptocurrency-market-cap-hits-new-time-high/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>&#8220;มันเป็นเรื่องเสี่ยงเกินไปที่จะสร้างเหรียญ Cryptocurrency&#8221; กล่าวโดยธนาคารกลางแอฟริกาใต้</title>
+		<link>https://siamblockchain.com/2017/08/23/south-africas-central-bank-risky-launch-cryptocurrency/</link>
+		<comments>https://siamblockchain.com/2017/08/23/south-africas-central-bank-risky-launch-cryptocurrency/#respond</comments>
+		<pubDate>Wed, 23 Aug 2017 13:24:27 +0000</pubDate>
+		<dc:creator><![CDATA[Beam]]></dc:creator>
+				<category><![CDATA[ต่างประเทศ]]></category>
+		<category><![CDATA[เทคโนโลยี Blockchain]]></category>
+
+		<guid isPermaLink="false">https://siamblockchain.com/?p=5064</guid>
+		<description><![CDATA[<p>สมาชิกระดับสูงของธนาคารกลางในประเทศรัฐบาลแอฟริกาใต้ได้ออกมากล่าวว่ามันเป็นเรื่องที่ &#8220;เสี่ยงมากเกินไป&#8221; สำหรับทางธนาคารกลางที่จะเปิดตัวเหรียญคริปโตเป็นของตัวเอง โดยเขาคือ Francois Groepe หรือรองผู้ว่าการธนาคารสำรองแอฟริกาใต้ ที่ได้ออกมากล่าวในงาน Strate GIBS FinTech Innovation Conference 2017 โดยแสดงความเห็นเกี่ยวกับแนวคิดของการพัฒนาด้านฟินเทคโดยการโฟกัสไประบบ blockchain และ distributed ledger โดยอ้างอิงจากสำนักข่าว ITWeb นาย Groepe ได้กล่าวว่าทางธนาคารกลางเปิดรับคำถามเกี่ยวกับการสร้างสกุลเงินดิจิตอลของตัวเอง แต่ทว่าเขาก็ยังต้องเฝ้าระวังปัญหาในระยะสั้นถ้าหากว่าจะทำแบบนั้นจริงๆ &#8220;สกุลเงินดิจิตอลมีศักยภาพที่จะกลายเป็นที่นิยมสูง&#8221; เขากล่าวกับผู้ร่วมงาน &#8220;แต่ว่าอย่างไรก็ตาม การเปิดตัวเหรียญดิจิตอลสำหรับทางธนาคารกลางที่มีความอิสระมากเกินไปนั้นมีเสี่ยงมากเกินไป เรายังต้องขอไปคิดดูก่อน&#8221; นาย Groepe ได้ออกมาแสดงความเห็นเกือบปีหลังจากที่ทาง South African Reserve Bank ออกมาบ่งชี้ว่าพวกเขาจะเปิดรับการพัฒนาด้านเทคโนโลยีมากขึ้น &#8220;เรามีความต้องการที่จะวิเคราะห์ด้านจิรยธรรมและความเสี่ยงของเทคโนโลยี Blockhain และรวมถึง distributed ledgers&#8221; กล่าวโดยผู้ว่าการธนาคาร Lesetja Kganyago ในขณะนั้น ในขณะที่สถาบันการเงินอื่นๆในประเทศรวมถึงศูนย์รับฝากหลักทรัพย์กลางของรัฐบาลนั้นก็เริ่มที่จะศึกษาเทคโนโลยี Blockchain ในการนำมาปรับใช้งานแล้วเช่นกัน</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/south-africas-central-bank-risky-launch-cryptocurrency/">&#8220;มันเป็นเรื่องเสี่ยงเกินไปที่จะสร้างเหรียญ Cryptocurrency&#8221; กล่าวโดยธนาคารกลางแอฟริกาใต้</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>สมาชิกระดับสูงของธนาคารกลางในประเทศรัฐบาลแอฟริกาใต้ได้ออกมากล่าวว่ามันเป็นเรื่องที่ &#8220;เสี่ยงมากเกินไป&#8221; สำหรับทางธนาคารกลางที่จะเปิดตัวเหรียญคริปโตเป็นของตัวเอง</p>
+<p>โดยเขาคือ Francois Groepe หรือรองผู้ว่าการธนาคารสำรองแอฟริกาใต้ ที่ได้ออกมากล่าวในงาน Strate GIBS FinTech Innovation Conference 2017 โดยแสดงความเห็นเกี่ยวกับแนวคิดของการพัฒนาด้านฟินเทคโดยการโฟกัสไประบบ <a href="https://siamblockchain.com/2017/06/04/blockchain-%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3/">blockchain</a> และ distributed ledger</p>
+<p>โดยอ้างอิงจากสำนักข่าว <a href="http://www.itweb.co.za/mobilesite/news/164197">ITWeb</a> นาย Groepe ได้กล่าวว่าทางธนาคารกลางเปิดรับคำถามเกี่ยวกับการสร้างสกุลเงินดิจิตอลของตัวเอง แต่ทว่าเขาก็ยังต้องเฝ้าระวังปัญหาในระยะสั้นถ้าหากว่าจะทำแบบนั้นจริงๆ</p>
+<p>&#8220;สกุลเงินดิจิตอลมีศักยภาพที่จะกลายเป็นที่นิยมสูง&#8221; เขากล่าวกับผู้ร่วมงาน</p>
+<blockquote><p>&#8220;แต่ว่าอย่างไรก็ตาม การเปิดตัวเหรียญดิจิตอลสำหรับทางธนาคารกลางที่มีความอิสระมากเกินไปนั้นมีเสี่ยงมากเกินไป เรายังต้องขอไปคิดดูก่อน&#8221;</p></blockquote>
+<p>นาย Groepe ได้ออกมาแสดงความเห็นเกือบปีหลังจากที่ทาง South African Reserve Bank ออกมา<a href="https://www.coindesk.com/south-africas-central-bank-says-open-cryptocurrencies/">บ่งชี้</a>ว่าพวกเขาจะเปิดรับการพัฒนาด้านเทคโนโลยีมากขึ้น</p>
+<p>&#8220;เรามีความต้องการที่จะวิเคราะห์ด้านจิรยธรรมและความเสี่ยงของเทคโนโลยี Blockhain และรวมถึง distributed ledgers&#8221; กล่าวโดยผู้ว่าการธนาคาร Lesetja Kganyago ในขณะนั้น</p>
+<p>ในขณะที่สถาบันการเงินอื่นๆในประเทศรวมถึง<a href="https://www.coindesk.com/south-africas-biggest-financial-power-players-just-went-blockchain/">ศูนย์รับฝากหลักทรัพย์กลาง</a>ของรัฐบาลนั้นก็เริ่มที่จะศึกษาเทคโนโลยี Blockchain ในการนำมาปรับใช้งานแล้วเช่นกัน</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/south-africas-central-bank-risky-launch-cryptocurrency/">&#8220;มันเป็นเรื่องเสี่ยงเกินไปที่จะสร้างเหรียญ Cryptocurrency&#8221; กล่าวโดยธนาคารกลางแอฟริกาใต้</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://siamblockchain.com/2017/08/23/south-africas-central-bank-risky-launch-cryptocurrency/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>ทาง Blockchain.info จะจ่าย Bitcoin Cash ให้กับผู้ใช้งานภายใน 8 สัปดาห์</title>
+		<link>https://siamblockchain.com/2017/08/23/blockchaininfo-to-give-users-bitcoin-cash-within-8-weeks/</link>
+		<comments>https://siamblockchain.com/2017/08/23/blockchaininfo-to-give-users-bitcoin-cash-within-8-weeks/#respond</comments>
+		<pubDate>Wed, 23 Aug 2017 12:55:57 +0000</pubDate>
+		<dc:creator><![CDATA[Beam]]></dc:creator>
+				<category><![CDATA[ข่าว Bitcoin Cash]]></category>
+
+		<guid isPermaLink="false">https://siamblockchain.com/?p=5060</guid>
+		<description><![CDATA[<p>ผู้ให้บริการกระเป๋า Bitcoin และข้อมูลด้าน Blockchain นามว่า Blockchain (หรือที่รู้จักกันดีในนาม Blockchain.info) ได้ออกมาประกาศว่าทางลูกค้าที่ใช้บริการ Bitcoin นั้นจะได้รับ Bitcoin Cash (BCH) โดยอัตโนมัติ อ้างอิงจากบล็อกของ Blockchain.info เมื่อวานนี้ ที่มีการบอกว่าก่อนหน้านี้ช่วงการ hard fork ของ Bitcoin Cash ช่วง 1 สิงหาคมที่ผ่านมา ผู้ใช้งาน Bitcoin ทุกคนบน Blockchain.info ที่ได้เก็บ Bitcoin ไว้ก่อนการ hard fork แต่ยังไม่ได้รับ BCH ทั้งๆที่เป็นสิทธิของทุกคนที่ควรจะได้นั้น พวกเขาได้บอกว่า &#8220;เราได้เฝ้าดู Bitcoin Cash (BCH) มาตั้งแต่ hard fork แล้ว&#8221; กล่าวโดยบริษัท &#8220;ภายใน 8 สัปดาห์ เราจะทำการเพิ่มการรองรับ BCH ผ่านหน้าต่าง [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/blockchaininfo-to-give-users-bitcoin-cash-within-8-weeks/">ทาง Blockchain.info จะจ่าย Bitcoin Cash ให้กับผู้ใช้งานภายใน 8 สัปดาห์</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>ผู้ให้บริการกระเป๋า Bitcoin และข้อมูลด้าน Blockchain นามว่า <a href="https://blockchain.info">Blockchain</a> (หรือที่รู้จักกันดีในนาม Blockchain.info) ได้ออกมาประกาศว่าทางลูกค้าที่ใช้บริการ Bitcoin นั้นจะได้รับ Bitcoin Cash (BCH) โดยอัตโนมัติ</p>
+<p>อ้างอิงจาก<a href="https://blog.blockchain.com/2017/08/22/bitcoin-cash-update/">บล็อก</a>ของ Blockchain.info เมื่อวานนี้ ที่มีการบอกว่าก่อนหน้านี้ช่วงการ hard fork ของ Bitcoin Cash ช่วง 1 สิงหาคมที่ผ่านมา ผู้ใช้งาน Bitcoin ทุกคนบน Blockchain.info ที่ได้เก็บ Bitcoin ไว้ก่อนการ hard fork แต่ยังไม่ได้รับ BCH ทั้งๆที่เป็นสิทธิของทุกคนที่ควรจะได้นั้น พวกเขาได้บอกว่า</p>
+<p>&#8220;เราได้เฝ้าดู Bitcoin Cash (BCH) มาตั้งแต่ hard fork แล้ว&#8221; กล่าวโดยบริษัท</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-9369348762774300"
+     data-ad-slot="4635445870"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<blockquote><p>&#8220;ภายใน 8 สัปดาห์ เราจะทำการเพิ่มการรองรับ BCH ผ่านหน้าต่าง settings บนกระเป๋า Blockchain ของคุณ ผู้ใช้งานที่เคยเก็บ Bitcoin ไว้ก่อนการแยกตัววันที่ 1 สิงหาคมทุกคนจะได้รับ Bitcoin Cash เทียบเท่ากับจำนวน Bitcoin ที่เคยเก็บไว้ในช่วงนั้น&#8221;</p></blockquote>
+<p>ผู้ใช้งานบางคนที่ไม่รู้ว่าจะเก็บ Bitcoin ไว้ที่ไหนดีเมื่อได้ Bitcoin Cash กำลังพยายาม<a href="https://siamblockchain.com/category/news/%e0%b8%82%e0%b9%88%e0%b8%b2%e0%b8%a7-bitcoin/">ปลดล็อก BCH</a> ของพวกเขาออกมาอยู่</p>
+<p>ก่อนหน้านี้ผู้ให้บริการกระเป๋ารายอื่นเลือกที่จะยื่น BCH ให้กับผู้ใช้งานในทันทีเนื่องจากกลัวมีปัญหาด้านกฎหมาย เพราะว่า Bitcon Cash นั้นถือเป็นสิทธิของผู้ถือ Bitcoin ทุกคนที่ควรจะได้มัน ไม่ใช่ผู้ให้บริการ Wallet ในขณะที่ผู้ให้บริการเจ้าอื่นๆใช้วิธีค่อยๆผ่อนผัน</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/blockchaininfo-to-give-users-bitcoin-cash-within-8-weeks/">ทาง Blockchain.info จะจ่าย Bitcoin Cash ให้กับผู้ใช้งานภายใน 8 สัปดาห์</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://siamblockchain.com/2017/08/23/blockchaininfo-to-give-users-bitcoin-cash-within-8-weeks/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>ผู้ใช้งาน Bitcoin ส่วนใหญ่เริ่มเครียด เนื่องจาก hashrate ร่วง 50% ภายใน 4 วัน</title>
+		<link>https://siamblockchain.com/2017/08/23/bitcoin-users-vent-frustration-as-hashrate-drops-50-percent-in-4-days/</link>
+		<comments>https://siamblockchain.com/2017/08/23/bitcoin-users-vent-frustration-as-hashrate-drops-50-percent-in-4-days/#respond</comments>
+		<pubDate>Wed, 23 Aug 2017 12:30:46 +0000</pubDate>
+		<dc:creator><![CDATA[Beam]]></dc:creator>
+				<category><![CDATA[ข่าว Bitcoin]]></category>
+
+		<guid isPermaLink="false">https://siamblockchain.com/?p=5056</guid>
+		<description><![CDATA[<p>ผู้ใช้งาน Bitcoin (BTC) ส่วนใหญ่กำลังบ่นถึงปัญหาการคอนเฟิร์มธุรกรรมที่ล่าช้าและมีค่าธรรมเนียมที่แพงหูฉี่ เนื่องมาจากการสูญเสีย hashrate หรือพลังการขุดถึง 50% ทำให้เครือข่าย Bitcoin ไม่มีจำนวนแรงขุดที่เพียงพอที่จะสามารถช่วยคอนเฟิร์มธุรกรรมอย่างรวดเร็วได้ ข้อมูลจาก Blockchain.info ที่นำมาโพสโดยนักเทรดนามว่า SatoSqueeze ได้เผยให้เห็นถึง hashrate ของ BTC ที่ร่วงจาก 8,000 ลงไปเหลือ 4,000 petahash ในเวลาเพียงแค่ 4 วันเท่านั้น &#8220;นั่นจะช่วยอธิบายถึงสาเหตุที่ทำไมถึงมีจำนวนธุรกรรมที่ยังไม่ถูกคอนเฟิร์มเยอะ&#8221; เขากล่าว #Bitcoin hashrate dropped 50%+ from 8,000 Petahash to 4,000 Petahash in the past 5 days. That explains most of the unconfirmed transactions pic.twitter.com/sxOBlmiHJp — SatoSqueeze (@cryptoSqueeze) [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/bitcoin-users-vent-frustration-as-hashrate-drops-50-percent-in-4-days/">ผู้ใช้งาน Bitcoin ส่วนใหญ่เริ่มเครียด เนื่องจาก hashrate ร่วง 50% ภายใน 4 วัน</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>ผู้ใช้งาน Bitcoin (BTC) ส่วนใหญ่กำลังบ่นถึงปัญหาการคอนเฟิร์มธุรกรรมที่ล่าช้าและมีค่าธรรมเนียมที่แพงหูฉี่ เนื่องมาจากการสูญเสีย hashrate หรือพลังการขุดถึง 50% ทำให้เครือข่าย Bitcoin ไม่มีจำนวนแรงขุดที่เพียงพอที่จะสามารถช่วยคอนเฟิร์มธุรกรรมอย่างรวดเร็วได้</p>
+<p>ข้อมูลจาก Blockchain.info ที่นำมาโพสโดยนักเทรดนามว่า SatoSqueeze ได้เผยให้เห็นถึง hashrate ของ BTC ที่ร่วงจาก 8,000 ลงไปเหลือ 4,000 petahash ในเวลาเพียงแค่ 4 วันเท่านั้น</p>
+<p>&#8220;นั่นจะช่วยอธิบายถึงสาเหตุที่ทำไมถึงมีจำนวนธุรกรรมที่ยังไม่ถูกคอนเฟิร์มเยอะ&#8221; เขากล่าว</p>
+<blockquote class="twitter-tweet" data-lang="en">
+<p dir="ltr" lang="en"><a href="https://twitter.com/hashtag/Bitcoin?src=hash">#Bitcoin</a> hashrate dropped 50%+ from 8,000 Petahash to 4,000 Petahash in the past 5 days.<br />
+That explains most of the unconfirmed transactions <a href="https://t.co/sxOBlmiHJp">pic.twitter.com/sxOBlmiHJp</a></p>
+<p>— SatoSqueeze (@cryptoSqueeze) <a href="https://twitter.com/cryptoSqueeze/status/900255329941835776">August 23, 2017</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br />
+กระนั้นก็มีรายงานจากผู้ใช้ Bitcoin เป็นจำนวนมากที่ออกมากล่าวว่าธุรกรรมของ Bitcoin นั้นใช้เวลาจากระดับชั่วโมงไปจนถึงหลายๆวันในการคอนเฟิร์ม โดยพวกเขาออกมาบ่นผ่านโซเชียลกันเป็นจำนวนมาก เหตุการณ์ดังกล่าวน่าจะไม่ต่างกับเหตุการณ์ของหลายๆเดือนที่ผ่านมาที่มี<a href="https://cointelegraph.com/news/bitcoin-mempool-drops-90-despite-localbitcoins-records">การคอขวด</a>ในการคอนเฟิร์มธุรกรรมเมื่อ mempool ที่ใช้สำหรับเก็บธุรกรรมเพื่อรอการคอนเฟิร์มนั้นเต็ม</p>
+<p>ทว่าในครั้งนี้การดีเลย์ไม่ได้เกิดจากการคอขวด แต่เกิดจากการที่กำลังในการขุดไม่เพียงพอ เนื่องจากนักขุดส่วนใหญ่<a href="https://siamblockchain.com/2017/08/18/bitcoin-cash-closes-profitability-parity-original-blockchain/">หนีไปขุด Bitcoin Cash</a> ที่ให้ผลตอบแทนดีกว่าแล้ว</p>
+<p>บางคนก็ได้ออกมาบ่นว่า BCH ส่งผลทำให้ BTC เริ่มเสียสมดุลแล้ว ตามแบบที่ทางสยามบล็อกเชนเคยออกมา<a href="https://siamblockchain.com/2017/08/05/even-miners-hate-bitcoin-cash-might-want-mine/">วิเคราะห์</a>เมื่อไม่นานมานี้</p>
+<blockquote class="twitter-tweet" data-lang="en">
+<p dir="ltr" lang="en">BTC is finding 4 blocks an hour. <a href="https://twitter.com/hashtag/BitcoinCash?src=hash">#BitcoinCash</a> is finding 43 blocks an hour. Satoshi was right. Miners will mine the more profitable chain.</p>
+<p>— Michael Matthews (@mikerelentless) <a href="https://twitter.com/mikerelentless/status/899984366234992640">August 22, 2017</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br />
+แปล: BTC ขุดเจอ 4 บล็อกในเวลา 1 ชั่วโมง ส่วน Bitcoin Cash ขุดเจอ 43 บล็อกใน 1 ชั่วโมง Satoshi พูดถูก นักขุดจะวิ่งไปหา chain ที่สร้างกำไรได้มากกว่า</p>
+<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/bitcoin-users-vent-frustration-as-hashrate-drops-50-percent-in-4-days/">ผู้ใช้งาน Bitcoin ส่วนใหญ่เริ่มเครียด เนื่องจาก hashrate ร่วง 50% ภายใน 4 วัน</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://siamblockchain.com/2017/08/23/bitcoin-users-vent-frustration-as-hashrate-drops-50-percent-in-4-days/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
 		<title>ผู้สร้าง Lightning Network ของ Bitcoin กำลังทำงานให้กับ Bitcoin Cash</title>
 		<link>https://siamblockchain.com/2017/08/23/lightnings-tadge-dryja-working-bitcoin-cash-splitter/</link>
 		<comments>https://siamblockchain.com/2017/08/23/lightnings-tadge-dryja-working-bitcoin-cash-splitter/#respond</comments>
@@ -140,341 +437,13 @@
 			<wfw:commentRss>https://siamblockchain.com/2017/08/23/25-year-old-bitcoin-millionaire-travels-the-world-becomes-bitcoin-booster/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
-		<item>
-		<title>Walmart, Kroger &#038; Nestle และ IBM ใช้ Blockchain เพื่อต่อสู้กับอาหารที่เป็นพิษ</title>
-		<link>https://siamblockchain.com/2017/08/23/walmart-kroger-nestle-team-with-ibm-blockchain-to-fight-food-poisoning/</link>
-		<comments>https://siamblockchain.com/2017/08/23/walmart-kroger-nestle-team-with-ibm-blockchain-to-fight-food-poisoning/#respond</comments>
-		<pubDate>Wed, 23 Aug 2017 03:14:58 +0000</pubDate>
-		<dc:creator><![CDATA[Beam]]></dc:creator>
-				<category><![CDATA[ต่างประเทศ]]></category>
-		<category><![CDATA[เทคโนโลยี Blockchain]]></category>
-
-		<guid isPermaLink="false">https://siamblockchain.com/?p=5037</guid>
-		<description><![CDATA[<p>ผู้ให้บริการด้านอาหารหรือ food supply ทั่วโลกกำลังร่วมมือกันในการใช้เทคโนโลยี blockchain ที่ว่ากันว่าในอนาคตสามารถที่จะช่วยทางด้านการประหยัดเงิน และเซฟชีวิตมนุษย์ บริษัท IT ยักษ์ใหญ่ของโลกอย่าง IBM ได้เซ็นสัญญาหุ้นส่วนกับ Dole, Unilever, Walmart, Golden State Foods, Kroger and Nestle, Tyson Foods, McLane Company และ McCormick and Company ซึ่งพวกเขาได้ทำการประกาศเมื่อวานนี้ว่ามีแผนการที่จะใช้เทคโนโลยี Blockchain ในการตรวจสอบและป้องกันอาหารที่มีพิษและทำการกำจัดมัน ทว่าจะไม่เหมือนกับกลุ่มบริษัท Blockchain อื่นๆที่เคยเปิดตัวไปแล้วก่อนหน้านี้ เนื่องจากการรวมกลุ่มของพวกเขาครั้งนี้ต้องการที่จะเปิดตัวระบบ Blockchain ในระดับ enterprise โดยอ้างอิงจากนาย Frank Yiannas หรือรองประธานฝ่ายความปลอดภัยของอาหารของ Walmart เขากล่าวว่า &#8220;IBM ได้อุทิศเวลาของพวกเขาในการเขียนโคดโปรแกรม สร้างออกมาเป็นผลิตภัณฑ์ที่สามารถใช้งานได้จริง อีกทั้งยังมีกรอบและเนื้อหาที่ถูกต้องตามข้อกำหนดของผลิตภัณฑ์ เป็นเทคโนโลยีที่เรียกได้ว่าของจริง เลยนะครับ&#8221; ถ้าหากว่าทำสำเร็จนั้น โปรเจคดังกล่าวจะช่วยขยาย proof-of-concept ของ [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/walmart-kroger-nestle-team-with-ibm-blockchain-to-fight-food-poisoning/">Walmart, Kroger &#038; Nestle และ IBM ใช้ Blockchain เพื่อต่อสู้กับอาหารที่เป็นพิษ</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></description>
-				<content:encoded><![CDATA[<p>ผู้ให้บริการด้านอาหารหรือ food supply ทั่วโลกกำลังร่วมมือกันในการใช้เทคโนโลยี blockchain ที่ว่ากันว่าในอนาคตสามารถที่จะช่วยทางด้านการประหยัดเงิน และเซฟชีวิตมนุษย์</p>
-<p>บริษัท IT ยักษ์ใหญ่ของโลกอย่าง IBM ได้เซ็นสัญญาหุ้นส่วนกับ Dole, Unilever, Walmart, Golden State Foods, Kroger and Nestle, Tyson Foods, McLane Company และ McCormick and Company ซึ่งพวกเขาได้ทำการประกาศเมื่อวานนี้ว่ามีแผนการที่จะใช้เทคโนโลยี Blockchain ในการตรวจสอบและป้องกันอาหารที่มีพิษและทำการกำจัดมัน</p>
-<p>ทว่าจะไม่เหมือนกับกลุ่มบริษัท Blockchain อื่นๆที่เคยเปิดตัวไปแล้วก่อนหน้านี้ เนื่องจากการรวมกลุ่มของพวกเขาครั้งนี้ต้องการที่จะเปิดตัวระบบ Blockchain ในระดับ enterprise โดยอ้างอิงจากนาย Frank Yiannas หรือรองประธานฝ่ายความปลอดภัยของอาหารของ Walmart เขากล่าวว่า</p>
-<blockquote><p>&#8220;IBM ได้อุทิศเวลาของพวกเขาในการเขียนโคดโปรแกรม สร้างออกมาเป็นผลิตภัณฑ์ที่สามารถใช้งานได้จริง อีกทั้งยังมีกรอบและเนื้อหาที่ถูกต้องตามข้อกำหนดของผลิตภัณฑ์ เป็นเทคโนโลยีที่เรียกได้ว่าของจริง เลยนะครับ&#8221;</p></blockquote>
-<p>ถ้าหากว่าทำสำเร็จนั้น โปรเจคดังกล่าวจะช่วยขยาย proof-of-concept ของ Blockchain ส่วนตัวของ Walmart ในด้านความปลอดภัยทางอาหารและรวมถึงการตรวจจับอาหารเป็นพิษได้ อีกทั้งยังสามารถส่งข้อมูลไปหาหุ้นส่วนอื่นๆได้ด้วย ซึ่งเทคโนโลยีดังกล่าวนี้จะสามารถที่จะตรวจพบอาหารเป็นพิษได้ในทุกๆขั้นตอนในระดับวินาที</p>
-<p>ทาง IBM ยังมีเป้าหมายที่จะให้โปรเจคดังกล่าวสามารถใช้ประโยชน์ด้านอื่นๆได้อีกด้วย</p>
-<p>ซึ่งไม่เพียงแต่เทคโนโลยี distributed ledger ตัวนี้สามารถที่จะช่วยป้องกันการสูญเสียรายได้ของผู้ประกอบการร้านค้าในการหยิบเอาสินค้าที่เป็นพิษในโกดังของตัวเองไปทิ้ง แต่ยังสามารถที่จะช่วยปกป้องชีวิตของผู้คนอีกหลายๆคนที่เสียชีวิตจากอาหารมีสารปนเปื้อนและเป็นพิษได้อีกด้วย</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-9369348762774300"
-     data-ad-slot="4635445870"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<p>&#8220;เรากำลังอยู่ในธุรกิจที่ต้องการจะช่วยเพิ่มคุณภาพชีวิตของผู้คนที่เรากำลังรับใช้อยู่ทั่วโลก&#8221; เขากล่าว</p>
-<h2>ต้นทุนทั้งสาม</h2>
-<p>ทว่าการจะทำระบบที่สมบูรณ์แบบออกมานั้นไม่ใช่เรื่องง่าย ซึ่งถ้าหากทำออกมาไม่ดีนั้น อาจจะทำให้มีการดีเลย์ในการตรวจพบอาหารเป็นพิษ ที่ภายหลังอาจจะหลุดเข้าไปอยู่ในระบบการขนส่งจนกว่าจะรู้ตัวอีกทีก็ไปถึงร้านค้าแล้ว</p>
-<p><img class="alignnone wp-image-5038 size-full" src="https://siamblockchain.com/wp-content/uploads/2017/08/Details-e1503403661886-728x469.jpeg" alt="" width="728" height="469" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/Details-e1503403661886-728x469.jpeg 728w, https://siamblockchain.com/wp-content/uploads/2017/08/Details-e1503403661886-728x469-300x193.jpeg 300w, https://siamblockchain.com/wp-content/uploads/2017/08/Details-e1503403661886-728x469-696x448.jpeg 696w, https://siamblockchain.com/wp-content/uploads/2017/08/Details-e1503403661886-728x469-652x420.jpeg 652w" sizes="(max-width: 728px) 100vw, 728px" /></p>
-<p>ในช่วงการสาธิตตัว demo ของแอพตัวนี้ รองประธานฝ่าย blockchain business development ของ IBM นามว่า Brigid McDermott ได้ออกมาจำแนกหมวดหมู่ราวๆ 3 หมวดหมู่</p>
-<p>อย่างแรกคืออะไรเป็นตัวแปรหลักๆที่ทำให้มนุษย์เสียสุขภาพและชีวิต</p>
-<p>ยกตัวอย่างเช่นเมื่อช่วงต้นเดือนนี้ที่ผ่านมา โรคซาโมเนลลาได้ที่การระบาดนั้น เมื่อสืบสวนไปแล้วจึงพบว่มีต้นตอมาจากมะละกอลูกหนึ่งที่เป็นตัวการทำให้ผู้คนราวๆ 173 คนติดเชื้อนี้ ส่งผลต้องทำให้เข้าโรงพยาบาลทั้งหมด 58 คน และเสียชีวิต 1 คน อ้างอิงจาก<a href="https://www.cdc.gov/salmonella/kiambu-07-17/index.html">รายงาน</a>ของ Centers for Disease Control and Prevention (CDC) รวมถึง<a href="http://www.who.int/mediacentre/news/releases/2015/foodborne-disease-estimates/en/">รายงาน</a>ขององค์การอนามัยโลกที่กล่าวว่ามีมนุษย์เสียชีวิตจากอาหารเป็นพิษราวๆ 420,000 คนทั่วโลกต่อปีอีกด้วย</p>
-<p>หมวดหมู่ที่สองและสามนั้นคือต้นทุนอันแสนแพงทางด้านความไร้ประสิทธิภาพของของ supply-chain ที่ทำให้เกิดปัญหาด้านโรคภัยไข้เจ็บกับผู้บริโภค อ้างอิงจาก McDermott</p>
-<p>โดยเฉพาะอย่างยิ่ง เธอกล่าวว่าต้นทุนในการเรียกสินค้าอาหารเป็นพิษกลับคืนนั้นจะส่งผลเสียกับผู้ผลิตมากที่สุด แต่ทว่าขั้นตอนในการตรวจสอบหาอาหารที่เป็นพิษในการผลิตนั้นอาจจะใช้เวลานานมาก อาจถึงขั้นสัปดาห์ ซึ่งภายหลังราคาของมันอาจจะลดลง และผู้คนก็อาจจะเลิกซื้อสินค้านั้นไปในท้ายสุด ทำให้ทางผู้ผลิตต้องสูญเสียต้นทุนและรายได้มหาศาล</p>
-<p>จำนวนตัวเลขดังกล่าว หากรวมกันเฉพาะของในวงการอาหารในประเทศสหรัฐฯอาจจะนับได้ตั้งแต่ที่ 4.4 พันล้านดอลลาร์ไปจนถึง 93.2 พันล้านดอลลาร์</p>
-<p>นาง McDermott กล่าวว่า</p>
-<blockquote><p>&#8220;โครงการทำให้อาหารปลอดภัยด้วยเทคโนโลยี Blockchain นั้นเป็นเรื่องที่ดีมากๆ เนื่องจากมันจะช่วยสร้างความโปร่งใสให้กับระบบอาหาร ซึ่งนั่นหมายถึงคุณสามารถที่จะเรียกอาหารเป็นพิษกลับคืนมาได้อย่างรวดเร็ว, มีประสิทธิภาพ และจัดการแก้ไขได้อย่างตรงจุด&#8221;</p></blockquote>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/walmart-kroger-nestle-team-with-ibm-blockchain-to-fight-food-poisoning/">Walmart, Kroger &#038; Nestle และ IBM ใช้ Blockchain เพื่อต่อสู้กับอาหารที่เป็นพิษ</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></content:encoded>
-			<wfw:commentRss>https://siamblockchain.com/2017/08/23/walmart-kroger-nestle-team-with-ibm-blockchain-to-fight-food-poisoning/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>ราคาเหรียญ Ripple พุ่งกว่า 40% บนเว็บกระดานเทรดเกาหลีใต้</title>
-		<link>https://siamblockchain.com/2017/08/23/xrp-price-climbs-40-amid-heightened-korean-won-volume/</link>
-		<comments>https://siamblockchain.com/2017/08/23/xrp-price-climbs-40-amid-heightened-korean-won-volume/#respond</comments>
-		<pubDate>Wed, 23 Aug 2017 01:40:21 +0000</pubDate>
-		<dc:creator><![CDATA[Beam]]></dc:creator>
-				<category><![CDATA[ราคา Ripple]]></category>
-
-		<guid isPermaLink="false">https://siamblockchain.com/?p=5031</guid>
-		<description><![CDATA[<p>ราคาของเหรียญ Ripple (XRP) พุ่งขึ้นมามากกว่า 40% ในช่วงเมื่อคืนที่ผ่านมา ซึ่งหลักๆแล้วมาจากการซื้อขายบนเว็บเทรดบนประเทศเกาหลี ข้อมูลจาก Coinmarketcap ได้เผยให้เห็นว่าเหรียญ XRP หรือเหรียญคริปโตที่รันอยู่บน Blockchain ส่วนตัวของบริษัท Ripple นั้นได้มีการซื้อขายกันที่ราคาประมาณ 0.23 ดอลลาร์ถึง 0.24 ดอลลาร์ ในขณะที่โวลลุ่มการซื้อขายนั้นพุ่งไปเกือบถึง 1 พันล้านดอลลาร์นั้นถูกทำการซื้อขายในสกุลเงินวอนของประเทศเกาหลีใต้ โดยเฉพาะเว็บเทรดสัญชาติเกาหลี Bithumb นั้นที่กินส่วนแบ่งการตลาดโวลลุ่มซื้อขายเหรียญ Ripple ราวๆ 45% ทั่วโลก (ซึ่งมีโวลลุ่มซื้อขาย 24 ชั่วโมงมากกว่า 600 ล้านดอลลาร์) และตามมาติดๆด้วย Coinone และ Korbit ซึ่งการซื้อขายบนเว็บเทรดทั้งหมดนี้คิดเป็นราวๆ 70% ของโวลลุ่มเหรียญ Ripple ทั้งหมด อย่างไรก็ตาม ราคาของเหรียญ Ripple นั้นยังอยู่ต่ำกว่าจุดสูงสุดในประวัติศาสตร์ของเมื่อเดือนพฤษภาคมที่ผ่านมาที่ราคา 0.366 ดอลลาร์ ทว่าข้อมูลจาก Coinmarketcap นั้นเผยว่าโวลลุ่มการซื้อขาย 24 ชั่วโมงที่ผ่านมาถือว่ามากที่สุดเป็นประวัติการณ์ของเหรียญ [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/xrp-price-climbs-40-amid-heightened-korean-won-volume/">ราคาเหรียญ Ripple พุ่งกว่า 40% บนเว็บกระดานเทรดเกาหลีใต้</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></description>
-				<content:encoded><![CDATA[<p>ราคาของเหรียญ Ripple (XRP) พุ่งขึ้นมามากกว่า 40% ในช่วงเมื่อคืนที่ผ่านมา ซึ่งหลักๆแล้วมาจากการซื้อขายบนเว็บเทรดบนประเทศเกาหลี</p>
-<p><img class="alignnone wp-image-5032 size-full" src="https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.37.04-AM.png" alt="" width="1116" height="508" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.37.04-AM.png 1116w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.37.04-AM-300x137.png 300w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.37.04-AM-768x350.png 768w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.37.04-AM-1024x466.png 1024w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.37.04-AM-696x317.png 696w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.37.04-AM-1068x486.png 1068w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.37.04-AM-923x420.png 923w" sizes="(max-width: 1116px) 100vw, 1116px" /></p>
-<p>ข้อมูลจาก Coinmarketcap ได้เผยให้เห็นว่าเหรียญ XRP หรือเหรียญคริปโตที่รันอยู่บน Blockchain ส่วนตัวของบริษัท Ripple นั้นได้มีการซื้อขายกันที่ราคาประมาณ 0.23 ดอลลาร์ถึง 0.24 ดอลลาร์ ในขณะที่โวลลุ่มการซื้อขายนั้นพุ่งไปเกือบถึง 1 พันล้านดอลลาร์นั้นถูกทำการซื้อขายในสกุลเงินวอนของประเทศเกาหลีใต้<img class="alignnone wp-image-5033 size-full" src="https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.19.44-AM.png" alt="" width="1083" height="140" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.19.44-AM.png 1083w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.19.44-AM-300x39.png 300w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.19.44-AM-768x99.png 768w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.19.44-AM-1024x132.png 1024w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.19.44-AM-696x90.png 696w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-9.19.44-AM-1068x138.png 1068w" sizes="(max-width: 1083px) 100vw, 1083px" /></p>
-<p>โดยเฉพาะเว็บเทรดสัญชาติเกาหลี Bithumb นั้นที่กินส่วนแบ่งการตลาดโวลลุ่มซื้อขายเหรียญ Ripple ราวๆ 45% ทั่วโลก (ซึ่งมีโวลลุ่มซื้อขาย 24 ชั่วโมงมากกว่า 600 ล้านดอลลาร์) และตามมาติดๆด้วย Coinone และ Korbit ซึ่งการซื้อขายบนเว็บเทรดทั้งหมดนี้คิดเป็นราวๆ 70% ของโวลลุ่มเหรียญ Ripple ทั้งหมด</p>
-<p>อย่างไรก็ตาม ราคาของเหรียญ Ripple นั้นยังอยู่ต่ำกว่าจุดสูงสุดในประวัติศาสตร์ของเมื่อเดือนพฤษภาคมที่ผ่านมาที่ราคา 0.366 ดอลลาร์ ทว่าข้อมูลจาก Coinmarketcap นั้นเผยว่าโวลลุ่มการซื้อขาย 24 ชั่วโมงที่ผ่านมาถือว่ามากที่สุดเป็นประวัติการณ์ของเหรียญ Ripple เลยก็ว่าได้</p>
-<h2>ข่าวลือเรื่องธนาคาร Kakao</h2>
-<p>สาเหตุหลักๆนั้นน่าจะมาจากข่าวลือในกลุ่มผู้ใช้ cryptocurrency ในประเทศเกาหลี ว่าหนึ่งในธนาคารที่ใหญ่ที่สุดในเกาหลีนามว่า KakaoBank จะเซ็นสัญญาหุ้นส่วนกับ Ripple นั้นทำให้หลายๆคนตื่นตระหนกกับข่าวดังกล่าวนี้ และรีบซื้อเหรียญ Ripple กันอย่างรวดเร็ว</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-9369348762774300"
-     data-ad-slot="4635445870"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<blockquote class="twitter-tweet" data-lang="en">
-<p dir="ltr" lang="en">If <a href="https://twitter.com/Ripple">@Ripple</a> announce the partnership with KakaoBank, Someone leaked this news before some day ago in Korean crypto currency community.</p>
-<p>— Bitcoin_Korea (@Bitcoin_Korea) <a href="https://twitter.com/Bitcoin_Korea/status/900044628124090368">August 22, 2017</a></p></blockquote>
-<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br />
-ก่อนหน้านี้ในประเทศไทยเราก็ได้มี<a href="https://siamblockchain.com/2017/06/30/scb-launches-ripple-blockchain-money-transfer-platform/">ธนาคารไทยพาณิชย์</a>ที่ประกาศเปิดตัวระบบโอนเงินระหว่างประเทศไทยญี่ปุ่นโดยใช้ Blockchain ของ Ripple เมื่อเดือนมิถุนายนที่ผ่านมา แต่การประกาศดังกล่าวก็ไม่ได้มีผลกับราคาของ XRP เสียเท่าไร</p>
-<p>ในขณะที่เหรียญยอดนิยมอื่นๆในไทยอย่างเช่น OMG นั้นราคาก็ยังไซด์เวย์คงตัวอยู่ที่ระดับ 7 ดอลลาร์ ซึ่งในขณะที่รายงานข่าวอยู่นี้ได้ตกลงมาอยู่ที่อันดับที่ 13 ของโลก และมีมูลค่าตลาดรวมอยู่ที่ 763 ล้านดอลลาร์</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/xrp-price-climbs-40-amid-heightened-korean-won-volume/">ราคาเหรียญ Ripple พุ่งกว่า 40% บนเว็บกระดานเทรดเกาหลีใต้</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></content:encoded>
-			<wfw:commentRss>https://siamblockchain.com/2017/08/23/xrp-price-climbs-40-amid-heightened-korean-won-volume/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>รายการ What The Coin ในไทยต้องการแจก Bitcoin ให้กับผู้ชมแบบฟรีๆ</title>
-		<link>https://siamblockchain.com/2017/08/23/what-the-coin-wants-to-give-its-audiences-free-bitcoin/</link>
-		<comments>https://siamblockchain.com/2017/08/23/what-the-coin-wants-to-give-its-audiences-free-bitcoin/#respond</comments>
-		<pubDate>Wed, 23 Aug 2017 00:30:56 +0000</pubDate>
-		<dc:creator><![CDATA[Beam]]></dc:creator>
-				<category><![CDATA[ข่าว Bitcoin]]></category>
-		<category><![CDATA[ในประเทศ]]></category>
-
-		<guid isPermaLink="false">https://siamblockchain.com/?p=5021</guid>
-		<description><![CDATA[<p>เทคโนโลยี Blockchain หลายๆวงการในปัจจุบันเริ่มนำไปปรับใช้สิ่งรอบตัวๆนั้น ดูเหมือนว่าจะเริ่มที่จะเข้ามา disrupt หรือปฏิวัติโลกเราเข้าไปในทุกขณะ ไม่ว่าจะเป็นเรื่องของการทำฟัน, การไปรษณีย์ในไทย, หรือการส่งเงินระหว่างธนาคารต่างประเทศ ซึ่งจะว่าไปแล้วต้องขอบคุณเหรียญคริปโตรุ่นบุกเบิกอย่าง Bitcoin ที่มีการนำเอาเทคโนโลยีนี้มาเผยให้เป็นที่แพร่หลาย ด้วยธรรมชาติของมันที่ทำให้การส่งเหรียญหากันทั่วโลกใช้เวลาเพียงแค่ระดับนาทีนั้น ทำให้ปัจจุบันมันกลายเป็นที่นิยมทั่วโลก ทว่าจุดที่น่าสนใจคือเมื่อรายการทางช่อง YouTube ในประเทศไทยช่องหนึ่งที่ได้ยกระดับการแจกเงินรางวัลผ่านรายการให้เหนือไปอีกขั้นด้วยการแจก Bitcoin ให้กับผู้ชมรายการที่มาดูแบบสดๆ มีชื่อว่า What The Coin รายการทอล์คโชว์แบบ LIVE ที่มีสาระเกี่ยวกับเทคโนโลยี Blockchain และการลงทุนในตัวเหรียญ Cryptocurrency ก่อตั้งโดยคุณสกลกรย์ สระกวี อดีต CEO ของบริษัท Garena ซึ่งอ้างอิงจากคลิปวีดีโอดังกล่าวที่นาทีที่ 21:26 ทางคุณสกลกรย์ได้ประกาศว่าจะทำการแจก Bitcoin ช่วงท้ายรายการ ให้กับผู้ที่เข้าร่วมกิจกรรมโดยการกดแชร์วีดีโอตัวนี้โดยจะทำการสุมผู้โชคดีเพื่อแจกเป็นคนละจำนวน 0.01 BTC (ประมาณ 1,400 บาท) ทั้งหมด 10 รางวัล ซึ่งก็รวมทั้งหมดที่ 0.1 BTC เมื่อรายการเกมโชว์นำเอา Bitcoin มาประยุกต์ใช้แจกเป็นรางวัล [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/what-the-coin-wants-to-give-its-audiences-free-bitcoin/">รายการ What The Coin ในไทยต้องการแจก Bitcoin ให้กับผู้ชมแบบฟรีๆ</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></description>
-				<content:encoded><![CDATA[<p>เทคโนโลยี <a href="https://siamblockchain.com/2017/06/04/blockchain-%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3/">Blockchain</a> หลายๆวงการในปัจจุบันเริ่มนำไปปรับใช้สิ่งรอบตัวๆนั้น ดูเหมือนว่าจะเริ่มที่จะเข้ามา disrupt หรือปฏิวัติโลกเราเข้าไปในทุกขณะ ไม่ว่าจะเป็นเรื่องของ<a href="https://siamblockchain.com/2017/08/20/ethereum-based-token-seeks-improve-dental-industry/">การทำฟัน</a>, <a href="https://siamblockchain.com/2017/08/16/thailand-post-will-begin-using-blockchain-tech-year/">การไปรษณีย์ในไทย</a>, หรือ<a href="https://siamblockchain.com/2017/06/30/scb-launches-ripple-blockchain-money-transfer-platform/">การส่งเงินระหว่างธนาคารต่างประเทศ</a> ซึ่งจะว่าไปแล้วต้องขอบคุณเหรียญคริปโตรุ่นบุกเบิกอย่าง Bitcoin ที่มีการนำเอาเทคโนโลยีนี้มาเผยให้เป็นที่แพร่หลาย ด้วยธรรมชาติของมันที่ทำให้การส่งเหรียญหากันทั่วโลกใช้เวลาเพียงแค่ระดับนาทีนั้น ทำให้ปัจจุบันมันกลายเป็นที่นิยมทั่วโลก ทว่าจุดที่น่าสนใจคือเมื่อรายการทางช่อง YouTube ในประเทศไทยช่องหนึ่งที่ได้ยกระดับการแจกเงินรางวัลผ่านรายการให้เหนือไปอีกขั้นด้วยการแจก Bitcoin ให้กับผู้ชมรายการที่มาดูแบบสดๆ</p>
-<p>มีชื่อว่า <a href="https://www.youtube.com/watch?v=BEKWUpmJa_E">What The Coin</a> รายการทอล์คโชว์แบบ LIVE ที่มีสาระเกี่ยวกับเทคโนโลยี Blockchain และการลงทุนในตัวเหรียญ Cryptocurrency ก่อตั้งโดยคุณสกลกรย์ สระกวี อดีต CEO ของบริษัท Garena ซึ่งอ้างอิงจากคลิปวีดีโอดังกล่าวที่นาทีที่ 21:26 ทางคุณสกลกรย์ได้ประกาศว่าจะทำการแจก Bitcoin ช่วงท้ายรายการ ให้กับผู้ที่เข้าร่วมกิจกรรมโดยการกดแชร์วีดีโอตัวนี้โดยจะทำการสุมผู้โชคดีเพื่อแจกเป็นคนละจำนวน 0.01 BTC (ประมาณ 1,400 บาท) ทั้งหมด 10 รางวัล ซึ่งก็รวมทั้งหมดที่ 0.1 BTC</p>
-<figure id="attachment_5022" style="width: 498px" class="wp-caption aligncenter"><img class="wp-image-5022 size-large" src="https://siamblockchain.com/wp-content/uploads/2017/08/21035204_10214128753071609_521325445_o-498x1024.png" alt="" width="498" height="1024" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/21035204_10214128753071609_521325445_o-498x1024.png 498w, https://siamblockchain.com/wp-content/uploads/2017/08/21035204_10214128753071609_521325445_o-146x300.png 146w, https://siamblockchain.com/wp-content/uploads/2017/08/21035204_10214128753071609_521325445_o-768x1579.png 768w, https://siamblockchain.com/wp-content/uploads/2017/08/21035204_10214128753071609_521325445_o-696x1431.png 696w, https://siamblockchain.com/wp-content/uploads/2017/08/21035204_10214128753071609_521325445_o-1068x2195.png 1068w, https://siamblockchain.com/wp-content/uploads/2017/08/21035204_10214128753071609_521325445_o-204x420.png 204w, https://siamblockchain.com/wp-content/uploads/2017/08/21035204_10214128753071609_521325445_o.png 1080w" sizes="(max-width: 498px) 100vw, 498px" /><figcaption class="wp-caption-text">หลักฐานการแจกรางวัล อ้างอิงจากคุณสกลกรย์</figcaption></figure>
-<h2>เมื่อรายการเกมโชว์นำเอา Bitcoin มาประยุกต์ใช้แจกเป็นรางวัล</h2>
-<p>แม้ว่าทาง What The Coin จะไม่ใช่รายแรกที่จัดกิจกรรมแจก Bitcoin ผ่านทางรายการ แต่กิจกรรมแจกรางวัลดังกล่าวนี้สร้างคำถามที่น่าสนใจขึ้นมาข้อหนึ่งว่า &#8220;แล้วถ้ารายการเกมโชว์ทางโทรทัศน์มีการแจกรางวัลเป็น Bitcoin ให้กับผู้ชมทางบ้านบ้างล่ะ?&#8221; สิ่งหนึ่งที่หลายๆคนคิดตามมาคงจะเป็นไอเดียที่สามารถนำมาต่อยอดได้ไม่รู้จักจบจักสิ้น</p>
-<p>ด้วยธรรมชาติของ Bitcoin ที่สามารถส่งหากันได้ทั่วโลกในระดับนาทีนั้น การแจก Bitcoin ให้กับผู้ชมทางบ้านเพื่อจุดประสงค์ทางการตลาดและกิจกรรมสามารถที่จะทำได้ง่ายดายกว่าเมื่อก่อนมาก โดยข้อได้เปรียบหลักๆที่ทางผู้จัดรายการจะได้ไปก็คือความสะดวกและรวดเร็วที่ไม่ต้องไปขอเก็บชื่อ, เบอร์โทรศัพท์ และเลขที่บัญชีธนาคารของผู้ชนะรางวัลให้ยุ่งยาก เพียงแค่ทำ platform ผ่าน internet แบบง่ายๆที่ให้ทางผู้ชมทางบ้านสามารถส่ง address ของ Bitcoin ของพวกเขาเข้าไปในระบบนั้นๆแบบไร้ตัวตน หรือจะใช้ระบบ SMS ให้ส่ง address เข้าไปก็ได้เช่นกัน ยกตัวอย่างเช่นรายการประเภทที่ให้ผู้ชมทางบ้านร่วมสนุกด้วยการตอบคำถามหรือโหวตนั้น ก็สามารถที่จะใช้วิธีการนี้ก็ได้เช่นกัน</p>
-<p>โดยในลักษณะนั้นจะช่วยให้ทางผู้ประกอบการรายการโทรทัศน์สามารถที่จะประหยัดเวลาในการโอนเงินให้กับผู้เข้าร่วมรายการทางโทรทัศน์ที่อาจจะมีตั้งแต่หลายสิบไปจนถึงหลายร้อยคนได้ ในขณะที่ผู้เข้าร่วมรายการก็จะได้ประโยชน์ทางด้านความเป็นส่วนตัวหรือการไร้ตัวตน ในกรณีที่พวกเขาไม่อยากจะเปิดชื่อให้ทุกๆคนรู้เช่นกัน</p>
-<h2>Cryptocurrency สร้างกำไรได้ในหลายๆด้าน</h2>
-<p>โดยอ้างอิงจากในคลิปวีดีโอของ What The Coin นั้น ทางรายการยังได้มีการสัมภาษณ์คุณเต้จาก TH Miner หรือนักขุด Bitcoin มืออาชีพอีกด้วย โดยนาทีที่ 28:30 ที่เขาได้ออกมาอธิบายถึงการขุด altcoin โดยใช้การ์ดจอและเมนบอร์ดนั้น สามารถที่จะสร้างรายได้ราวๆ 9,000 บาทต่อวันถ้าหากสร้างริกขุดที่มีการ์ดจอแบบหลายๆใบ โดยการ์ดจอ 1 ตัวนั้นสามารถที่จะสร้างรายได้วันละ 50-60 บาท อ้างอิงจากคุณเต้</p>
-<blockquote><p>&#8220;การให้ผลตอบแทนเนี่ย นับตามจำนวนการ์ดเลยนะครับ[&#8230;]ผมคำนวณให้แบบเบสิคก็การ์ดละ 50-60 บาทต่อวัน แต่ว่าเราต้องทำงาน 24 ชั่วโมงต่อวัน&#8221;</p></blockquote>
-<p>กล่าวโดยคุณเต้</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-9369348762774300"
-     data-ad-slot="4635445870"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<p>และที่น่าสนใจอีกก็คือ คุณสกลกรย์ยังได้มีการเล่าถึงคนรู้จักของเขา ที่นาทีที่ 1:25:35 ว่าเคยซื้อเหรียญ <a href="https://siamblockchain.com/2017/08/08/omisego-%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3/">OmiseGO (OMG)</a> วันแรกที่พวกเขาเปิดขาย ICO ด้วยเงินลงทุนแบบเทหมดหน้าตักที่ 7 ล้านบาทและภายหลังราคาของมันขึ้นมา 30 เท่า ทว่านักลงทุนที่ไม่เปิดเผยชื่อคนนั้นก็ยังไม่ขาย แม้ว่าจะได้กำไรถึง 200 ล้านบาทแล้วก็ตาม</p>
-<blockquote><p>&#8220;แต่มันขึ้นมาถึง 200 ล้าน ใจเขาก็ยังไม่ขายนะ เค้ายังคิดว่ามันจะไปอีก&#8221;</p></blockquote>
-<p>กล่าวโดยคุณสกลกรย์</p>
-<p>เหรียญ OmiseGO คือเหรียญที่ถูกสร้างขึ้นโดยบริษัท Omise หรือบริษัทลูกครึ่งไทยญี่ปุ่น โดยบริษัทดังกล่าวก่อนหน้านี้เคยออกมาประกาศซื้อต่อกิจการบริษัท Paysbuy หรือหนึ่งในผู้ให้บริการ payment gateway ที่ใหญ่ที่สุดของไทย รวมถึงเปิดตัวระบบ <a href="https://www.dailynews.co.th/economic/591071">Face Pay</a> หรือระบบอัจฉริยะจ่ายเงินด้วยใบหน้าอีกด้วย</p>
-<p>ราคาของเหรียญดังกล่าวก่อนหน้านี้เมื่อช่วงเดือนที่แล้วมีราคาอยู๋ที่ราวๆ 1.30 ดอลลาร์หรือประมาณ 30 กว่าบาทเท่านั้น ทว่าภายหลังการ<a href="https://siamblockchain.com/2017/08/15/omisego-and-vitalik-meets-thaibank/">เข้าพบปะพูดคุยกับธนาคารแห่งประเทศไทย</a>ของทีม OmiseGO และบิดาของ Ethereum อย่างนาย Vitalik เมื่อช่วงกลางสัปดาห์ของเดือนสิงหาคมนั้น ภายหลังส่งผลให้ราคาของมันพุ่งขึ้นมาอย่างรุนแรงจนไปแตะ<a href="https://siamblockchain.com/2017/08/17/omise-go-hit-9usd-thai-hit-300thb-reaching-10/">จุดสูงสุดในประวัติศาสตร์</a>ที่ 9.30 ดอลลาร์ หรือประมาณ 300 บาท อ้างอิงจาก Coinmarketcap</p>
-<h2>วงการสื่อด้าน Blockchain และ Cryptocurrency ในไทยกำลังอยู่ในช่วงเริ่มต้น</h2>
-<p>ปัจจุบัน สื่อทางด้าน Blockchain และ Cryptocurrency ในประเทศไทยที่ถูกก่อตั้งขึ้นเพื่อให้ความรู้ชาวไทยนั้นยังถือว่ามีค่อนข้างน้อย ซึ่งแม้ว่าสื่อกระแสหลักส่วนใหญ่จะไม่ได้ให้ความสนใจกับวงการนี้มากเป็นพิเศษ แต่บางครั้งพวกเขาก็จะมีการลงข่าวเพื่อรายงานความเป็นไปทางด้านสกุลเงินดิจิตอลในไทย ซึ่งก็มีทั้ง<a href="https://siamblockchain.com/2017/08/08/thailand-sec-and-centralbank-is-studying-ico/">ด้านบวก</a>และ<a href="https://siamblockchain.com/2017/07/31/manager-says-bitcoin-is-a-catastrophe/">ด้านลบ</a>คละๆกันไป</p>
-<p>โดยอ้างอิงจากคุณสกลกรย์ในการให้สัมภาษณ์กับสยามบล็อกเชนนั้น การเปิดตัว What The Coin นั้นทำขึ้นเพราะต้องการที่จะให้ความรู้กับชาวไทยในด้านที่ตัวเองถนัดอยู่แล้ว ซึ่งก็คือ cryptocurrency โดยเขาบอกว่า</p>
-<p>&#8220;เรามีน้องๆ ที่ทำทีม production ทำรายการอยู่แล้ว ก็เลยอยากที่จะทำรายการขึ้นมาซักรายการนึง โดยเอาเรื่องที่ตัวเองถนัดมาทำเป็นรายการสด Live talk เน้นให้ความรู้จริงๆ กับ คนที่ต้องการจะรู้จัก Cryptocurrency หรือคนที่รู้จักดีอยู่แล้ว ได้เข้าใจมากยิ่งขึ้น โดยการนำกูรู คนในวงการ Bitcoin ของไทยมาร่วมพูดคุยในรายการ&#8221;</p>
-<p>อดีต CEO ของ Garena ผู้นี้ยังอธิบายถึงวิสัยทัศน์ของเขาเกี่ยวกับอนาคตของวงการ Bitcoin โดยเขามองว่าปัจจุบันคนรอบๆตัวของเขาเริ่มหันมาให้ความสนใจใน Bitcoin มากกว่าแต่ก่อนมาก พร้อมทั้งคาดว่าราคาน่าจะเพิ่มขึ้นไปอีก 10-50 เท่า</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-9369348762774300"
-     data-ad-slot="4635445870"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<blockquote><p>&#8220;บิทคอยน์คืออนาคต ทุกวันนี้คนรอบๆ ตัว ทั้งในชีวิตจริง และโลก Social ก็ตื่นตัวใน bitcoin มากขึ้นกว่าเมื่อก่อนมาก หลายๆ คนเริ่มหันมาลงทุนซื้อ บิทคอยน์เก็บไว้ และมองว่ามันคือทรัพย์สินจริงๆ ที่มีมูลค่า แค่นี้ bitcoin ก็ล้มยากแล้วครับ ยิ่งถ้าคนทั้งโลกหันมาถือกันมากขึ้นแต่ supply ยังเท่าเดิม มองราคา 10-50 เท่า ใน 5 ปี นี้ ไว้ได้เลย&#8221;</p></blockquote>
-<p>กล่าวโดยคุณสกลกรย์</p>
-<p>ก่อนหน้านี้เขาก็เคยออกมา<a href="https://siamblockchain.com/2017/08/07/%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%95%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%A1%E0%B8%99%E0%B8%B2-thminer-bitcoin-workshop-2017/">ทำนายราคาของ Bitcoin</a> ในอนาคตไว้แล้วในงาน TH Miner Bitcoin Workshop 2017 ที่ผ่านมา โดยเขาบอกว่าราคาของ Bitcoin นั้นจะพุ่งไปถึง 7,000 ดอลลาร์ภายในปีนี้อีกด้วย</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/23/what-the-coin-wants-to-give-its-audiences-free-bitcoin/">รายการ What The Coin ในไทยต้องการแจก Bitcoin ให้กับผู้ชมแบบฟรีๆ</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></content:encoded>
-			<wfw:commentRss>https://siamblockchain.com/2017/08/23/what-the-coin-wants-to-give-its-audiences-free-bitcoin/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>สงคราม Bitcoin กับ SegWit2x ได้เริ่มต้นขึ้นแล้ว</title>
-		<link>https://siamblockchain.com/2017/08/22/bitcoins-battle-segwit2x-begun/</link>
-		<comments>https://siamblockchain.com/2017/08/22/bitcoins-battle-segwit2x-begun/#respond</comments>
-		<pubDate>Tue, 22 Aug 2017 13:07:38 +0000</pubDate>
-		<dc:creator><![CDATA[Beam]]></dc:creator>
-				<category><![CDATA[Featured]]></category>
-		<category><![CDATA[ข่าว Bitcoin]]></category>
-
-		<guid isPermaLink="false">https://siamblockchain.com/?p=5012</guid>
-		<description><![CDATA[<p>&#8220;ดาวน์โหลด BTC1&#8221; กลายเป็นส่วนหนึ่งของคำพูดที่ทาง BitPay ออกมากล่าวบนบล็อกของพวกเขาเมื่อสัปดาห์ที่แล้ว ซึ่งคำพูดชักชวนนี้มีขึ้นเพื่อต้องการให้นักขุด Bitcoin ทำการอัพเดตซอฟต์แวร์ของพวกเขาล่วงหน้าก่อนการอัพเกรด Segwit2x ที่จะมาถึงนี้ แต่อย่างไรก็ตาม แม้การออกมาโพสของพวกเขาจะไม่มีเจตนาทำให้ผู้ใช้งานโกรธนั้น แต่ทางฟีดแบคจากผู้ใช้งานส่วนใหญ่กลับกลายเป็นไปด้วยด้านลบด้วยความโมโห สาเหตุหลักๆนั้นเป็นเพราะว่าทาง BitPay ออกมากล่าวว่าพวกเขาจะให้การสนับสนุน &#8220;BTC1&#8221; หรือซอฟต์แวร์อีกตัวหนึ่งที่สนับสนุน SegWit2x และการเพิ่มขนาดบล็อก 2MB แต่ไม่ได้รับการสนับสนุนจากทาง Bitcoin Core ซึ่งเป็นตัว node ที่มีคนให้การสนับสนุนมากที่สุดในเครือข่ายของ Bitcoin ซึ่งการเลือกที่จะแยกตัวดังกล่าวอาจส่งผลให้เกิดปัญหาการไม่รองรับ Bitcoin ของผู้ใช้งานได้ สำหรับผู้ที่ไม่เข้าใจว่าประโยคข้างต้นคืออะไร ขออธิบายก่อนสักเล็กน้อย เนื่องด้วยการที่เครือข่ายธุรกรรมของ Bitcoin ถูกรันและทำให้ใช้งานทั่วโลกได้โดยกลุ่มนักขุดและผู้ที่เสียสละเครื่องคอมพิวเตอร์ของตัวเองเพื่อเปิด node ของ Bitcoin โดย node ของ Bitcoin ที่ว่านี้คือ &#8220;โปรแกรมบนเครื่องคอมพิวเตอร์&#8221; ที่ถูกรันและ sync กับเครือข่ายของทุกคนที่เปิด node เหมือนกัน โดยโปรแกรมที่ว่านี้จะใช้เก็บข้อมูลธุรกรรมของ Bitcoin ที่มีมาตั้งแต่เริ่มต้น Bitcoin (ปี [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/22/bitcoins-battle-segwit2x-begun/">สงคราม Bitcoin กับ SegWit2x ได้เริ่มต้นขึ้นแล้ว</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></description>
-				<content:encoded><![CDATA[<blockquote><p>&#8220;ดาวน์โหลด BTC1&#8221;</p></blockquote>
-<p>กลายเป็นส่วนหนึ่งของคำพูดที่ทาง BitPay ออกมากล่าวบน<a href="https://blog.bitpay.com/bitcore-segwit-activation/">บล็อก</a>ของพวกเขาเมื่อสัปดาห์ที่แล้ว ซึ่งคำพูดชักชวนนี้มีขึ้นเพื่อต้องการให้นักขุด Bitcoin ทำการอัพเดตซอฟต์แวร์ของพวกเขาล่วงหน้าก่อนการอัพเกรด Segwit2x ที่จะมาถึงนี้ แต่อย่างไรก็ตาม แม้การออกมาโพสของพวกเขาจะไม่มีเจตนาทำให้ผู้ใช้งานโกรธนั้น แต่ทางฟีดแบคจากผู้ใช้งานส่วนใหญ่กลับกลายเป็นไปด้วยด้านลบด้วยความโมโห</p>
-<p>สาเหตุหลักๆนั้นเป็นเพราะว่าทาง BitPay ออกมากล่าวว่าพวกเขาจะให้การสนับสนุน &#8220;BTC1&#8221; หรือซอฟต์แวร์อีกตัวหนึ่งที่สนับสนุน SegWit2x และการเพิ่มขนาดบล็อก 2MB แต่ไม่ได้รับการสนับสนุนจากทาง Bitcoin Core ซึ่งเป็นตัว node ที่มีคนให้การสนับสนุน<a href="https://coin.dance/nodes">มากที่สุด</a>ในเครือข่ายของ Bitcoin ซึ่งการเลือกที่จะแยกตัวดังกล่าวอาจส่งผลให้เกิดปัญหาการไม่รองรับ Bitcoin ของผู้ใช้งานได้</p>
-<p>สำหรับผู้ที่ไม่เข้าใจว่าประโยคข้างต้นคืออะไร ขออธิบายก่อนสักเล็กน้อย เนื่องด้วยการที่<a href="https://siamblockchain.com/2017/06/04/blockchain-%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3/">เครือข่ายธุรกรรมของ Bitcoin</a> ถูกรันและทำให้ใช้งานทั่วโลกได้โดย<a href="https://siamblockchain.com/%e0%b8%81%e0%b8%b2%e0%b8%a3-%e0%b8%82%e0%b8%b8%e0%b8%94-bitcoin-%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3/">กลุ่มนักขุด</a>และผู้ที่เสียสละเครื่องคอมพิวเตอร์ของตัวเองเพื่อเปิด node ของ Bitcoin โดย node ของ Bitcoin ที่ว่านี้คือ &#8220;โปรแกรมบนเครื่องคอมพิวเตอร์&#8221; ที่ถูกรันและ sync กับเครือข่ายของทุกคนที่เปิด node เหมือนกัน โดยโปรแกรมที่ว่านี้จะใช้เก็บข้อมูลธุรกรรมของ Bitcoin ที่มีมาตั้งแต่เริ่มต้น Bitcoin (ปี 2009) จนถึงปัจจุบัน อีกทั้งยังใช้เพื่อยืนยันการส่งธุรกรรมของผู้ใช้งาน Bitcoin อีกด้วย ทว่าปัจจุบัน node ตัวนี้มีหลายเวอร์ชัน ซึ่งตัวที่เราใช้กันอยู่ปัจจุบันก็คือ Bitcoin Core ที่มีผู้สนับสนุนมากที่สุด ดังภาพด้านล่าง ในขณะที่ Bitcoin-ABC คือของ <a href="https://siamblockchain.com/category/news/%e0%b8%82%e0%b9%88%e0%b8%b2%e0%b8%a7-bitcoin-cash/">Bitcoin Cash</a> หากจะอธิบายง่ายๆก็คือแต่ละเวอร์ชันที่ไม่เหมือนกันก็จะไม่รองรับการทำงานร่วมกันนั่นเอง และหากเราโอน Bitcoin ไปหา address ที่ถูกเก็บอยู่ใน node ของ Bitcoin-ABC หรือ BTC1 ก็จะใช้งานร่วมกันไม่ได้</p>
-<figure id="attachment_5013" style="width: 2438px" class="wp-caption alignnone"><img class="size-full wp-image-5013" src="https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-22-at-7.27.57-PM.png" alt="" width="2438" height="1064" srcset="https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-22-at-7.27.57-PM.png 2438w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-22-at-7.27.57-PM-300x131.png 300w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-22-at-7.27.57-PM-768x335.png 768w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-22-at-7.27.57-PM-1024x447.png 1024w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-22-at-7.27.57-PM-696x304.png 696w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-22-at-7.27.57-PM-1068x466.png 1068w, https://siamblockchain.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-22-at-7.27.57-PM-962x420.png 962w" sizes="(max-width: 2438px) 100vw, 2438px" /><figcaption class="wp-caption-text">จำนวน node ทั้งหมดของ Bitcoin ทั่วโลก</figcaption></figure>
-<p>กลับมาที่บทความ หลังจากนั้นผู้คนส่วนใหญ่ก็ออกมาแสดงความ<a href="https://twitter.com/i/moments/898288070591520768">โมโหและ</a>ต่อต้านการตัดสินใจของ BitPay มากมายรวมถึงผู้ที่มีชื่อเสียงในวงการ Blockchain ด้วย</p>
-<p>ผู้สร้าง Lightning Network นามว่า Tadge Dryja <a href="https://twitter.com/tdryja/status/898208222716334081">เรียกมันว่า</a> &#8220;ตัว malware ดีๆนี่เอง&#8221; ในขณะที่ผู้สนับสนุน Bitcoin Core นามว่า John Newbery ถึงกลับออกมา<a href="https://twitter.com/jfnewbery/status/898220806379012097">พูดว่า</a> โพสนั้นเต็มไปด้วย &#8220;ความไม่น่าไว้ใจ้และอันตราย&#8221;</p>
-<p>หลายๆคนที่ออกมาแสดงความไม่พอใจกล่าวหา BitPay ว่ามีความเต็มใจที่จะทำให้ผู้ใช้งานเกิดความสับสน ซึ่งก็ไม่ต่างจากการที่ออกมาบอกให้ผู้ใช้งานอัพเกรดโทรศัพท์ iPhone ของพวกเขาเพื่อที่โทรศัพท์ของพวกเขาจะได้ส่งข้อความหาคนอื่นๆไม่ได้อีกต่อไป</p>
-<p>ซึ่งการออกมาวิพากษ์วิจารณ์ดังกล่าวนั้นบางทีอาจจะเกี่ยวกับเรื่องของโรดแมปในอนาคตของ Bitcoin และการออกมาประกาศสงครามใน network ของ Bitcoin เพื่อแย่งชิงความเป็นหนึ่งมากกว่า</p>
-<p>ยิ่งไปกว่านั้นซอฟต์แวร์ BTC1 เกิดขึ้นมาท่ามกลางความขัดแย้งในกลุ่มผู้ใช้งานส่วนมาก เนื่องจาก<a href="https://www.coindesk.com/explainer-what-is-segwit2x-and-what-does-it-mean-for-bitcoin/">ข้อเสนอ</a>ดังกล่าวนั้นถูกทำขึ้นเพื่อตกลงกันเฉพาะในกลุ่มนักขุด Bitcoin, บริษัท, และนักพัฒนาเท่านั้น และไม่ได้มีการตัดสินใจของกลุ่มผู้ใช้งานเข้าไปร่วมเลยแม้แต่น้อย ทว่าพวกเขากลับอ้างว่าพวกเขาคือตัวแทนของผู้ใช้งานโดยรวมทั้งหมดทั่วโลกที่ต้องการจะมีการให้เกิดการ hard fork เพื่อเพิ่มขนาด block ในเดือนพฤศจิกายนที่จะถึงนี้</p>
-<p>และแม้ว่า SegWit2x นั้นจะไม่ได้ถูก<a href="https://siamblockchain.com/2017/08/17/block-494784-segwit2x-developers-set-date-bitcoin-hard-fork/">วางแผน</a>เพื่อเปิดตัวโค้ดสำหรับการ hard fork ในอีกสองสามเดือนนั้น แต่แนวคิดดังกล่าวก็อาจจะกลายมาเป็นต้นเหตุแห่งการ<a href="https://siamblockchain.com/2017/08/03/could-segwit2x-lead-to-three-different-bitcoins/">แยกตัว Bitcoin ออกมาเป็นเหรียญที่สาม</a>ถัดจาก Bitcoin Cash ก็อาจเป็นได้</p>
-<h2>การทะเลาะกันในกลุ่มกลายเป็นวัฒนธรรมของ Bitcoin ไปซะแล้ว</h2>
-<p>สงครามเริ่มต้นขึ้นแล้ว</p>
-<p>เมื่อหนึ่งในนักพัฒนาของ Bitcoin Core ถึงกับออกมาแบนนาย Jeff Garzik หรือหัวหน้านักพัฒนา BTC1 อย่างเป็นทางการ หลังจากที่เขามาช่วยมีส่วนร่วมการพัฒนาโปรเจคดังกล่าวบน GitHub หลังจากการประกาศของ BitPay</p>
-<p>แม้ว่าเรื่องนี้อาจจะไม่เป็นที่น่าตกใจสำหรับใครหลายๆคน เพราะว่านาย Garzik นั้นเคยหยุดช่วยเหลือกลุ่ม Bitcoin Core ไปตั้งแต่เมื่อปี 2014 แล้ว แต่ทว่าการออกมาทำแบบนี้ก็ไม่ต่างจากการประกาศสงครามของเขานั่นเอง</p>
-<p>หลายๆคนถึงกับเชื่อว่านาย Garzik นั้นคือผู้อยู่เบื้องหลังการเกณฑ์ผู้สนับสนุนและแนวร่วมไม่ว่าจะเป็นกลุ่มบริษัทต่างๆ เพื่อแผนการในการครอบครอง Bitcoin ให้เป็นของพวกเขาเองเพื่อประโยชน์ส่วนตน</p>
-<p>และก็มีอีกหลายๆคนที่ตีตราว่านาย Garzik นั้นไม่ต่างอะไรกับ<a href="https://twitter.com/MrHodl/status/899663272999362560">นักการเมือง</a>ที่บางครั้งเวลาเขาเข้าไปแสดงความเห็นใน community ของ Bitcoin ก็จะ<a href="https://twitter.com/AKWAnalytics/status/898322163249197056">ถูกขอเชิญให้ออก</a> (บางทีก็ไล่ออก) นาย Garzik เคยเป็นอดีตลูกจ้างของ BitPay และตอนนี้กลายเป็น CEO ของบริษัทสตาร์ทอัพนามว่า Bloq</p>
-<p>กระนั้น นาย Garzik ก็มีผู้ที่คอยออกมาปกป้องเขาเช่นกัน โดยเฉพาะกลุ่มผู้สนับสนุน SegWit2x นาย Erik Voorhees หรือผู้ก่อตั้งเว็บ ShapeShift ได้ออกมามองว่าการวิพากษ์วิจารณ์ดังกล่าวนี้ยังคงเหมือนเคย เนื่องจากพวกเขา<a href="https://twitter.com/ErikVoorhees/status/898558200001069057">ไม่ชอบเปิดรับสิ่งใหม่ๆ</a></p>
-<p>ในขณะที่ผู้ใช้งานคนอื่นๆก็ออกมาแสดงความไม่เห็นด้วยอย่างมีสีสัน</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-9369348762774300"
-     data-ad-slot="4635445870"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<h2>อันตราย, อันตราย</h2>
-<p>อีกจุดหนึ่งที่น่าสนใจในการต่อสู้ของสงครามครั้งนี้คือแนวคิดเรื่องของความปลอดภัย ที่แต่ละฝ่ายต่างก็ใช้เวลาของพวกเขาในการโจมตีกันไปมา โดยอ้างว่าแนวคิดของแต่ละฝ่ายนั้นจะทำให้เงินของผู้ใช้งานมีความเสี่ยง</p>
-<p>ทว่านั่นก็ยังไม่เท่าหัวข้อการต่อสู้เรื่อง &#8220;การป้องการโจมตีแบบ replay&#8221; (หรือป้องกันการนำ Bitcoin ไปใช้จ่ายสองที)</p>
-<p>หลักๆก็คือถ้าหากทาง SegWit2x ตัดสินใจที่จะ hard fork เพื่อให้ขนาดบล็อกของ Bitcoin กลายเป็นขนาด 2MB และ chain ของ Bitcoin ถูกแยกออกเป็นสองตัวนั้น การโจมตีแบบ replay อาจจะทำให้ผู้ใช้งานบางคนและบริษัทต้องสูญเสียเงิน ซึ่งในมุมมองของทีม Bitcoin Core นั้น พวกเขาคิดว่าผู้ที่สนับสนุนข้อตกลง SegWit2x ควรจะเป็นฝ่ายหาวิธีป้องกันการโจมตีแบบ replay</p>
-<p>ซึ่งในลักษณะนี้คงจะไม่ต่างจากเหตุการณ์ของ Ethereum เมื่อ<a href="https://www.coindesk.com/rise-replay-attacks-ethereum-divide/">ปีที่แล้ว</a>ที่ทางนักพัฒนาของ Ethereum นั้นแยกตัวออกไปพัฒนา Ethereum Classic หรือตัว Blockchain ดั้งเดิมของ Ethereum ที่ไม่ต้องการจะ hard fork แต่ทว่าก็ถูกผู้ใช้งานส่วนใหญ่ทอดทิ้ง</p>
-<p>ทว่าการต่อสู้ของพวกเขานั้น คนที่เจ็บกลับไม่ใช่นักสู้ แต่กลับกลายเป็นผู้ใช้อย่างพวกเรา ในช่วงนั้นมีผู้ที่สูญเสีย ETH จากการ shuffle ที่ว่านี้</p>
-<p>นักพัฒนาบางคนที่ได้พิสูจน์ตัวของพวกเขาแล้วว่าต้องการที่จะอุทิศตัวเองเพื่อ SegWit2x ได้ออกมา<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-segwit2x/2017-August/000254.html">แสดงความกังวล</a>ว่า BTC1 นั้นไม่มีติดตั้งการป้องกันการโจมตีแบบ replay ซึ่งที่น่าสนใจก็คือบางคนเชื่อว่าพวกเขาตั้งใจทำให้เป็นแบบนั้นอยู่แล้ว</p>
-<p>เหตุผลุหลักๆก็คือ ถ้าหากพวกเขาไม่ทำการเพิ่มการป้องกันการโจมตีแบบ replay นั้น ทางกลุ่ม SegWit2x จะได้หลีกเลี่ยงการเกิดขึ้นของการแยกตัว Bitcoin และจะได้ชักชวนให้ผู้ใช้งานมาเปิดใช้ซอฟต์แวร์ของ BTC1 ซึ่งก็จะตรงกับคำกล่าวที่สมาชิกในกลุ่มพัฒนาของพวกเขาที่ออกมาบอกว่า BTC1 จะไม่ทำให้เกิด Bitcoin ตัวที่สามอย่างแน่นอน</p>
-<p>ผู้สนับสนุนปากกล้าที่อยากให้มีการเพิ่มขนาดบล็อกของ Bitcoin นั้นไม่เกรงกลัวอะไรทั้งสิ้น พวกเขา<a href="https://twitter.com/olivierjanss/status/898585114103476224">เชื่อว่าการ</a>ทำแบบนี้คือเรื่องที่ถูกต้อง แถมยังได้ออกมาทำนายว่า Bitcoin Core นั้นจะกลายเป็น chain ที่ได้รับความนิยมน้อยที่สุดในอนาคต</p>
-<h2>การปรองดองและเข้าใจกัน</h2>
-<p>กระนั้น ก็ยังได้มีคนบางกลุ่มที่ได้ออกมาพูดเตือนสติของค่ายนักรับทั้งสองนี้</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-9369348762774300"
-     data-ad-slot="4635445870"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<p>นาย Ted Rogers หรือประธานของบริษัทผู้ให้บริการกระเป๋า Bitcoin นามว่า Xapo (ที่เคยออกมากล่าวสนับสนุน SegWit2x) ได้ออกมาเถียงใน<a href="https://twitter.com/tedmrogers/status/899020664920604672">สงครามทวิตเตอร์</a>ว่าผู้วิพากษ์วิจารณ์ส่วนใหญ่นั้นมักจะเข้าใจเป้าหมายและความต้องการของนักพัฒนาแบบผิดๆ</p>
-<p>&#8220;Segwit2x นั้นคือความพยายามในการจับเอาสองฝ่ายมาจับมือกัน เพื่อไม่ให้เกิดการแยกตัว&#8221; เขากล่าวก่อนที่จะลิสข้อได้เปรียบของข้อเสนอ SegWit2x ดังกล่าวนี้</p>
-<p>แทนที่จะเถียงว่า SegWit2x นั้นคือ Bitcoin ที่แท้จริง นาย Rogers กล่าวว่านี่จะเป็น &#8220;โอกาสให้ตลาดได้เห็นว่าโซลูชันใหม่ๆนั้นจะเป็นอย่างไรในอนาคต&#8221;</p>
-<p>ที่น่าสนใจคือ ภายหลังนาย Rodgers ยังได้มากล่าวให้ทุกๆคนมีความสามัคคีกัน มิเช่นนั้น Bitcoin ที่พวกเขารักอาจจะตายไปสักวันหนึ่ง โดยเขากล่าวว่า</p>
-<blockquote><p>&#8220;ถ้าหากกลุ่ม CEO เพียงไม่กี่คนสามารถที่จะรวมตัวกันและเปลี่ยนแปลง Bitcoin ให้เป็นไปตามที่พวกเขาต้องการได้ นั่นหมายความว่ารัฐบาลจะทำแบบนั้นได้เช่นกัน และถ้าวันนั้นมาถึง Bitcoin ก็จะตาย&#8221;</p></blockquote>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/22/bitcoins-battle-segwit2x-begun/">สงคราม Bitcoin กับ SegWit2x ได้เริ่มต้นขึ้นแล้ว</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></content:encoded>
-			<wfw:commentRss>https://siamblockchain.com/2017/08/22/bitcoins-battle-segwit2x-begun/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>ผู้ให้บริการบัตรเครดิต Visa บอกใบ้บริการใหม่ในอนาคต &#8220;Digital Asset Service&#8221;</title>
-		<link>https://siamblockchain.com/2017/08/22/credit-card-giant-visa-hints-digital-asset-service-plans/</link>
-		<comments>https://siamblockchain.com/2017/08/22/credit-card-giant-visa-hints-digital-asset-service-plans/#respond</comments>
-		<pubDate>Tue, 22 Aug 2017 09:32:18 +0000</pubDate>
-		<dc:creator><![CDATA[Beam]]></dc:creator>
-				<category><![CDATA[เทคโนโลยี Blockchain]]></category>
-
-		<guid isPermaLink="false">https://siamblockchain.com/?p=5009</guid>
-		<description><![CDATA[<p>หนึ่งในผู้ให้บริการบัตรเครดิตที่ใหญ่ที่สุดในโลก Visa อาจจะกำลังสนใจในเทคโนโลยี Blockchain และกำลังวางแผนหาทางช่วยอำนวยความสะดวกในการโอนหรือจ่าย &#8220;สินทรัพย์ แบบดิจิตอล&#8221; แบบฟอร์มสิทธิบัตรของ Visa ที่ถูกจดและเผยแพร่เมื่อสัปดาห์ที่แล้วได้เผยให้เห็นถึงพนักงานประจำของ Visa 4 คนที่ประจำอยู่แผนก B2B ได้ทำการยื่นจดสิทธิบัตรที่มีชื่อว่า &#8220;Methods and System for Using Digital Signatures to Create Trusted Digital Asset Services&#8221; หรือถ้าแปลเป็นไทยคือ &#8220;วิธีและระบบในการใช้ลายเซ็นดิจิตอลเพื่อสร้างบริการสินทรัพย์ด้านดิจิตอลที่มีความน่าเชื่อถือ&#8221; ซึ่งแบบฟอร์มดังกล่าวไม่ได้มีการเจาะจงอะไรอย่างหนึ่งโดยเฉพาะ แต่อย่างไรก็ตาม นวัตกรรมในนั้นมีการกล่าวถึง Blockchain ทั้งแบบ public และ private และได้มีการบอกใบ้ว่าระบบใหม่ดังกล่าวนั้นจะถูกใช้เพื่อส่งสินทรัพย์แบบดิจิตอลทั้งไปและกลับได้ โดยในแบบฟอร์มนั้นได้อธิบายว่า &#8220;สินทรัพย์ดิจิตอลที่มีมูลค่านั้นในบางลักษณะสามารถที่จะถูกเซ็นลายเซ็นแบบดิจิตอลโดยผู้ส่ง และ/หรือผู้แอดมินที่มีส่วนเกี่ยวข้อง ลายเซ็นของผู้ส่งสามารถที่จะบ่งชี้และยินยันได้ว่าสินทรัพย์ดิจิตอลนั้นถูกส่งโดยผู้ส่งที่เป็นคนเซ็นจริงๆ และลายเซ็นของแอดมินที่มีส่วนเกี่ยวข้องสามารถที่จะบ่งชี้ได้ว่าสินทรัพย์ดิจิตอลตัวนั้นถูกอนุมัติและ/หรือบันทึกโดยแอดมินของระบบ ในบางลักษณะนั้น ลายเซ็นดิจิตอลสามารถที่จะบ่งชี้ว่าสินทรัพย์ดิจิตอลตัวนั้นได้ถูกส่งหรือโอนเรียบร้อยแล้ว และการโอนนั้นไม่สามารถที่จะดึงกลับมาได้ ไม่ว่า Visa กำลังวางแผนที่จะเปิดตัวบริการทางด้านสินทรัพย์ดิจิตอลที่อยู่บน Blockchain หรืออะไรก็แล้วแต่นั้น เราก็ยังคงต้องดูกันต่อไป ภาพจาก Visa</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/22/credit-card-giant-visa-hints-digital-asset-service-plans/">ผู้ให้บริการบัตรเครดิต Visa บอกใบ้บริการใหม่ในอนาคต &#8220;Digital Asset Service&#8221;</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></description>
-				<content:encoded><![CDATA[<p>หนึ่งในผู้ให้บริการบัตรเครดิตที่ใหญ่ที่สุดในโลก Visa อาจจะกำลังสนใจในเทคโนโลยี <a href="https://siamblockchain.com/2017/06/04/blockchain-%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3/">Blockchain</a> และกำลังวางแผนหาทางช่วยอำนวยความสะดวกในการโอนหรือจ่าย &#8220;สินทรัพย์ แบบดิจิตอล&#8221;</p>
-<p><a href="http://appft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.html&amp;r=1&amp;p=1&amp;f=G&amp;l=50&amp;d=PG01&amp;S1=20170237554.PGNR.&amp;OS=dn/20170237554&amp;RS=DN/20170237554">แบบฟอร์มสิทธิบัตร</a>ของ Visa ที่ถูกจดและเผยแพร่เมื่อสัปดาห์ที่แล้วได้เผยให้เห็นถึงพนักงานประจำของ Visa 4 คนที่ประจำอยู่แผนก B2B ได้ทำการยื่นจดสิทธิบัตรที่มีชื่อว่า &#8220;Methods and System for Using Digital Signatures to Create Trusted Digital Asset Services&#8221; หรือถ้าแปลเป็นไทยคือ &#8220;วิธีและระบบในการใช้ลายเซ็นดิจิตอลเพื่อสร้างบริการสินทรัพย์ด้านดิจิตอลที่มีความน่าเชื่อถือ&#8221;</p>
-<p>ซึ่งแบบฟอร์มดังกล่าวไม่ได้มีการเจาะจงอะไรอย่างหนึ่งโดยเฉพาะ แต่อย่างไรก็ตาม นวัตกรรมในนั้นมีการกล่าวถึง Blockchain ทั้งแบบ public และ private และได้มีการบอกใบ้ว่าระบบใหม่ดังกล่าวนั้นจะถูกใช้เพื่อส่งสินทรัพย์แบบดิจิตอลทั้งไปและกลับได้</p>
-<p>โดยในแบบฟอร์มนั้นได้อธิบายว่า</p>
-<blockquote>
-<p style="text-align: left;">&#8220;สินทรัพย์ดิจิตอลที่มีมูลค่านั้นในบางลักษณะสามารถที่จะถูกเซ็นลายเซ็นแบบดิจิตอลโดยผู้ส่ง และ/หรือผู้แอดมินที่มีส่วนเกี่ยวข้อง ลายเซ็นของผู้ส่งสามารถที่จะบ่งชี้และยินยันได้ว่าสินทรัพย์ดิจิตอลนั้นถูกส่งโดยผู้ส่งที่เป็นคนเซ็นจริงๆ และลายเซ็นของแอดมินที่มีส่วนเกี่ยวข้องสามารถที่จะบ่งชี้ได้ว่าสินทรัพย์ดิจิตอลตัวนั้นถูกอนุมัติและ/หรือบันทึกโดยแอดมินของระบบ ในบางลักษณะนั้น ลายเซ็นดิจิตอลสามารถที่จะบ่งชี้ว่าสินทรัพย์ดิจิตอลตัวนั้นได้ถูกส่งหรือโอนเรียบร้อยแล้ว และการโอนนั้นไม่สามารถที่จะดึงกลับมาได้</p>
-</blockquote>
-<p>ไม่ว่า Visa กำลังวางแผนที่จะเปิดตัวบริการทางด้านสินทรัพย์ดิจิตอลที่อยู่บน Blockchain หรืออะไรก็แล้วแต่นั้น เราก็ยังคงต้องดูกันต่อไป</p>
-<p><em>ภาพจาก Visa</em></p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/22/credit-card-giant-visa-hints-digital-asset-service-plans/">ผู้ให้บริการบัตรเครดิต Visa บอกใบ้บริการใหม่ในอนาคต &#8220;Digital Asset Service&#8221;</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></content:encoded>
-			<wfw:commentRss>https://siamblockchain.com/2017/08/22/credit-card-giant-visa-hints-digital-asset-service-plans/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>ผู้ให้บริการตลาดซื้อขายตั๋วรายใหญ่ในญี่ปุ่นเริ่มรับ Bitcoin เป็นช่องทางการชำระเงิน</title>
-		<link>https://siamblockchain.com/2017/08/22/major-japanese-ticket-exchange-marketplace-now-accepts-bitcoin/</link>
-		<comments>https://siamblockchain.com/2017/08/22/major-japanese-ticket-exchange-marketplace-now-accepts-bitcoin/#respond</comments>
-		<pubDate>Tue, 22 Aug 2017 07:58:48 +0000</pubDate>
-		<dc:creator><![CDATA[Beam]]></dc:creator>
-				<category><![CDATA[ข่าว Bitcoin]]></category>
-		<category><![CDATA[ต่างประเทศ]]></category>
-
-		<guid isPermaLink="false">https://siamblockchain.com/?p=5004</guid>
-		<description><![CDATA[<p>ผู้ให้บริการด้านตลาดซื้อขายตั๋วที่ผู้ใช้บริการสามารถมาโพสขาย หรือตั้งรับในประเทศญี่ปุ่นนามว่า Ticket Camp ได้ออกมาประกาศว่าพวกเขาเริ่มรับ Bitcoin เป็นช่องทางในการชำระเงินแล้ว โดยอ้างอิงจาก Coin Telegraph นั้นการเคลื่อนไหวดังกล่าวนั้นมีขึ้นเพื่อต้องการที่จะให้เหรียญ cryptocurrency เป็นที่นิยมมากขึ้น เนื่องจากว่าตลาดดังกล่าวนี้มีผู้ใช้บริการประมาณ 5 ล้านคนทั่วประเทศ ทางบริษัทจะใช้บริการของ Coincheck ในด้านระบบรับชำระเงินด้วย Bitcoin ทั้งหมด รายแรกในวงการ ด้วยการประกาศดังกล่าวนี้ส่งผลให้ Ticket Camp กลายเป็นสมาชิกคนแรกในวงการการซื้อขายตั๋วในญี่ปุ่นที่รับ Bitcoin เป็นช่องทางในการจ่ายเงิน เนื่องจากว่าสกุลเงินดิจิตอลดังกล่าวนั้นได้ถูกทำให้ถูกกฎหมายโดยรัฐบาลญี่ปุ่นเมื่อเดือนเมษายนที่ผ่านมานี้และระบบของ Ticket Camp นั้นเป็นลักษณะตลาดการซื้อขายแบบวนเว็บไซต์ ทำให้ทางบริษัทน่าจะได้รับประโยชน์ส่วนนี้ไปแบบเต็มๆในระยะยาว การนำ Bitcoin เข้ามาใช้ของ Ticket Camp นั้นจะไม่ได้นำมาถูกใช้ทดแทนการจ่ายเงินแบบเดิม แต่จะเป็นการเพิ่มเข้ามาจากตัวเลือกที่มีอยู่ ปัญหาในการใช้ Bitcoin แม้ว่าการนำสกุลเงินดิจิตอลอย่าง Bitcoin เข้ามาใช้เป็นช่องทางการชำระเงินของ Tiket Camp จะมีขึ้นมาแล้ว แต่ทว่าปัญหาก็ยังคงมี อย่างแรกก็คือทางบริษัทจะเก็บค่าธรรมเนียม 13% ในทุกๆการซื้อขาย ซึ่งค่าธรรมเนียมนั้นจะถูกนำมาหารแบบเท่าเทียมกันให้กับทางผู้ซื้อและผู้ขายตั๋ว และมันก็ยังไม่เป็นที่แน่นอนว่าทาง Ticket [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/22/major-japanese-ticket-exchange-marketplace-now-accepts-bitcoin/">ผู้ให้บริการตลาดซื้อขายตั๋วรายใหญ่ในญี่ปุ่นเริ่มรับ Bitcoin เป็นช่องทางการชำระเงิน</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></description>
-				<content:encoded><![CDATA[<p>ผู้ให้บริการด้านตลาดซื้อขายตั๋วที่ผู้ใช้บริการสามารถมาโพสขาย หรือตั้งรับในประเทศญี่ปุ่นนามว่า Ticket Camp ได้ออกมาประกาศว่าพวกเขาเริ่มรับ Bitcoin เป็นช่องทางในการชำระเงินแล้ว</p>
-<p>โดยอ้างอิงจาก <a href="https://cointelegraph.com/news/major-japanese-ticket-exchange-marketplace-now-accepts-bitcoin">Coin Telegraph</a> นั้นการเคลื่อนไหวดังกล่าวนั้นมีขึ้นเพื่อต้องการที่จะให้เหรียญ cryptocurrency เป็นที่นิยมมากขึ้น เนื่องจากว่าตลาดดังกล่าวนี้มีผู้ใช้บริการประมาณ 5 ล้านคนทั่วประเทศ</p>
-<p>ทางบริษัทจะใช้บริการของ Coincheck ในด้านระบบรับชำระเงินด้วย Bitcoin ทั้งหมด</p>
-<h2>รายแรกในวงการ</h2>
-<p>ด้วยการประกาศดังกล่าวนี้ส่งผลให้ Ticket Camp กลายเป็นสมาชิกคนแรกในวงการการซื้อขายตั๋วในญี่ปุ่นที่รับ Bitcoin เป็นช่องทางในการจ่ายเงิน</p>
-<p>เนื่องจากว่าสกุลเงินดิจิตอลดังกล่าวนั้นได้ถูกทำให้ถูกกฎหมายโดยรัฐบาลญี่ปุ่นเมื่อ<a href="https://siamblockchain.com/2017/02/08/countdown-bitcoin-legal-payment-japan-two-months/">เดือนเมษายน</a>ที่ผ่านมานี้และระบบของ Ticket Camp นั้นเป็นลักษณะตลาดการซื้อขายแบบวนเว็บไซต์ ทำให้ทางบริษัทน่าจะได้รับประโยชน์ส่วนนี้ไปแบบเต็มๆในระยะยาว</p>
-<p>การนำ Bitcoin เข้ามาใช้ของ Ticket Camp นั้นจะไม่ได้นำมาถูกใช้ทดแทนการจ่ายเงินแบบเดิม แต่จะเป็นการเพิ่มเข้ามาจากตัวเลือกที่มีอยู่</p>
-<h2>ปัญหาในการใช้ Bitcoin</h2>
-<p>แม้ว่าการนำสกุลเงินดิจิตอลอย่าง Bitcoin เข้ามาใช้เป็นช่องทางการชำระเงินของ Tiket Camp จะมีขึ้นมาแล้ว แต่ทว่าปัญหาก็ยังคงมี</p>
-<p>อย่างแรกก็คือทางบริษัทจะเก็บค่าธรรมเนียม 13% ในทุกๆการซื้อขาย</p>
-<p>ซึ่งค่าธรรมเนียมนั้นจะถูกนำมาหารแบบเท่าเทียมกันให้กับทางผู้ซื้อและผู้ขายตั๋ว และมันก็ยังไม่เป็นที่แน่นอนว่าทาง Ticket Camp จะเก็บรายได้ที่ได้มาเป็น Bitcoin หรือว่าจะนำไปแปลงเป็นเงินเยนเข้าบัญชีธนาคาร</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-9369348762774300"
-     data-ad-slot="4635445870"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<p>อีกปัญหาหนึ่งก็คือเรื่อง<a href="https://cointelegraph.com/news/ethereum-classic-used-to-fight-ticket-touts">การขายตั๋วปลอม</a> ที่หลายๆคนตั้งคำถามว่าการนำ Bitcoin เข้ามาใช้จะช่วยแก้ปัญหาดังกล่าวได้หรือไม่</p>
-<p>ปัญหาตั๋วปลอมนี้ถือเป็นมะเร็งที่กัดกินวงการการขายตั๋วในประเทศญี่ปุ่นมานานแล้ว และการพยายามที่จะหยุดและยับยั้งปัญหานี้ถือเป็นเรื่องที่ยากมาก</p>
-<p>แม้ว่าทาง Ticket Camp จะมีระบบ escrow หรือตัวกลางที่ช่วยจัดการเรื่องการซื้อขายระหว่างบุคคลเพื่อป้องกันการโกงนั้น แต่มันก็ใช้ไมได้ผลกับปัญหาตั๋วปลอมแต่อย่างใด</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/22/major-japanese-ticket-exchange-marketplace-now-accepts-bitcoin/">ผู้ให้บริการตลาดซื้อขายตั๋วรายใหญ่ในญี่ปุ่นเริ่มรับ Bitcoin เป็นช่องทางการชำระเงิน</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></content:encoded>
-			<wfw:commentRss>https://siamblockchain.com/2017/08/22/major-japanese-ticket-exchange-marketplace-now-accepts-bitcoin/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>(Y) ราคา Bitcoin กำลังปรับฐาน ได้เวลารักษากำไร และรอการขึ้นรอบใหม่</title>
-		<link>https://siamblockchain.com/2017/08/22/btc-correction-ready-for-new-high/</link>
-		<comments>https://siamblockchain.com/2017/08/22/btc-correction-ready-for-new-high/#respond</comments>
-		<pubDate>Tue, 22 Aug 2017 07:00:13 +0000</pubDate>
-		<dc:creator><![CDATA[Yuthavithi Rootwararit]]></dc:creator>
-				<category><![CDATA[ราคา Bitcoin]]></category>
-		<category><![CDATA[ราคาและการวิเคราะห์]]></category>
-
-		<guid isPermaLink="false">https://siamblockchain.com/?p=4990</guid>
-		<description><![CDATA[<p>บทความคราวก่อนได้วิเคราะห์ไว้ว่า ราคา BTC จะพุ่งทยานถึง 5,000 ดอลลาร์โดยผมได้ตั้งเป้าไว้ราว 4,800 USD ราคา BTC สามารถพุ่งทะยานไปถึง 4,600 USD แล้วแกว่งอยู่หลายวันเหนือ 4000 USD แม้ว่าไม่ถึง 4,600 USD แต่ก็ถือว่าบรรลุเป้าหมายได้แล้ว เมื่อวานผมได้ตรวจสอบกราฟ 1W เจอ Shooting Star อย่างจัง แท่งยาวเสียดฟ้า ซึ่งเป็นสัญลักษณ์บ่งบอกว่าไปต่อไม่ไหว หมดแรงแล้ว และได้แนะนำสมาชิกในกลุ่มทำการขาย BTC ออกไป หลังจากยื้อมาหลายวัน ต่อสู้กันอย่างหนักระหว่างฝ่ายกระทิง และฝ่ายหมี ที่แนวรับ 4000 มาวันนี้ กระทิงหมดแรงจนได้ ราคาร่วงทะลุ 4000 ลงมา และลงเร็วขึ้นเรื่อยๆ ผมคาดว่าการปรับฐานครั้งนี้ น่าจะไปถึง 3,500 หรือ ต่ำกว่านั้น คือ 3,000 USD (โซนกล่องสีเขียว) สามารถตั้งซื้อแถวนั้นได้ หลังจากนั้นจะเข้าสู่ Sideway [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/22/btc-correction-ready-for-new-high/">(Y) ราคา Bitcoin กำลังปรับฐาน ได้เวลารักษากำไร และรอการขึ้นรอบใหม่</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></description>
-				<content:encoded><![CDATA[<p><a href="https://siamblockchain.com/2017/07/20/prepare-for-segwit-bitcoin-5000-ahead/">บทความคราวก่อน</a>ได้วิเคราะห์ไว้ว่า ราคา BTC จะพุ่งทยานถึง 5,000 ดอลลาร์โดยผมได้ตั้งเป้าไว้ราว 4,800 USD<br />
-ราคา BTC สามารถพุ่งทะยานไปถึง 4,600 USD แล้วแกว่งอยู่หลายวันเหนือ 4000 USD แม้ว่าไม่ถึง 4,600 USD แต่ก็ถือว่าบรรลุเป้าหมายได้แล้ว</p>
-<p>เมื่อวานผมได้ตรวจสอบกราฟ 1W เจอ Shooting Star อย่างจัง แท่งยาวเสียดฟ้า ซึ่งเป็นสัญลักษณ์บ่งบอกว่าไปต่อไม่ไหว หมดแรงแล้ว และได้แนะนำสมาชิกในกลุ่มทำการขาย BTC ออกไป</p>
-<figure style="width: 1064px" class="wp-caption alignnone"><img class="size-medium" src="https://www.tradingview.com/x/bQ3Yipxi/" width="1064" height="972" /><figcaption class="wp-caption-text">BTC 1W, Shooting Star</figcaption></figure>
-<p>หลังจากยื้อมาหลายวัน ต่อสู้กันอย่างหนักระหว่างฝ่ายกระทิง และฝ่ายหมี ที่แนวรับ 4000 มาวันนี้ กระทิงหมดแรงจนได้ ราคาร่วงทะลุ 4000 ลงมา และลงเร็วขึ้นเรื่อยๆ</p>
-<p><img class="alignnone size-medium" src="https://www.tradingview.com/x/f6ne5SpY/" width="1064" height="972" /></p>
-<p>ผมคาดว่าการปรับฐานครั้งนี้ น่าจะไปถึง 3,500 หรือ ต่ำกว่านั้น คือ 3,000 USD (โซนกล่องสีเขียว) สามารถตั้งซื้อแถวนั้นได้</p>
-<p>หลังจากนั้นจะเข้าสู่ Sideway Mode สะสมพลังค่อยมาอีกรอบ</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-9369348762774300"
-     data-ad-slot="4635445870"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<p>ส่วนรายละเอียดอื่นๆ ไม่ว่าจะเป็นแนวโน้มต่อจากนี้เป็นอย่างไร ส่งผลกับ altcoin เช่นไหร่ ต้อง trade อย่างไรให้กำไร โปรดติดตามในรายการ <a href="https://www.facebook.com/whatthecoin/">wtcoin #2 </a>วันนี้ช่วง 1 ทุ่ม ได้เลยครับ ซึ่งผมจะเป็นคนไปออกรายการและวิเคราะห์ส่วนลึกแบบเพิ่มเติมให้</p>
-<p><em>หมายเหตุ: การลงทุนในตัวเหรียญคริปโตเคอเรนซีมีความเสี่ยงสูงมาก ผู้ลงทุนควรศึกษาให้ดีก่อนทำการตัดสินใจลงทุน ทางสยามบล็อกเชนจะไม่รับผิดชอบในความสูญเสียในทุกกรณี</em></p>
-<p>The post <a rel="nofollow" href="https://siamblockchain.com/2017/08/22/btc-correction-ready-for-new-high/">(Y) ราคา Bitcoin กำลังปรับฐาน ได้เวลารักษากำไร และรอการขึ้นรอบใหม่</a> appeared first on <a rel="nofollow" href="https://siamblockchain.com">Siam Blockchain</a>.</p>
-]]></content:encoded>
-			<wfw:commentRss>https://siamblockchain.com/2017/08/22/btc-correction-ready-for-new-high/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
 	</channel>
 </rss>
 
 <!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
 
-Object Caching 8259/8349 objects using disk
+Object Caching 7304/7389 objects using disk
 Page Caching using disk: enhanced
-Database Caching 25/60 queries in 0.012 seconds using disk
+Database Caching 20/56 queries in 0.011 seconds using disk
 
- Served from: siamblockchain.com @ 2017-08-23 17:11:39 by W3 Total Cache -->
+ Served from: siamblockchain.com @ 2017-08-24 13:19:06 by W3 Total Cache -->
