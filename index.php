@@ -444,7 +444,7 @@
 
         $(".nav-pool-name").text($("#pool option:selected").text())
 
-        getData();
+        getData(1);
         setInterval(function(){
             getData()
         },30000)
@@ -461,8 +461,21 @@
 
    
 
-    function getData(){
+    function getData(show_preload=0){
         var pool = $("#pool").val()
+        if(show_preload==1){
+        var preLoader = '<span class="preloader preloader-white"></span>';
+	        $("#workers").html(preLoader);
+	        $("#day-eth").html(preLoader);
+	        $("#day-thb").html(preLoader);
+	        $("#week-eth").html(preLoader);
+	        $("#week-thb").html(preLoader);
+	        $("#month-eth").html(preLoader);
+	        $("#month-thb").html(preLoader);
+	        $("#next-payment").html(preLoader);
+	        $("#payouts").html(preLoader);
+        }
+
         $.ajax({
             url:pool+'/api.php',
             type:'get',
