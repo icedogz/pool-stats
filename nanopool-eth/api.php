@@ -67,12 +67,12 @@ if(isset($_GET['miner']) && $_GET['miner']!=""){
 	}
 
 	$ret['workers'] = $workers;
-	$ret['earning']['day']['eth'] = number_format($earning->data->minute->coins,2);
-	$ret['earning']['day']['thb'] = number_format(($earning->data->minute->coins) * $bx_price->{21}->last_price,2);
-	$ret['earning']['week']['eth'] = number_format($earning->data->minute->coins * 7,2);
-	$ret['earning']['week']['thb'] = number_format(($earning->data->minute->coins) * $bx_price->{21}->last_price * 7,2);
-	$ret['earning']['month']['eth'] = number_format($earning->data->minute->coins * 30,2);
-	$ret['earning']['month']['thb'] = number_format(($earning->data->minute->coins) * $bx_price->{21}->last_price * 30,2);
+	$ret['earning']['day']['eth'] = number_format($earning->data->minute->coins*1440,2);
+	$ret['earning']['day']['thb'] = number_format(($earning->data->minute->coins*1440) * $bx_price->{21}->last_price,2);
+	$ret['earning']['week']['eth'] = number_format($earning->data->minute->coins*1440 * 7,2);
+	$ret['earning']['week']['thb'] = number_format(($earning->data->minute->coins*1440) * $bx_price->{21}->last_price * 7,2);
+	$ret['earning']['month']['eth'] = number_format($earning->data->minute->coins*1440 * 30,2);
+	$ret['earning']['month']['thb'] = number_format(($earning->data->minute->coins*1440) * $bx_price->{21}->last_price * 30,2);
 
 	$payouts = [];
 	foreach ($payments->data as $key => $pay) {
