@@ -602,7 +602,7 @@
                 var html="<ul>";
                 $.each(data.channel.item, function(index, value) {
                     html +="<li>";
-                    html +="  <a href='"+value.link+"' class='item-link item-content'>";
+                    html +="  <a href='"+value.link+"' class='item-link external item-content'>";
                     html +="    <div class='item-inner'>";
                     html +="      <div class='item-title-row'>";
                     html +="        <div class='item-title'>Siam Blockchain</div>";
