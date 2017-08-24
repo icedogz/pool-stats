@@ -465,6 +465,15 @@
         var pool = $("#pool").val()
         if(show_preload==1){
         var preLoader = '<span class="preloader preloader-white"></span>';
+        	$('#walletaddress').html(preLoader);
+            $('#balance').html(preLoader);
+            $('#reported-hashrate').html(preLoader);
+            $('#effective-hashrate').html(preLoader);
+            $('#average-hashrate').html(preLoader);
+            $('#btc-price').html(preLoader);
+            $('#btc-change').html(preLoader);
+            $('#eth-price').html(preLoader);
+            $('#eth-change').html(preLoader);
 	        $("#workers").html(preLoader);
 	        $("#day-eth").html(preLoader);
 	        $("#day-thb").html(preLoader);
