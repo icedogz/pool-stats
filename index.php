@@ -76,9 +76,9 @@
                 </div>
 
                 <!-- Home page navbar -->
-                <div class="navbar-inner cached" data-page="ethermine">
+                <div class="navbar-inner cached" data-page="pool_report">
                     <div class="left"><a href="#index" class="back link"><i class="framework7-icons">left</i> <span>Back</span> </a></div>
-                    <div class="center">Ethermine.org</div>
+                    <div class="center nav-pool-name">Pool Stats</div>
                     <div class="right"></div>
                 </div>
             </div>
@@ -94,8 +94,9 @@
                                     <li>
                                       <a href="#" class="item-link smart-select">
                                         <select name="pool" id="pool">
-                                          <option value="ethermine" selected>ETH - Ethermine.org</option>
+                                          <option value="ethermine" selected>ETH - ethermine.org</option>
                                           <option value="nanopool-eth">ETH - nanopool.org</option>
+                                          <option value="nanopool-etc">ETC - nanopool.org</option>
                                         </select>
                                         <div class="item-content">
                                           <div class="item-inner">
@@ -110,7 +111,7 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Wallet</div>
                                                 <div class="item-input">
-                                                    <input type="text" id="wallet_address" value="" placeholder="Enter your wallet address">
+                                                    <input type="text" id="wallet_address" value="<?php echo $_GET['miner'] ?>" placeholder="Enter your wallet address">
                                                 </div>
                                             </div>
                                           </div>
@@ -123,8 +124,8 @@
                         </div>   
                     </div>
                 </div>
-                <!-- Ethermine page -->
-                <div class="page cached" data-page="ethermine" >
+                <!-- Pool Report page -->
+                <div class="page cached" data-page="pool_report" >
                     <div class="page-content" >
                         
                         
@@ -441,12 +442,14 @@
             'wallet_address': $("#wallet_address").val()
         });
 
+        $(".nav-pool-name").text($("#pool option:selected").text())
+
         getData();
         setInterval(function(){
             getData()
         },30000)
 
-        mainView.router.load({pageName: 'ethermine'});
+        mainView.router.load({pageName: 'pool_report'});
     });
 
     
