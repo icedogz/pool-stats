@@ -46,8 +46,8 @@ if(isset($_GET['miner']) && $_GET['miner']!=""){
 	$ret['balance'] = number_format($balance,5). ' ETH';
 	$ret['next_payment_minute'] = "";
 	$ret['next_payment_in'] = "";
-	$ret['hashrates']['reported'] = $data->hashrate .' MH/s';
-	$ret['hashrates']['effective'] = $data->avgHashrate->h1 .' MH/s';
+	$ret['hashrates']['reported'] = number_format($data->hashrate,1) .' MH/s';
+	$ret['hashrates']['effective'] = number_format($data->avgHashrate->h1,1) .' MH/s';
 	$ret['hashrates']['average'] = number_format($data->avgHashrate->h6,1).' MH/s';
 	$ret['bx_price']['BTC']['price'] = number_format($bx_price->{1}->last_price,0).' THB';
 	$ret['bx_price']['BTC']['change'] = $bx_price->{1}->change>0 ? '<span style="color:#44d844">(+'.$bx_price->{1}->change.'%)</span>' : '<span style="color:#ec2828">('.$bx_price->{1}->change.'%)</span>';
