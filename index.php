@@ -562,7 +562,7 @@
                 html +="        <div class='item-title' style='font-size:14px;'>"+value.name+" ("+value.symbol+")</div>";
                 html +="      </div>";
                 html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+nFormatter(parseFloat(value.market_cap_thb),1)+" THB</div>";
-                html +="      <div class='item-subtitle' style='color:#ddd;font-size:13px;'>"+parseFloat(value.price_thb).formatMoney(0, '.', ',')+" THB ("+change+")</div>";
+                html +="      <div class='item-subtitle' style='color:#ddd;font-size:13px;'>"+parseFloat(value.price_thb).formatMoney(2, '.', ',')+" THB ("+change+")</div>";
                 html +="    </div>";
                 html +="  </div>";
                 html +="</li>";
