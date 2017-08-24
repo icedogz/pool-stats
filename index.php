@@ -79,7 +79,7 @@
                 <div class="navbar-inner cached" data-page="pool_report">
                     <div class="left"><a href="#index" class="back link"><i class="framework7-icons">left</i> <span>Back</span> </a></div>
                     <div class="center nav-pool-name">Pool Stats</div>
-                    <div class="right"></div>
+                     <div class="right"><a href="#" class="refresh-pool link" ><i class="framework7-icons">refresh</i> </a></div>
                 </div>
             </div>
             <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
@@ -428,6 +428,7 @@
         }
     });
 
+    $('.refresh-pool').on('click', function(){ getData(1); });
     $('.refresh-marketcap').on('click', function(){ getMarketCap(); });
     $('.refresh-news').on('click', function(){ getNews(); });
 
