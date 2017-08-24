@@ -510,7 +510,7 @@
 
         $("#marketcap-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
         $.ajax({
-            url:'marketcap.php',
+            url:'https://api.coinmarketcap.com/v1/ticker/?convert=THB',
             type:'get',
             dataType:'json',
             cache:true,
