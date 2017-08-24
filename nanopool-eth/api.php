@@ -33,53 +33,64 @@ function callService($url,$cache=0){
 if(isset($_GET['miner']) && $_GET['miner']!=""){
 
 	$wallet = str_replace('0x', '', $_GET['miner']);
-	$pool_url = "https://ethermine.org/api/miner_new/".$wallet;
+	$pool_url = "https://api.nanopool.org/v1/eth/user/".$wallet;
 	$bx_price_url = "https://bx.in.th/api/";
 	$data = callService($pool_url,3);
+	$data = $data->data;
+	$payments = callService('https://api.nanopool.org/v1/eth/payments/'.$wallet,3);
+	$earning = callService('https://api.nanopool.org/v1/eth/approximated_earnings/'.$data->avgHashrate->h6,3);
 	$bx_price = callService($bx_price_url,1);
 
-	$balance = $data->unpaid==0 ? 0 : $data->unpaid/1000000000000000000;
-	$next_payment_sec = (((float)($data->settings->minPayout/1000000000000000000)-$balance)/$data->ethPerMin)*60;
-	$pay_in = new DateTime(date('Y-m-d H:i:s',time()+$next_payment_sec));
-	$pay_in->setTimezone(new DateTimeZone('GMT+7'));
-	$next_payment_minute = 'Next Payment : '.$pay_in->format('d M Y H:i'). ' ( '.convertToHoursMins($next_payment_sec/60, '%02d h %02d min ' ).')';
-
+	$balance = $data->balance;
 	$ret['wallet_address'] = $wallet;
 	$ret['balance'] = number_format($balance,5). ' ETH';
-	$ret['next_payment_minute'] = isset($data->settings->minPayout) ? $next_payment_minute : "";
-	$ret['next_payment_in'] = number_format($data->unpaid/1000000000000000000,5). ' ETH';
-	$ret['hashrates']['reported'] = $data->reportedHashRate;
-	$ret['hashrates']['effective'] = $data->hashRate;
-	$ret['hashrates']['average'] = number_format($data->avgHashrate/1000000,1).' MH/s';
+	$ret['next_payment_minute'] = "";
+	$ret['next_payment_in'] = "";
+	$ret['hashrates']['reported'] = $data->hashrate .' MH/s';
+	$ret['hashrates']['effective'] = $data->avgHashrate->h1 .' MH/s';
+	$ret['hashrates']['average'] = number_format($data->avgHashrate->h6,1).' MH/s';
 	$ret['bx_price']['BTC']['price'] = number_format($bx_price->{1}->last_price,0).' THB';
 	$ret['bx_price']['BTC']['change'] = $bx_price->{1}->change>0 ? '<span style="color:#44d844">(+'.$bx_price->{1}->change.'%)</span>' : '<span style="color:#ec2828">('.$bx_price->{1}->change.'%)</span>';
 	$ret['bx_price']['ETH']['price'] = number_format($bx_price->{21}->last_price,0).' THB';
 	$ret['bx_price']['ETH']['change'] = $bx_price->{21}->change>0 ? '<span style="color:#44d844">(+'.$bx_price->{21}->change.'%)</span>' : '<span style="color:#ec2828">('.$bx_price->{21}->change.'%)</span>';
-	$ret['workers'] = $data->workers;
-	$ret['earning']['day']['eth'] = number_format($data->ethPerMin*1440,2);
-	$ret['earning']['day']['thb'] = number_format(($data->ethPerMin*1440) * $bx_price->{21}->last_price,2);
-	$ret['earning']['week']['eth'] = number_format($data->ethPerMin*1440 * 7,2);
-	$ret['earning']['week']['thb'] = number_format(($data->ethPerMin*1440) * $bx_price->{21}->last_price * 7,2);
-	$ret['earning']['month']['eth'] = number_format($data->ethPerMin*1440 * 30,2);
-	$ret['earning']['month']['thb'] = number_format(($data->ethPerMin*1440) * $bx_price->{21}->last_price * 30,2);
+
+	$workers = [];
+	foreach ($data->workers as $key => $worker) {
+		$workers[$key] = [
+			'worker' => $worker->id,
+			'reportedHashRate' => $worker->hashrate,
+			'hashrate' => isset($worker->avg_h1) ? $worker->avg_h1 : 0,
+			'validShares' => '',
+			'staleShares' => '',
+			'invalidShares' => '',
+		];
+	}
+
+	$ret['workers'] = $workers;
+	$ret['earning']['day']['eth'] = number_format($earning->data->minute->coins,2);
+	$ret['earning']['day']['thb'] = number_format(($earning->data->minute->coins) * $bx_price->{21}->last_price,2);
+	$ret['earning']['week']['eth'] = number_format($earning->data->minute->coins * 7,2);
+	$ret['earning']['week']['thb'] = number_format(($earning->data->minute->coins) * $bx_price->{21}->last_price * 7,2);
+	$ret['earning']['month']['eth'] = number_format($earning->data->minute->coins * 30,2);
+	$ret['earning']['month']['thb'] = number_format(($earning->data->minute->coins) * $bx_price->{21}->last_price * 30,2);
 
 	$payouts = [];
-	foreach ($data->payouts as $key => $pay) {
+	foreach ($payments->data as $key => $pay) {
 		if($key==9) break;
 		$duration = "-";
-		if(isset($data->payouts[$key+1]->paidOn)){
-			$duration = strtotime($pay->paidOn) - strtotime($data->payouts[$key+1]->paidOn);
+		if(isset($payments->data[$key+1]->date)){
+			$duration = $pay->date - $payments->data[$key+1]->date;
 			$duration = number_format($duration/60/60,1).' Hr';
 		}
 
-		$d = new DateTime($pay->paidOn);
+		$d = new DateTime(date('Y-m-d H:i:s',$pay->date));
 		$d->setTimezone(new DateTimeZone('GMT+7'));
 
 		$payouts[$key]['date'] = $d->format('d M y');
 		$payouts[$key]['time'] = $d->format('H:i');
 		$payouts[$key]['duration'] = $duration;
-		$payouts[$key]['amount'] = number_format($pay->amount/1000000000000000000,5).' ETH';
-		$payouts[$key]['tx'] = "https://etherchain.org/tx/".$pay->txHash;
+		$payouts[$key]['amount'] = number_format($pay->amount,5).' ETH';
+		$payouts[$key]['tx'] = $pay->txHash;
 	}
 
 	$ret['payouts'] = $payouts;

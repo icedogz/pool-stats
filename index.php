@@ -95,7 +95,7 @@
                                       <a href="#" class="item-link smart-select">
                                         <select name="pool" id="pool">
                                           <option value="ethermine" selected>ETH - Ethermine.org</option>
-                                          <option value="nanopool" disabled="">ETH - nanopool.org</option>
+                                          <option value="nanopool-eth">ETH - nanopool.org</option>
                                         </select>
                                         <div class="item-content">
                                           <div class="item-inner">
