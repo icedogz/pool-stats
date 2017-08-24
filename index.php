@@ -380,6 +380,17 @@
 <script type="text/javascript" src="framework7/js/framework7.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script type="text/javascript">
+	Number.prototype.formatMoney = function(c, d, t){
+	var n = this, 
+	    c = isNaN(c = Math.abs(c)) ? 2 : c, 
+	    d = d == undefined ? "." : d, 
+	    t = t == undefined ? "," : t, 
+	    s = n < 0 ? "-" : "", 
+	    i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), 
+	    j = (j = i.length) > 3 ? j % 3 : 0;
+	   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+	 };
+
     // Initialize App  
     var myApp = new Framework7();
             
@@ -550,8 +561,8 @@
                 html +="      <div class='item-title-row'>";
                 html +="        <div class='item-title' style='font-size:14px;'>"+value.name+" ("+value.symbol+")</div>";
                 html +="      </div>";
-                html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+value.market_cap_usd+" USD</div>";
-                html +="      <div class='item-subtitle' style='color:#ccc;font-size:11px;'>"+value.price_usd+" USD ("+change+")</div>";
+                html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+value.market_cap_thb+" THB</div>";
+                html +="      <div class='item-subtitle' style='color:#ccc;font-size:11px;'>"+value.price_thb+" THB ("+change+")</div>";
                 html +="    </div>";
                 html +="  </div>";
                 html +="</li>";
@@ -608,6 +619,7 @@
             }
         });
     }
+
 </script>
 </body>
 </html>
