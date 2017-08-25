@@ -733,9 +733,8 @@ firebase.initializeApp(config);
 
 	        $$('.news-item').on('click', function(){
 		    	var link = $$(this).attr('data-link');
-		    	$("#news-content").html('<iframe src="'+link+'" style="width:100%;height:1000px;border:0" onload="resizeIframe(this)" ></iframe>')
-
-		        newsView.router.load({pageName: 'readnews'});
+		    	window.open(link)
+		        //newsView.router.load({pageName: 'readnews'});
 		    }); 
 		});
 	}
