@@ -359,7 +359,7 @@
 						          <div class="item-media"><i class="framework7-icons">person</i></div>
 						          <div class="item-inner">
 						            <div class="item-title">Online</div>
-						            <div class="item-after online-count"></div>
+						            <div class="item-after online-count"><span class="preloader preloader-white"></span></div>
 						          </div>
 						        </li>
                                 
