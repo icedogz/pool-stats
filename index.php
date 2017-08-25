@@ -545,7 +545,7 @@ firebase.initializeApp(config);
    
 
     function getData(show_preload=0,pool,address){
-        var pool = $("#pool").val()
+
         if(show_preload==1){
         var preLoader = '<span class="preloader preloader-white"></span>';
 
