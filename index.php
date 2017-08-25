@@ -526,6 +526,11 @@ firebase.initializeApp(config);
     $$('#btn-view-stats').on('click', function(){
     	var pool = $("#pool").val();
     	var address = $("#wallet_address").val();
+
+    	if(address==""){
+    		alert("Please enter your wallet address");
+    		return false;
+    	}
     	//var auto_view = $("#auto_view:checked").length==1 ? 'yes' : 'no';
         var storedData = myApp.formStoreData('from-pool', {
             'pool':  pool,
