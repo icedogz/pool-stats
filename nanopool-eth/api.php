@@ -10,7 +10,7 @@ function convertToHoursMins($time, $format = '%02d:%02d') {
 function callService($url,$cache=0){
 	
 
-    $cache_file = 'cache/'.md5($url);
+    $cache_file = '../cache/'.md5($url);
 
     if (file_exists($cache_file) && $cache>0 && (filemtime($cache_file) > (time() - 60 * $cache ))) {
 	 
