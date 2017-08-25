@@ -332,7 +332,7 @@ if(!isset($_COOKIE['uniqueID']))
         </div>
 
         <!-- tab3-->
-        <div id="tab3" class="view tab view-favorite">
+        <div id="tab3" class="view tab view-news">
             <!-- Top Navbar-->
             <div class="navbar">
                 <!-- Home page navbar -->
@@ -341,7 +341,7 @@ if(!isset($_COOKIE['uniqueID']))
                     <div class="right"><a href="#" class="refresh-news link" ><i class="framework7-icons">refresh</i> </a></div>
                 </div>
                 <!-- Select read news navbar -->
-                <div class="navbar-inner cached" data-page="select-marketcap">
+                <div class="navbar-inner cached" data-page="readnews">
                     <div class="left"><a href="#news" class="back link"><i class="framework7-icons">left</i> <span>Back</span> </a></div>
                     <div class="center">News</div>
                     <div class="right"></div>
@@ -476,6 +476,11 @@ firebase.initializeApp(config);
     }) 
 
     var marketcapView = myApp.addView('.view-marketcap', {
+      dynamicNavbar: true,
+      domCache: true
+    }) 
+
+    var newsView = myApp.addView('.view-news', {
       dynamicNavbar: true,
       domCache: true
     }) 
@@ -711,7 +716,7 @@ firebase.initializeApp(config);
 	    	snapshot.forEach((duckSnap) => {
 	  			const duck = duckSnap.val();
 	                html +="<li>";
-	                html +="  <a data-link='"+duck.link+"' href='' class='item-link news-item  item-content'>";
+	                html +="  <a data-link='"+duck.link+"' href='#' class='item-link news-item item-content'>";
 	                html +="    <div class='item-inner'>";
 	                html +="      <div class='item-title-row'>";
 	                html +="        <div class='item-title' style='font-size:12px;'>Siam Blockchain</div>";
@@ -725,16 +730,12 @@ firebase.initializeApp(config);
 	        });
 	        html +="</ul>";
 	        $("#news-list").html(html); 
+
 	        $$('.news-item').on('click', function(){
 		    	var link = $$(this).attr('data-link');
-		    	$.ajax({
-		            url:link,
-		            type:'get',
-		            success:function(data){
-		            }
-		        });
+		    	$("#news-content").html('<iframe src="'+link+'" style="width:100%;height:1000px;border:0" onload="resizeIframe(this)" ></iframe>')
 
-		        mainView.router.load({pageName: 'readnews'});
+		        newsView.router.load({pageName: 'readnews'});
 		    }); 
 		});
 	}
@@ -821,6 +822,9 @@ firebase.initializeApp(config);
 		});
 		
 	}
+	function resizeIframe(obj) {
+	    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+	  }
 </script>
 
 <script>
