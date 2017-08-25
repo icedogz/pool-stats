@@ -340,11 +340,17 @@ if(!isset($_COOKIE['uniqueID']))
                     <div class="center">News</div>
                     <div class="right"><a href="#" class="refresh-news link" ><i class="framework7-icons">refresh</i> </a></div>
                 </div>
+                <!-- Select read news navbar -->
+                <div class="navbar-inner cached" data-page="select-marketcap">
+                    <div class="left"><a href="#news" class="back link"><i class="framework7-icons">left</i> <span>Back</span> </a></div>
+                    <div class="center">News</div>
+                    <div class="right"></div>
+                </div>
             </div>
             <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
             <div class="pages navbar-through toolbar-through">
-                <!-- Market Cap page -->
-                <div class="page" data-page="favorite">
+                <!-- News page -->
+                <div class="page" data-page="news">
                     <div class="page-content pull-to-refresh-content pull-news">
                         <!-- Default pull to refresh layer-->
                         <div class="pull-to-refresh-layer">
@@ -353,6 +359,15 @@ if(!isset($_COOKIE['uniqueID']))
 
                         <div class="list-block media-list" id="news-list" style="margin:0">
                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Read news -->
+                <div class="page cached" data-page="readnews">
+                    <div class="page-content ">
+                        <div id="news-content">
+                          	<span class="preloader preloader-white"></span>
                         </div>
                     </div>
                 </div>
@@ -696,10 +711,10 @@ firebase.initializeApp(config);
 	    	snapshot.forEach((duckSnap) => {
 	  			const duck = duckSnap.val();
 	                html +="<li>";
-	                html +="  <a href='"+duck.link+"' class='item-link external item-content'>";
+	                html +="  <a data-link='"+duck.link+"' href='' class='item-link news-item  item-content'>";
 	                html +="    <div class='item-inner'>";
 	                html +="      <div class='item-title-row'>";
-	                html +="        <div class='item-title'>Siam Blockchain</div>";
+	                html +="        <div class='item-title' style='font-size:12px;'>Siam Blockchain</div>";
 	                html +="        <div class='item-after'></div>";
 	                html +="      </div>";
 	                html +="      <div class='item-subtitle' style='color:#999;font-size:11px;'>"+duck.pubDate+"</div>";
@@ -709,7 +724,18 @@ firebase.initializeApp(config);
 	                html +="</li>";
 	        });
 	        html +="</ul>";
-	        $("#news-list").html(html);  
+	        $("#news-list").html(html); 
+	        $$('.news-item').on('click', function(){
+		    	var link = $$(this).attr('data-link');
+		    	$.ajax({
+		            url:link,
+		            type:'get',
+		            success:function(data){
+		            }
+		        });
+
+		        mainView.router.load({pageName: 'readnews'});
+		    }); 
 		});
 	}
 
