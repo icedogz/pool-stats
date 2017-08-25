@@ -88,7 +88,7 @@
                 <div class="page" data-page="index">
                     <div class="page-content">
                         <form id="from-pool" class="list-block store-data">
-                            <img src="favicons/apple-touch-icon.png" style="border-radius: 100px;border:solid 1px #333;margin:30px auto 0;display: block;">
+                            <img src="favicons/apple-touch-icon.png" style="width:20%;border-radius: 100px;border:solid 1px #333;margin:30px auto 0;display: block;">
                             <div class="list-block">
                                 <ul>
                                     <li>
@@ -658,6 +658,30 @@
 	}
 
 
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105294635-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBC85sGN_qp6XjBY3FXtk_NWsGEsm-hSNM",
+    authDomain: "pool-stats-a06b7.firebaseapp.com",
+    databaseURL: "https://pool-stats-a06b7.firebaseio.com",
+    projectId: "pool-stats-a06b7",
+    storageBucket: "pool-stats-a06b7.appspot.com",
+    messagingSenderId: "746391640103"
+  };
+  firebase.initializeApp(config);
 </script>
 </body>
 </html>
