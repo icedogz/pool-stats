@@ -89,7 +89,7 @@ if(!isset($_COOKIE['uniqueID']))
                 <div class="navbar-inner cached" data-page="pool_report">
                     <div class="left"><a href="#index" class="back link"><i class="framework7-icons">left</i> <span>Back</span> </a></div>
                     <div class="center nav-pool-name">Pool Stats</div>
-                     <div class="right"><a href="#" class="refresh-pool link" ><i class="framework7-icons">refresh</i> </a></div>
+                    <div class="right"><a href="#" class="refresh-pool link" ><i class="framework7-icons">refresh</i> </a></div>
                 </div>
             </div>
             <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
@@ -98,6 +98,8 @@ if(!isset($_COOKIE['uniqueID']))
                 <div class="page" data-page="index">
                     <div class="page-content">
                         <form id="from-pool" class="list-block store-data">
+                        	<input type="hidden" id="current-address" value="">
+                        	<input type="hidden" id="current-pool" value="">
                             <img src="favicons/apple-touch-icon.png" style="width:20%;border-radius: 100px;border:solid 1px #333;margin:30px auto 0;display: block;">
                             <div class="list-block">
                                 <ul>
@@ -132,6 +134,15 @@ if(!isset($_COOKIE['uniqueID']))
                         <div class="content-block">
                           <p><a href="#" class="button button-big active" id="btn-view-stats">View Stats</a></p>
                         </div>   
+
+                        
+                        <div class="content-block-title">Track History</div>
+						<div class="list-block media-list">
+						  <ul id="list-track-history">
+						 
+						  </ul>
+						</div>
+
                     </div>
                 </div>
                 <!-- Pool Report page -->
@@ -411,7 +422,19 @@ if(!isset($_COOKIE['uniqueID']))
 <script type="text/javascript" src="framework7/js/framework7.min.js"></script>
 <script type="text/javascript" src="framework7/js/gathering.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 <script type="text/javascript">
+// Initialize Firebase
+var config = {
+apiKey: "AIzaSyBC85sGN_qp6XjBY3FXtk_NWsGEsm-hSNM",
+authDomain: "pool-stats-a06b7.firebaseapp.com",
+databaseURL: "https://pool-stats-a06b7.firebaseio.com",
+projectId: "pool-stats-a06b7",
+storageBucket: "pool-stats-a06b7.appspot.com",
+messagingSenderId: "746391640103"
+};
+firebase.initializeApp(config);
+
 	Number.prototype.formatMoney = function(c, d, t){
 	var n = this, 
 	    c = isNaN(c = Math.abs(c)) ? 2 : c, 
@@ -425,6 +448,8 @@ if(!isset($_COOKIE['uniqueID']))
 
 	var deviceId = '<?php echo $deviceId; ?>';
 	$('.deviceId').text(deviceId);
+
+	var pools = {'ethermine':'ETH - ethermine.org','nanopool-eth' : 'ETH - nanopool.org','nanopool-etc' : 'ETC - nanopool.org'};
 
     // Initialize App  
     var myApp = new Framework7();
@@ -460,7 +485,9 @@ if(!isset($_COOKIE['uniqueID']))
         }
     });
 
-    $('.refresh-pool').on('click', function(){ getData(1); });
+    $('.refresh-pool').on('click', function(){ 
+    	getData(1,$("#current-pool").val(),$("#current-address").val()); 
+    });
     $('.refresh-marketcap').on('click', function(){ getMarketCap(); });
     $('.refresh-news').on('click', function(){ getNews(); });
 
@@ -480,10 +507,7 @@ if(!isset($_COOKIE['uniqueID']))
 
         setViewStatsHistory(deviceId, pool, address);
 
-        getData(1);
-        setInterval(function(){
-            getData()
-        },30000)
+        getData(1,pool,address);
 
         mainView.router.load({pageName: 'pool_report'});
     });
@@ -497,7 +521,7 @@ if(!isset($_COOKIE['uniqueID']))
 
    
 
-    function getData(show_preload=0){
+    function getData(show_preload=0,pool,address){
         var pool = $("#pool").val()
         if(show_preload==1){
         var preLoader = '<span class="preloader preloader-white"></span>';
@@ -521,7 +545,7 @@ if(!isset($_COOKIE['uniqueID']))
         $.ajax({
             url:pool+'/api.php',
             type:'get',
-            data:{miner: $("#wallet_address").val()},
+            data:{miner: address},
             dataType:'json',
             success:function(data){
                 $('#walletaddress').text(data.wallet_address);
@@ -551,6 +575,8 @@ if(!isset($_COOKIE['uniqueID']))
                 $("#month-eth").html(data.earning.month.eth);
                 $("#month-thb").html(data.earning.month.thb);
                 $("#next-payment").html(data.next_payment_minute);
+                $("#current-address").val(address);
+                $("#current-pool").val(pool);
 
                 var payout_html = "";
                 $.each(data.payouts, function(index, value) {
@@ -564,11 +590,36 @@ if(!isset($_COOKIE['uniqueID']))
         });
     }
 
+    realtimeMarketcap();
+    function realtimeMarketcap(){
+    	firebase.database().ref('/marketcap/data').on('value', function(snapshot) {
+	    	renderMarketCapList(snapshot.val());
+		
+			myApp.initImagesLazyLoad('.view-marketcap .page-content');
+
+	        var mySearchbar = $$('.searchbar')[0].f7Searchbar;
+
+	        $('.label-checkbox').on('click', function(){
+	        	setTimeout(function(){
+	        		var selected_coin = []
+			    	$('.select-coin-checkbox:checked').each(function(index, el) {
+			    		selected_coin[index] = $(this).val();
+			    	});
+			    	myApp.formStoreData('selected_coin', selected_coin);
+			    	var selected_coin = myApp.formGetData('selected_coin');
+	            	renderMarketCapList(data,1,0);
+	        	},200)
+		    });
+	    });
+    }
 
     function getMarketCap(){
     	 
 
         $("#marketcap-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
+        setTimeout(function(){
+        	realtimeMarketcap()
+        },500)
         $.ajax({
             url:'https://api.coinmarketcap.com/v1/ticker/?convert=THB',
             type:'get',
@@ -576,26 +627,13 @@ if(!isset($_COOKIE['uniqueID']))
             cache:true,
             success:function(data){
 
-                renderMarketCapList(data);
+            	var ref = firebase.database().ref('marketcap');
+				ref.update({
+					data : data
+				});
+ 
 
-
-                myApp.initImagesLazyLoad('.view-marketcap .page-content');
-
-                var mySearchbar = $$('.searchbar')[0].f7Searchbar;
-
-                $('.label-checkbox').on('click', function(){
-                	setTimeout(function(){
-                		var selected_coin = []
-				    	$('.select-coin-checkbox:checked').each(function(index, el) {
-				    		selected_coin[index] = $(this).val();
-				    	});
-				    	myApp.formStoreData('selected_coin', selected_coin);
-				    	var selected_coin = myApp.formGetData('selected_coin');
-	                	renderMarketCapList(data,1,0);
-                	},200)
-                	
-
-			    });
+                
                 
             }
         });
@@ -651,31 +689,45 @@ if(!isset($_COOKIE['uniqueID']))
         }
     }
 
+    getRealtimeNews()
+    function getRealtimeNews(){
+	    firebase.database().ref('/news/data').on('value', function(snapshot) {
+	    	var html="<ul>";
+	    	snapshot.forEach((duckSnap) => {
+	  			const duck = duckSnap.val();
+	                html +="<li>";
+	                html +="  <a href='"+duck.link+"' class='item-link external item-content'>";
+	                html +="    <div class='item-inner'>";
+	                html +="      <div class='item-title-row'>";
+	                html +="        <div class='item-title'>Siam Blockchain</div>";
+	                html +="        <div class='item-after'></div>";
+	                html +="      </div>";
+	                html +="      <div class='item-subtitle' style='color:#999;font-size:11px;'>"+duck.pubDate+"</div>";
+	                html +="      <div class='item-text' style='color:#ccc'>"+duck.title+"</div>";
+	                html +="    </div>";
+	                html +="  </a>";
+	                html +="</li>";
+	        });
+	        html +="</ul>";
+	        $("#news-list").html(html);  
+		});
+	}
+
     function getNews(){
         $("#news-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
+       	setTimeout(function(){
+       		 getRealtimeNews();
+       		},500)
         $.ajax({
             url:'news.php',
             type:'get',
             dataType:'json',
             cache:true,
             success:function(data){
-                var html="<ul>";
-                $.each(data.channel.item, function(index, value) {
-                    html +="<li>";
-                    html +="  <a href='"+value.link+"' class='item-link external item-content'>";
-                    html +="    <div class='item-inner'>";
-                    html +="      <div class='item-title-row'>";
-                    html +="        <div class='item-title'>Siam Blockchain</div>";
-                    html +="        <div class='item-after'></div>";
-                    html +="      </div>";
-                    html +="      <div class='item-subtitle'>"+value.pubDate+"</div>";
-                    html +="      <div class='item-text' style='color:#ccc'>"+value.title+"</div>";
-                    html +="    </div>";
-                    html +="  </a>";
-                    html +="</li>";
-                });
-                    html +="</ul>";
-                $("#news-list").html(html);             
+            	var ref = firebase.database().ref('news');
+				ref.update({
+					data : data.channel.item
+				});
             }
         });
     }
@@ -691,32 +743,7 @@ if(!isset($_COOKIE['uniqueID']))
 	  }
 	  return num.toFixed(digits).replace(rx, "$1");
 	}
-
-
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-105294635-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBC85sGN_qp6XjBY3FXtk_NWsGEsm-hSNM",
-    authDomain: "pool-stats-a06b7.firebaseapp.com",
-    databaseURL: "https://pool-stats-a06b7.firebaseio.com",
-    projectId: "pool-stats-a06b7",
-    storageBucket: "pool-stats-a06b7.appspot.com",
-    messagingSenderId: "746391640103"
-  };
-  firebase.initializeApp(config);
+  
 
   var gathering = new Gathering(firebase.database(), 'users-online'); 
 	gathering.join(); 
@@ -734,6 +761,51 @@ if(!isset($_COOKIE['uniqueID']))
 		});
 		
 	}
+	getStatsHistroy (deviceId,pools)
+	function getStatsHistroy (deviceId,pools) {
+        firebase.database().ref('/users/' + deviceId + '/pools').orderByChild("time").on('value', function(snapshot) {
+		  	//console.log(snapshot.val());
+		  	html = "";
+		  	snapshot.forEach((duckSnap) => {
+		  		const duck = duckSnap.val()
+			  	html +="<li>";
+			    html +="  <a href='#' class='item-link item-content track-history-item' data-pool='"+duck.pool+"' data-address='"+duck.address+"' data-poolname='"+pools[duck.pool]+"'>";
+			    html +="    <div class='item-inner'>";
+			    html +="      <div class='item-title-row'>";
+			    html +="        <div class='item-title' style='font-size:13px;'>"+pools[duck.pool]+"</div>";
+			    html +="      </div>";
+			    html +="      <div class='item-subtitle' style='color:#999;font-size:11px;'>"+duck.address+"</div>";
+			    html +="    </div>";
+			    html +="  </a>";
+			    html +="</li>";
+		    });
+
+		    $("#list-track-history").html(html);
+
+		    $$('.track-history-item').on('click', function(){
+		    	var pool = $$(this).attr('data-pool');
+		    	var address = $$(this).attr('data-address');
+		        $(".nav-pool-name").text($$(this).attr('data-poolname'))
+
+		        getData(1,pool,address);
+
+		        mainView.router.load({pageName: 'pool_report'});
+		    });
+
+		});
+		
+	}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105294635-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
 </body>
 </html>
