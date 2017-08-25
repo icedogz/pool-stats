@@ -171,15 +171,15 @@ if(!isset($_COOKIE['uniqueID']))
                                 <div class="card-content-inner">
                                     <div class="row">
                                         <div class="col-33" >
-                                            <h4 id="reported-hashrate" style="margin:0"><span class="preloader preloader-white"></span></h4>
+                                            <h4 id="reported-hashrate" style="margin:0;font-size:16px;"><span class="preloader preloader-white"></span></h4>
                                             <span class="" style="color:#999">Reported</span>
                                         </div>
                                         <div class="col-33" >
-                                            <h4 id="effective-hashrate" style="margin:0"><span class="preloader preloader-white"></span></h4>
+                                            <h4 id="effective-hashrate" style="margin:0;font-size:16px;"><span class="preloader preloader-white"></span></h4>
                                             <span class="" style="color:#999">Effective</span>
                                         </div>
                                         <div class="col-33" >
-                                            <h4 id="average-hashrate" style="margin:0"><span class="preloader preloader-white"></span></h4>
+                                            <h4 id="average-hashrate" style="margin:0;font-size:16px;"><span class="preloader preloader-white"></span></h4>
                                             <span class="" style="color:#999">Average</span>
                                         </div>
                                     </div>
