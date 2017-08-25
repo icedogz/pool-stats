@@ -469,13 +469,16 @@ if(!isset($_COOKIE['uniqueID']))
     
 
     $$('#btn-view-stats').on('click', function(){
-
+    	var pool = $("#pool").val();
+    	var address = $("#wallet_address").val();
         var storedData = myApp.formStoreData('from-pool', {
-            'pool':  $("#pool").val(),
-            'wallet_address': $("#wallet_address").val()
+            'pool':  pool,
+            'wallet_address': address
         });
 
         $(".nav-pool-name").text($("#pool option:selected").text())
+
+        setViewStatsHistory(deviceId, pool, address);
 
         getData(1);
         setInterval(function(){
@@ -720,6 +723,17 @@ if(!isset($_COOKIE['uniqueID']))
 	gathering.onUpdated(function(count, users) {
 		$('.online-count').text(count) 
 	});
+
+	function setViewStatsHistory (deviceId, pool, address) {
+        var key = pool+'|'+address
+  		var ref = firebase.database().ref('users/' + deviceId + '/pools/'+key);
+		ref.update({
+			address : address,
+            pool : pool,
+			time : Math.floor(Date.now() / 1000),
+		});
+		
+	}
 </script>
 </body>
 </html>
