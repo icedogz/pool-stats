@@ -353,7 +353,19 @@
                 <!-- Market Cap page -->
                 <div class="page" data-page="setting">
                     <div class="page-content">
-                          
+                    	<div class="list-block">
+                            <ul>
+                               <li class="item-content">
+						          <div class="item-media"><i class="framework7-icons">person</i></div>
+						          <div class="item-inner">
+						            <div class="item-title">Online</div>
+						            <div class="item-after online-count"></div>
+						          </div>
+						        </li>
+                                
+                            </ul>
+                        </div>
+                        
                     </div>
                 </div>
                 
@@ -381,6 +393,7 @@
     </div>
 <!-- Path to Framework7 Library JS-->
 <script type="text/javascript" src="framework7/js/framework7.min.js"></script>
+<script type="text/javascript" src="framework7/js/gathering.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script type="text/javascript">
 	Number.prototype.formatMoney = function(c, d, t){
@@ -682,6 +695,12 @@
     messagingSenderId: "746391640103"
   };
   firebase.initializeApp(config);
+
+  var gathering = new Gathering(firebase.database(), 'users-online'); 
+	gathering.join(); 
+	gathering.onUpdated(function(count, users) {
+		$('.online-count').text(count) 
+	});
 </script>
 </body>
 </html>
