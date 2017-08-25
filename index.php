@@ -125,16 +125,17 @@ if(!isset($_COOKIE['uniqueID']))
                                         <div class="item-content">
                                             <div class="item-inner">
                                                 <div class="item-title label">Wallet</div>
-                                                <div class="item-input">
+                                                <div class="item-input ">
                                                     <input type="text" id="wallet_address" value="<?php echo $_GET['miner'] ?>" placeholder="Enter your wallet address">
                                                 </div>
                                             </div>
                                           </div>
                                     </li>
+                                   
                                 </ul>
                             </div>
                         </form>
-                        <div class="content-block">
+                        <div class="content-block" >
                           <p><a href="#" class="button button-big active" id="btn-view-stats">View Stats</a></p>
                         </div>   
 
@@ -492,8 +493,13 @@ firebase.initializeApp(config);
 
     var storedData = myApp.formGetData('from-pool');
     if(storedData) {
-        $("#wallet_address").val(storedData.wallet_address);
+    	console.log(storedData)
+        	$("#wallet_address").val(storedData.wallet_address);
+
+        
     }
+
+
 
     $('.tab-link').on('click', function(){
         if($(this).attr('href')=="#tab2"){
@@ -516,15 +522,15 @@ firebase.initializeApp(config);
 
     $$('.pull-to-refresh-content.pull-marketcap').on('ptr:refresh', function (e) { getMarketCap();  myApp.pullToRefreshDone();});
     $$('.pull-to-refresh-content.pull-news').on('ptr:refresh', function (e) { getNews();  myApp.pullToRefreshDone();});
-    
-
+   
     $$('#btn-view-stats').on('click', function(){
     	var pool = $("#pool").val();
     	var address = $("#wallet_address").val();
+    	//var auto_view = $("#auto_view:checked").length==1 ? 'yes' : 'no';
         var storedData = myApp.formStoreData('from-pool', {
             'pool':  pool,
             'wallet_address': address
-        });
+        });	
 
         $(".nav-pool-name").text($("#pool option:selected").text())
 
@@ -534,6 +540,11 @@ firebase.initializeApp(config);
 
         mainView.router.load({pageName: 'pool_report'});
     });
+    setTimeout(function(){
+    	if($("#wallet_address").val()!=""){
+			$$("#btn-view-stats").click();
+    	}
+	},1000)
 
     
 
