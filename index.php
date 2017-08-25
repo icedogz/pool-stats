@@ -31,6 +31,9 @@ if(!isset($_COOKIE['uniqueID']))
 	<link rel="manifest" href="favicons/manifest.json">
 	<meta name="theme-color" content="#111111">
 	<style type="text/css">
+		body{
+			background: #111;
+		}
 		.data-table{
             
         }
