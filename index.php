@@ -17,7 +17,7 @@ if(!isset($_COOKIE['uniqueID']))
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Pool Stats</title>
+    <title>ETH Pool Stats - Track your Ethereum mining pools</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="framework7/css/framework7.ios.colors.min.css">
@@ -82,13 +82,13 @@ if(!isset($_COOKIE['uniqueID']))
             <div class="navbar">
                 <!-- Home page navbar -->
                 <div class="navbar-inner" data-page="index">            
-                    <div class="center">Pool Stats</div>
+                    <div class="center">ETH Pool Stats</div>
                 </div>
 
                 <!-- Home page navbar -->
                 <div class="navbar-inner cached" data-page="pool_report">
                     <div class="left"><a href="#index" class="back link"><i class="framework7-icons">left</i> <span>Back</span> </a></div>
-                    <div class="center nav-pool-name">Pool Stats</div>
+                    <div class="center nav-pool-name">ETH Pool Stats</div>
                     <div class="right"><a href="#" class="refresh-pool link" ><i class="framework7-icons">refresh</i> </a></div>
                 </div>
             </div>
