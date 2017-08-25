@@ -1,4 +1,14 @@
-<?php header("Cache-Control: max-age=2592000"); ?>
+<?php 
+header("Cache-Control: max-age=2592000"); 
+if(!isset($_COOKIE['uniqueID']))
+{
+	$deviceId = uniqid();
+    $expire=time()+60*60*24*30*12;//however long you want
+    setcookie('uniqueID', $deviceId , $expire);
+}else{
+	$deviceId = $_COOKIE['uniqueID'];
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -355,11 +365,17 @@
                     <div class="page-content">
                     	<div class="list-block">
                             <ul>
-                               <li class="item-content">
-						          <div class="item-media"><i class="framework7-icons">person</i></div>
+                                <li class="item-content">
 						          <div class="item-inner">
 						            <div class="item-title">Online</div>
 						            <div class="item-after online-count"><span class="preloader preloader-white"></span></div>
+						          </div>
+						        </li>
+						        <li class="item-content">
+						         
+						          <div class="item-inner">
+						            <div class="item-title">DeviceID</div>
+						            <div class="item-after deviceId"></div>
 						          </div>
 						        </li>
                                 
@@ -406,6 +422,9 @@
 	    j = (j = i.length) > 3 ? j % 3 : 0;
 	   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
 	 };
+
+	var deviceId = '<?php echo $deviceId; ?>';
+	$('.deviceId').text(deviceId);
 
     // Initialize App  
     var myApp = new Framework7();
