@@ -43,7 +43,7 @@ if(isset($_GET['miner']) && $_GET['miner']!=""){
 
 	$balance = $data->balance;
 	$ret['wallet_address'] = $wallet;
-	$ret['balance'] = number_format($balance,5). ' ETH';
+	$ret['balance'] = number_format($balance,5). ' ETC';
 	$ret['next_payment_minute'] = "";
 	$ret['next_payment_in'] = "";
 	$ret['hashrates']['reported'] = number_format($data->hashrate,1) .' MH/s';

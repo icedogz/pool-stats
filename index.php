@@ -468,7 +468,7 @@ firebase.initializeApp(config);
 	var deviceId = '<?php echo $deviceId; ?>';
 	$('.deviceId').text(deviceId);
 
-	var pools = {'ethermine':'ETH - ethermine.org','nanopool-eth' : 'ETH - nanopool.org','nanopool-etc' : 'ETC - nanopool.org'};
+	var pools = {'ethermine':'ETH - ethermine.org','nanopool-eth' : 'ETH - nanopool.org','nanopool-etc' : 'ETC - nanopool.org','nanopool-xmr' : 'XMR - nanopool.org'};
 
     // Initialize App  
     var myApp = new Framework7();
@@ -503,14 +503,11 @@ firebase.initializeApp(config);
 
     $('.tab-link').on('click', function(){
         if($(this).attr('href')=="#tab2"){
-            if($('#marketcap-list .item-content').length==0){
-                getMarketCap();
-            }
+             getMarketCap(0);
         }
         if($(this).attr('href')=="#tab3"){
-            if($('#news-list .item-content').length==0){
-                getNews();
-            }
+            getNews(0);
+         
         }
     });
 
@@ -646,16 +643,17 @@ firebase.initializeApp(config);
 			    	});
 			    	myApp.formStoreData('selected_coin', selected_coin);
 			    	var selected_coin = myApp.formGetData('selected_coin');
-	            	renderMarketCapList(data,1,0);
+	            	renderMarketCapList(snapshot.val(),1,0);
 	        	},200)
 		    });
 	    });
     }
 
-    function getMarketCap(){
+    function getMarketCap(preload=1){
     	 
-
-        $("#marketcap-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
+    	if(preload==1){
+        	$("#marketcap-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
+    	}
         setTimeout(function(){
         	realtimeMarketcap()
         },500)
@@ -663,17 +661,12 @@ firebase.initializeApp(config);
             url:'https://api.coinmarketcap.com/v1/ticker/?convert=THB',
             type:'get',
             dataType:'json',
-            cache:true,
+            cache:false,
             success:function(data){
-
             	var ref = firebase.database().ref('marketcap');
 				ref.update({
 					data : data
-				});
- 
-
-                
-                
+				});   
             }
         });
     }
@@ -690,16 +683,16 @@ firebase.initializeApp(config);
     	$.each(data, function(index, value) {
 
         	if(selected_coin.indexOf(value.id)!=-1){
-                var change = value.percent_change_24h>0 ? "<span style='color:#44d844'>+"+value.percent_change_24h+"%</span>" : "<span style='color:#ec2828'>"+value.percent_change_24h+"%</span>";
+                var change = value.percent_change_24h>0 ? "<span style='color:#44d844'>(+"+value.percent_change_24h+"%)</span>" : "<span style='color:#ec2828'>("+value.percent_change_24h+"%)</span>";
                 html +="<li>";
                 html +="  <div class='item-content'>";
-                html +="    <div class='item-media'><img src='https://files.coinmarketcap.com/static/img/coins/32x32/"+value.id+".png' width='32' height='32'></div>";
+                html +="    <div class='item-media'><img src='https://files.coinmarketcap.com/static/img/coins/16x16/"+value.id+".png' width='16' height='16'></div>";
                 html +="    <div class='item-inner'>";
+                html +="      <div class='item-subtitle' style='color:#ddd;font-size:13px;float:right;text-align:right;'>"+parseFloat(value.price_thb).formatMoney(2, '.', ',')+" THB<br>"+change+"</div>";
                 html +="      <div class='item-title-row'>";
-                html +="        <div class='item-title' style='font-size:14px;'>"+value.name+" ("+value.symbol+")</div>";
+                html +="        <div class='item-title' style='font-size:13px;'>"+value.name+" ("+value.symbol+")</div>";
                 html +="      </div>";
                 html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+nFormatter(parseFloat(value.market_cap_thb),1)+" THB</div>";
-                html +="      <div class='item-subtitle' style='color:#ddd;font-size:13px;'>"+parseFloat(value.price_thb).formatMoney(2, '.', ',')+" THB ("+change+")</div>";
                 html +="    </div>";
                 html +="  </div>";
                 html +="</li>";
@@ -758,8 +751,10 @@ firebase.initializeApp(config);
 		});
 	}
 
-    function getNews(){
-        $("#news-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
+    function getNews(preload=1){
+    	if(preload==1){
+        	$("#news-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
+    	}
        	setTimeout(function(){
        		 getRealtimeNews();
        		},500)
@@ -767,7 +762,7 @@ firebase.initializeApp(config);
             url:'news.php',
             type:'get',
             dataType:'json',
-            cache:true,
+            cache:false,
             success:function(data){
             	var ref = firebase.database().ref('news');
 				ref.update({
