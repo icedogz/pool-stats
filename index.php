@@ -686,7 +686,7 @@ firebase.initializeApp(config);
                 var change = value.percent_change_24h>0 ? "<span style='color:#44d844'>(+"+value.percent_change_24h+"%)</span>" : "<span style='color:#ec2828'>("+value.percent_change_24h+"%)</span>";
                 html +="<li>";
                 html +="  <div class='item-content'>";
-                html +="    <div class='item-media'><img src='https://files.coinmarketcap.com/static/img/coins/16x16/"+value.id+".png' width='16' height='16'></div>";
+                html +="    <div class='item-media'><img src='https://files.coinmarketcap.com/static/img/coins/32x32/"+value.id+".png' width='25' height='25'></div>";
                 html +="    <div class='item-inner'>";
                 html +="      <div class='item-subtitle' style='color:#ddd;font-size:13px;float:right;text-align:right;'>"+parseFloat(value.price_thb).formatMoney(2, '.', ',')+" THB<br>"+change+"</div>";
                 html +="      <div class='item-title-row'>";
