@@ -189,7 +189,7 @@ if(!isset($_COOKIE['uniqueID']))
                         </div> 
 
                         <div class="card">
-                            <div class="card-header">BX Prices</div>
+                            <div class="card-header">Prices</div>
                             <div class="card-content">
                                 <div class="card-content-inner">
                                     <div class="row">
@@ -231,7 +231,7 @@ if(!isset($_COOKIE['uniqueID']))
                             <table>
                                 <thead>
                                   <tr>
-                                    <tr> <th>Period</th> <th>ETH</th> <th>THB</th></tr>
+                                    <tr> <th>Period</th> <th>ETH</th> <th class="unit-currency">THB</th></tr>
                                   </tr>
                                 </thead>
                                 <tbody id="workers">  
@@ -619,16 +619,18 @@ firebase.initializeApp(config);
 
     var storedData = myApp.formGetData('from-pool');
     if(storedData) {
-    	console.log(storedData)
-        	$("#wallet_address").val(storedData.wallet_address);    
+        $("#wallet_address").val(storedData.wallet_address);    
     }
 
     $('#currency').change(function(){
-        console.log($(this).val())
+        
         var storedData = myApp.formStoreData('form-setting', {
             'currency':  $(this).val()
         }); 
+        $('.unit-currency').text($(this).val());
     });
+
+    $('.unit-currency').text($("#currency").val());
 
 
 
@@ -708,11 +710,12 @@ firebase.initializeApp(config);
 	        $("#month-thb").html(preLoader);
 	        $("#payouts").html(preLoader);
         }
+        var currency = $("#currency").val();
 
         $.ajax({
             url:pool+'/api.php',
             type:'get',
-            data:{miner: address},
+            data:{miner: address,currency:currency},
             dataType:'json',
             success:function(data){
                 $('#walletaddress').text(data.wallet_address);
