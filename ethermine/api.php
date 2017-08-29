@@ -46,11 +46,11 @@ if(isset($_GET['miner']) && $_GET['miner']!=""){
 		$eth_price_change = $bx_price->{21}->change;
 	}else{
 		$currency_field = strtolower($currency);
-		$btc = callService('https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert='+$currency,3);
-		$eth = callService('https://api.coinmarketcap.com/v1/ticker/ethereum/?convert='+$currency,3);
-		$btc_price = $btc[0]->{"price_"+$currency_field};
+		$btc = callService('https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert='.$currency,3);
+		$eth = callService('https://api.coinmarketcap.com/v1/ticker/ethereum/?convert='.$currency,3);
+		$btc_price = $btc[0]->{"price_".$currency_field};
 		$btc_price_change = $btc[0]->percent_change_24h;
-		$eth_price = $eth[0]->{"price_"+$currency_field};
+		$eth_price = $eth[0]->{"price_".$currency_field};
 		$eth_price_change = $eth[0]->percent_change_24h;
 	}
 
