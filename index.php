@@ -393,21 +393,142 @@ if(!isset($_COOKIE['uniqueID']))
                 <!-- Market Cap page -->
                 <div class="page" data-page="setting">
                     <div class="page-content">
-                    	<div class="list-block">
+
+                        <div class="content-block-title">Setting</div>
+                         <form id="form-setting" class="list-block store-data">
+                            <ul>
+                                <li>
+                                  <a href="#" class="item-link smart-select">
+                                    <select name="currency" id="currency">
+                                        <option value="USD">USD - United States Dollars</option>
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - United Kingdom Pounds</option>
+                                        <option value="DZD">DZD - Algeria Dinars</option>
+                                        <option value="ARP">ARP - Argentina Pesos</option>
+                                        <option value="AUD">AUD - Australia Dollars</option>
+                                        <option value="ATS">ATS - Austria Schillings</option>
+                                        <option value="BSD">BSD - Bahamas Dollars</option>
+                                        <option value="BBD">BBD - Barbados Dollars</option>
+                                        <option value="BEF">BEF - Belgium Francs</option>
+                                        <option value="BMD">BMD - Bermuda Dollars</option>
+                                        <option value="BRR">BRR - Brazil Real</option>
+                                        <option value="BGL">BGL - Bulgaria Lev</option>
+                                        <option value="CAD">CAD - Canada Dollars</option>
+                                        <option value="CLP">CLP - Chile Pesos</option>
+                                        <option value="CNY">CNY - China Yuan Renmimbi</option>
+                                        <option value="CYP">CYP - Cyprus Pounds</option>
+                                        <option value="CSK">CSK - Czech Republic Koruna</option>
+                                        <option value="DKK">DKK - Denmark Kroner</option>
+                                        <option value="NLG">NLG - Dutch Guilders</option>
+                                        <option value="XCD">XCD - Eastern Caribbean Dollars</option>
+                                        <option value="EGP">EGP - Egypt Pounds</option>
+                                        <option value="FJD">FJD - Fiji Dollars</option>
+                                        <option value="FIM">FIM - Finland Markka</option>
+                                        <option value="FRF">FRF - France Francs</option>
+                                        <option value="DEM">DEM - Germany Deutsche Marks</option>
+                                        <option value="XAU">XAU - Gold Ounces</option>
+                                        <option value="GRD">GRD - Greece Drachmas</option>
+                                        <option value="HKD">HKD - Hong Kong Dollars</option>
+                                        <option value="HUF">HUF - Hungary Forint</option>
+                                        <option value="ISK">ISK - Iceland Krona</option>
+                                        <option value="INR">INR - India Rupees</option>
+                                        <option value="IDR">IDR - Indonesia Rupiah</option>
+                                        <option value="IEP">IEP - Ireland Punt</option>
+                                        <option value="ILS">ILS - Israel New Shekels</option>
+                                        <option value="ITL">ITL - Italy Lira</option>
+                                        <option value="JMD">JMD - Jamaica Dollars</option>
+                                        <option value="JPY">JPY - Japan Yen</option>
+                                        <option value="JOD">JOD - Jordan Dinar</option>
+                                        <option value="KRW">KRW - Korea (South) Won</option>
+                                        <option value="LBP">LBP - Lebanon Pounds</option>
+                                        <option value="LUF">LUF - Luxembourg Francs</option>
+                                        <option value="MYR">MYR - Malaysia Ringgit</option>
+                                        <option value="MXP">MXP - Mexico Pesos</option>
+                                        <option value="NLG">NLG - Netherlands Guilders</option>
+                                        <option value="NZD">NZD - New Zealand Dollars</option>
+                                        <option value="NOK">NOK - Norway Kroner</option>
+                                        <option value="PKR">PKR - Pakistan Rupees</option>
+                                        <option value="XPD">XPD - Palladium Ounces</option>
+                                        <option value="PHP">PHP - Philippines Pesos</option>
+                                        <option value="XPT">XPT - Platinum Ounces</option>
+                                        <option value="PLZ">PLZ - Poland Zloty</option>
+                                        <option value="PTE">PTE - Portugal Escudo</option>
+                                        <option value="ROL">ROL - Romania Leu</option>
+                                        <option value="RUR">RUR - Russia Rubles</option>
+                                        <option value="SAR">SAR - Saudi Arabia Riyal</option>
+                                        <option value="XAG">XAG - Silver Ounces</option>
+                                        <option value="SGD">SGD - Singapore Dollars</option>
+                                        <option value="SKK">SKK - Slovakia Koruna</option>
+                                        <option value="ZAR">ZAR - South Africa Rand</option>
+                                        <option value="KRW">KRW - South Korea Won</option>
+                                        <option value="ESP">ESP - Spain Pesetas</option>
+                                        <option value="XDR">XDR - Special Drawing Right (IMF)</option>
+                                        <option value="SDD">SDD - Sudan Dinar</option>
+                                        <option value="SEK">SEK - Sweden Krona</option>
+                                        <option value="CHF">CHF - Switzerland Francs</option>
+                                        <option value="TWD">TWD - Taiwan Dollars</option>
+                                        <option value="THB" selected="selected">THB - Thailand Baht</option>
+                                        <option value="TTD">TTD - Trinidad and Tobago Dollars</option>
+                                        <option value="TRL">TRL - Turkey Lira</option>
+                                        <option value="VEB">VEB - Venezuela Bolivar</option>
+                                        <option value="ZMK">ZMK - Zambia Kwacha</option>
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="XCD">XCD - Eastern Caribbean Dollars</option>
+                                        <option value="XDR">XDR - Special Drawing Right (IMF)</option>
+                                        <option value="XAG">XAG - Silver Ounces</option>
+                                        <option value="XAU">XAU - Gold Ounces</option>
+                                        <option value="XPD">XPD - Palladium Ounces</option>
+                                        <option value="XPT">XPT - Platinum Ounces</option>
+                                    </select>
+                                    <div class="item-content">
+                                      <div class="item-inner">
+                                        <div class="item-title">Currency</div>
+                                        <div class="item-after">THB - Thailand Baht</div>
+                                      </div>
+                                    </div>
+                                  </a>
+                                </li>                                
+                            </ul>
+                        </form>
+
+                        <div class="content-block-title">Stats</div>
+                        <div class="list-block">
                             <ul>
                                 <li class="item-content">
-						          <div class="item-inner">
-						            <div class="item-title">Online</div>
-						            <div class="item-after online-count"><span class="preloader preloader-white"></span></div>
-						          </div>
-						        </li>
-						        <li class="item-content">
-						         
-						          <div class="item-inner">
-						            <div class="item-title">DeviceID</div>
-						            <div class="item-after deviceId"></div>
-						          </div>
-						        </li>
+                                  <div class="item-inner">
+                                    <div class="item-title">Online</div>
+                                    <div class="item-after online-count"><span class="preloader preloader-white"></span></div>
+                                  </div>
+                                </li>
+                                <li class="item-content">
+                                 
+                                  <div class="item-inner">
+                                    <div class="item-title">DeviceID</div>
+                                    <div class="item-after deviceId" style="font-size:10px;"></div>
+                                  </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+
+                        
+
+                        <div class="content-block-title">Donate</div>
+                        <div class="list-block">
+                            <ul>
+                                <li class="item-content">
+                                  <div class="item-inner">
+                                    <div class="item-title">BTC</div>
+                                    <div class="item-after" style="font-size:11px;">1PcAw1WT7nj8VWRaERtjEXXy954tfhZpF9</div>
+                                  </div>
+                                </li>
+                                <li class="item-content">
+                                 
+                                  <div class="item-inner">
+                                    <div class="item-title">ETH</div>
+                                    <div class="item-after" style="font-size:11px;">0x270e6aa94B84Abd514B293d8F67101DA18b1609c</div>
+                                  </div>
+                                </li>
                                 
                             </ul>
                         </div>
@@ -445,12 +566,12 @@ if(!isset($_COOKIE['uniqueID']))
 <script type="text/javascript">
 // Initialize Firebase
 var config = {
-apiKey: "AIzaSyBC85sGN_qp6XjBY3FXtk_NWsGEsm-hSNM",
-authDomain: "pool-stats-a06b7.firebaseapp.com",
-databaseURL: "https://pool-stats-a06b7.firebaseio.com",
-projectId: "pool-stats-a06b7",
-storageBucket: "pool-stats-a06b7.appspot.com",
-messagingSenderId: "746391640103"
+    apiKey: "AIzaSyBC85sGN_qp6XjBY3FXtk_NWsGEsm-hSNM",
+    authDomain: "pool-stats-a06b7.firebaseapp.com",
+    databaseURL: "https://pool-stats-a06b7.firebaseio.com",
+    projectId: "pool-stats-a06b7",
+    storageBucket: "pool-stats-a06b7.appspot.com",
+    messagingSenderId: "746391640103"
 };
 firebase.initializeApp(config);
 
@@ -468,7 +589,7 @@ firebase.initializeApp(config);
 	var deviceId = '<?php echo $deviceId; ?>';
 	$('.deviceId').text(deviceId);
 
-	var pools = {'ethermine':'ETH - ethermine.org','nanopool-eth' : 'ETH - nanopool.org','nanopool-etc' : 'ETC - nanopool.org','nanopool-xmr' : 'XMR - nanopool.org'};
+	var pools = {'ethermine':'ETH - ethermine.org','nanopool-eth' : 'ETH - nanopool.org','nanopool-etc' : 'ETC - nanopool.org'};
 
     // Initialize App  
     var myApp = new Framework7();
@@ -487,6 +608,11 @@ firebase.initializeApp(config);
     var newsView = myApp.addView('.view-news', {
       dynamicNavbar: true,
       domCache: true
+    })
+
+    var settingView = myApp.addView('.view-setting', {
+      dynamicNavbar: true,
+      domCache: true
     }) 
 
     var $$ = Dom7;
@@ -494,10 +620,15 @@ firebase.initializeApp(config);
     var storedData = myApp.formGetData('from-pool');
     if(storedData) {
     	console.log(storedData)
-        	$("#wallet_address").val(storedData.wallet_address);
-
-        
+        	$("#wallet_address").val(storedData.wallet_address);    
     }
+
+    $('#currency').change(function(){
+        console.log($(this).val())
+        var storedData = myApp.formStoreData('form-setting', {
+            'currency':  $(this).val()
+        }); 
+    });
 
 
 
@@ -650,7 +781,7 @@ firebase.initializeApp(config);
     }
 
     function getMarketCap(preload=1){
-    	 
+    	var currency = $("#currency").val();
     	if(preload==1){
         	$("#marketcap-list").html('<div style="text-align:center;margin:30px;"><span class="preloader preloader-white"></span></div>');
     	}
@@ -658,12 +789,12 @@ firebase.initializeApp(config);
         	realtimeMarketcap()
         },500)
         $.ajax({
-            url:'https://api.coinmarketcap.com/v1/ticker/?convert=THB',
+            url:'https://api.coinmarketcap.com/v1/ticker/?convert='+currency,
             type:'get',
             dataType:'json',
             cache:false,
             success:function(data){
-            	var ref = firebase.database().ref('marketcap');
+            	var ref = firebase.database().ref('marketcap/'+currency);
 				ref.update({
 					data : data
 				});   
@@ -676,6 +807,8 @@ firebase.initializeApp(config);
     	var html="<ul>";
         var html_select="<ul>";
     	var selected_coin = myApp.formGetData('selected_coin');
+        var currency = $("#currency").val();
+        var currency_field = currency.toLowerCase();
         //console.log(selected_coin)
         if(typeof selected_coin == "undefined" || selected_coin == null){
         	selected_coin = default_coin;
@@ -688,11 +821,11 @@ firebase.initializeApp(config);
                 html +="  <div class='item-content'>";
                 html +="    <div class='item-media'><img src='https://files.coinmarketcap.com/static/img/coins/32x32/"+value.id+".png' width='25' height='25'></div>";
                 html +="    <div class='item-inner'>";
-                html +="      <div class='item-subtitle' style='color:#ddd;font-size:13px;float:right;text-align:right;'>"+parseFloat(value.price_thb).formatMoney(2, '.', ',')+" THB<br>"+change+"</div>";
+                html +="      <div class='item-subtitle' style='color:#ddd;font-size:13px;float:right;text-align:right;'>"+parseFloat(value['price_'+currency_field]).formatMoney(2, '.', ',')+" "+currency+"<br>"+change+"</div>";
                 html +="      <div class='item-title-row'>";
                 html +="        <div class='item-title' style='font-size:13px;'>"+value.name+" ("+value.symbol+")</div>";
                 html +="      </div>";
-                html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+nFormatter(parseFloat(value.market_cap_thb),1)+" THB</div>";
+                html +="      <div class='item-subtitle' style='color:#999;font-size:12px;'>"+nFormatter(parseFloat(value['market_cap_'+currency_field]),1)+" "+currency+"</div>";
                 html +="    </div>";
                 html +="  </div>";
                 html +="</li>";
