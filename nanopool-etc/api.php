@@ -39,7 +39,14 @@ if(isset($_GET['miner']) && $_GET['miner']!=""){
 	$data = $data->data;
 	$payments = callService('https://api.nanopool.org/v1/etc/payments/'.$wallet,3);
 	$earning = callService('https://api.nanopool.org/v1/etc/approximated_earnings/'.$data->avgHashrate->h6,3);
-	$bx_price = callService($bx_price_url,1);
+
+	$currency_field = strtolower($currency);
+	$btc = callService('https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert='.$currency,3);
+	$etc = callService('https://api.coinmarketcap.com/v1/ticker/ethereum-classic/?convert='.$currency,3);
+	$btc_price = $btc[0]->{"price_".$currency_field};
+	$btc_price_change = $btc[0]->percent_change_24h;
+	$etc_price = $etc[0]->{"price_".$currency_field};
+	$etc_price_change = $etc[0]->percent_change_24h;
 
 	$balance = $data->balance;
 	$ret['wallet_address'] = $wallet;
@@ -49,10 +56,10 @@ if(isset($_GET['miner']) && $_GET['miner']!=""){
 	$ret['hashrates']['reported'] = number_format($data->hashrate,1) .' MH/s';
 	$ret['hashrates']['effective'] = number_format($data->avgHashrate->h1,1) .' MH/s';
 	$ret['hashrates']['average'] = number_format($data->avgHashrate->h6,1).' MH/s';
-	$ret['bx_price']['BTC']['price'] = number_format($bx_price->{1}->last_price,0).' THB';
-	$ret['bx_price']['BTC']['change'] = $bx_price->{1}->change>0 ? '<span style="color:#44d844">(+'.$bx_price->{1}->change.'%)</span>' : '<span style="color:#ec2828">('.$bx_price->{1}->change.'%)</span>';
-	$ret['bx_price']['ETH']['price'] = number_format($bx_price->{21}->last_price,0).' THB';
-	$ret['bx_price']['ETH']['change'] = $bx_price->{21}->change>0 ? '<span style="color:#44d844">(+'.$bx_price->{21}->change.'%)</span>' : '<span style="color:#ec2828">('.$bx_price->{21}->change.'%)</span>';
+	$ret['bx_price']['BTC']['price'] = number_format($btc_price,0).' '.$currency;
+	$ret['bx_price']['BTC']['change'] = $btc_price_change>0 ? '<span style="color:#44d844">(+'.$btc_price_change.'%)</span>' : '<span style="color:#ec2828">('.$btc_price_change.'%)</span>';
+	$ret['bx_price']['ETH']['price'] = number_format($etc_price,0).' '.$currency;
+	$ret['bx_price']['ETH']['change'] = $etc_price_change>0 ? '<span style="color:#44d844">(+'.$etc_price_change.'%)</span>' : '<span style="color:#ec2828">('.$etc_price_change.'%)</span>';
 
 	$workers = [];
 	foreach ($data->workers as $key => $worker) {
@@ -68,11 +75,11 @@ if(isset($_GET['miner']) && $_GET['miner']!=""){
 
 	$ret['workers'] = $workers;
 	$ret['earning']['day']['eth'] = number_format($earning->data->minute->coins*1440,2);
-	$ret['earning']['day']['thb'] = number_format(($earning->data->minute->coins*1440) * $bx_price->{21}->last_price,2);
+	$ret['earning']['day']['thb'] = number_format(($earning->data->minute->coins*1440) * $etc_price,2);
 	$ret['earning']['week']['eth'] = number_format($earning->data->minute->coins*1440 * 7,2);
-	$ret['earning']['week']['thb'] = number_format(($earning->data->minute->coins*1440) * $bx_price->{21}->last_price * 7,2);
+	$ret['earning']['week']['thb'] = number_format(($earning->data->minute->coins*1440) * $etc_price * 7,2);
 	$ret['earning']['month']['eth'] = number_format($earning->data->minute->coins*1440 * 30,2);
-	$ret['earning']['month']['thb'] = number_format(($earning->data->minute->coins*1440) * $bx_price->{21}->last_price * 30,2);
+	$ret['earning']['month']['thb'] = number_format(($earning->data->minute->coins*1440) * $etc_price * 30,2);
 
 	$payouts = [];
 	foreach ($payments->data as $key => $pay) {
@@ -89,7 +96,7 @@ if(isset($_GET['miner']) && $_GET['miner']!=""){
 		$payouts[$key]['date'] = $d->format('d M y');
 		$payouts[$key]['time'] = $d->format('H:i');
 		$payouts[$key]['duration'] = $duration;
-		$payouts[$key]['amount'] = number_format($pay->amount,5).' ETH';
+		$payouts[$key]['amount'] = number_format($pay->amount,5).' ETC';
 		$payouts[$key]['tx'] = $pay->txHash;
 	}
 
