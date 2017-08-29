@@ -110,8 +110,7 @@ if(!isset($_COOKIE['uniqueID']))
                                       <a href="#" class="item-link smart-select">
                                         <select name="pool" id="pool">
                                           <option value="ethermine" selected>ETH - ethermine.org</option>
-                                          <option value="nanopool-eth">ETH - nanopool.org</option>
-                                          <option value="nanopool-etc">ETC - nanopool.org</option>
+                                         
                                         </select>
                                         <div class="item-content">
                                           <div class="item-inner">
@@ -159,7 +158,7 @@ if(!isset($_COOKIE['uniqueID']))
                             <div class="card-content">
                                 <div class="card-content-inner">
                                     <h2 style="margin:0" id="balance"><span class="preloader preloader-white"></span></h2>
-                                    <span id="next-payment" style="font-size:12px;"></span><br>
+                                    <span id="next-payment" style="font-size:12px;display: none;"></span>
                                     <span style="color:#999;font-size:12px;" id="walletaddress"></span>
                                 </div>
                             </div>
@@ -169,18 +168,19 @@ if(!isset($_COOKIE['uniqueID']))
                         <div class="card">
                             <div class="card-header">Hashrates</div>
                             <div class="card-content">
+                                <div id="chartcontainer" style="height:160px;margin-top:20px;"></div>
                                 <div class="card-content-inner">
                                     <div class="row">
                                         <div class="col-33" >
-                                            <h4 id="reported-hashrate" style="margin:0;font-size:16px;"><span class="preloader preloader-white"></span></h4>
+                                            <h4 id="reported-hashrate" style="margin:0;font-size:16px;color:#2b908f"><span class="preloader preloader-white"></span></h4>
                                             <span class="" style="color:#999">Reported</span>
                                         </div>
                                         <div class="col-33" >
-                                            <h4 id="effective-hashrate" style="margin:0;font-size:16px;"><span class="preloader preloader-white"></span></h4>
-                                            <span class="" style="color:#999">Effective</span>
+                                            <h4 id="effective-hashrate" style="margin:0;font-size:16px;color:#90ee7e"><span class="preloader preloader-white"></span></h4>
+                                            <span class="" style="color:#999">Current</span>
                                         </div>
                                         <div class="col-33" >
-                                            <h4 id="average-hashrate" style="margin:0;font-size:16px;"><span class="preloader preloader-white"></span></h4>
+                                            <h4 id="average-hashrate" style="margin:0;font-size:16px;color:#f45b5b"><span class="preloader preloader-white"></span></h4>
                                             <span class="" style="color:#999">Average</span>
                                         </div>
                                     </div>
@@ -563,7 +563,10 @@ if(!isset($_COOKIE['uniqueID']))
 <script type="text/javascript" src="framework7/js/gathering.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="js/hightheme.js"></script>
 <script type="text/javascript">
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyBC85sGN_qp6XjBY3FXtk_NWsGEsm-hSNM",
@@ -645,7 +648,11 @@ firebase.initializeApp(config);
     });
 
     $('.refresh-pool').on('click', function(){ 
-    	getData(1,$("#current-pool").val(),$("#current-address").val()); 
+        if($("#current-pool").val()=="ethermine"){
+            getDataEthermine(1,$("#current-pool").val(),$("#current-address").val())
+        }else{
+            getData(1,$("#current-pool").val(),$("#current-address").val()); 
+        }
     });
     $('.refresh-marketcap').on('click', function(){ getMarketCap(); });
     $('.refresh-news').on('click', function(){ getNews(); });
@@ -671,7 +678,11 @@ firebase.initializeApp(config);
 
         setViewStatsHistory(deviceId, pool, address);
 
-        getData(1,pool,address);
+        if(pool=="ethermine"){
+            getDataEthermine(1,pool,address);
+        }else{
+            getData(1,pool,address);
+        }
 
         mainView.router.load({pageName: 'pool_report'});
     });
@@ -689,6 +700,192 @@ firebase.initializeApp(config);
 
 
    
+    function getDataEthermine(show_preload=0,pool,address){
+
+        if(show_preload==1){
+        var preLoader = '<span class="preloader preloader-white"></span>';
+
+            $('#balance').html(preLoader);
+            $('#reported-hashrate').html(preLoader);
+            $('#effective-hashrate').html(preLoader);
+            $('#average-hashrate').html(preLoader);
+            $('#btc-price').html(preLoader);   
+            $('#eth-price').html(preLoader);     
+            $("#workers").html(preLoader);
+            $("#day-eth").html(preLoader);
+            $("#day-thb").html(preLoader);
+            $("#week-eth").html(preLoader);
+            $("#week-thb").html(preLoader);
+            $("#month-eth").html(preLoader);
+            $("#month-thb").html(preLoader);
+            $("#payouts").html(preLoader);
+        }
+        var currency = $("#currency").val();
+        getEthermineCurrentStats(address);
+         $("#current-address").val(address);
+        $("#current-pool").val(pool);
+        
+    }
+
+    function getEthermineCurrentStats(address){
+        var currency = $("#currency").val();
+
+        $.ajax({
+            url:'https://api.ethermine.org/miner/'+address+'/currentStats',
+            type:'get',
+            cache:true,
+            dataType:'json',
+            success:function(data){
+                var data = data.data;
+                var balance = parseFloat(data.unpaid/1000000000000000000).formatMoney(5, '.', ',') + ' ETH'
+                var reportedHashRate = parseFloat(data.reportedHashrate/1000000).formatMoney(1, '.', ',')+ ' Mh/s' ;
+                var currentHashrate = parseFloat(data.currentHashrate/1000000).formatMoney(1, '.', ',')+ ' Mh/s' ;
+                var averageHashrate = parseFloat(data.averageHashrate/1000000).formatMoney(1, '.', ',')+ ' Mh/s' ;
+                var coinsPerMin = data.coinsPerMin ;
+                $('#walletaddress').text(address);
+                $('#balance').text(balance);
+                $('#reported-hashrate').text(reportedHashRate);
+                $('#effective-hashrate').text(currentHashrate);
+                $('#average-hashrate').text(averageHashrate);
+
+                //get chart
+                $.ajax({
+                    url:'https://api.ethermine.org/miner/'+address+'/history',
+                    type:'get',
+                    dataType:'json',
+                    success:function(history){
+
+                        var series = [];
+                        var serie1 = []
+                        var serie2 = []
+                        var serie3 = []
+                        var serie4 = []
+                        $.each(history.data, function(index, value) {
+                            serie1[index]  = value.reportedHashrate;
+                            serie2[index]  = value.currentHashrate;
+                            serie3[index]  = value.averageHashrate;
+                            serie4[index]  = value.validShares;
+                        });
+                        series = [{
+                                name: 'Reported',
+                                data: serie1
+                            }, {
+                                name: 'Current',
+                                data: serie2
+                            }, {
+                                name: 'Average',
+                                data: serie3
+                            }];
+                      
+                        Highcharts.chart('chartcontainer', {
+                            title: {
+                                text: ''
+                            },
+                            yAxis: {
+                                title: {
+                                    text: null
+                                }
+                            },
+                            xAxis: {
+                               
+                                title: {
+                                    text: null
+                                },
+                                labels: {
+                                 enabled:false 
+                                }
+
+                            },
+                            legend:{
+                                enabled:false
+                            },
+                            series: series
+
+                        });
+                        
+                    }
+                });
+
+
+                //get workers
+                $.ajax({
+                    url:'https://api.ethermine.org/miner/'+address+'/workers',
+                    type:'get',
+                    dataType:'json',
+                    success:function(workers){
+                        var worker_html ="";
+                        $.each(workers.data, function(index, value) {
+                            worker_html +="<tr><td class='label-cell'><span style=''>"+value.worker+"</span></td>";
+                            worker_html +="<td class='numeric-cell'><span style=''>"+parseFloat(value.reportedHashrate/1000000).formatMoney(1, '.', ',')+"</span></td>";
+                            worker_html +="<td class='numeric-cell'><span style=''>"+parseFloat(value.currentHashrate/1000000).formatMoney(1, '.', ',')+"</span></td>";
+                            worker_html +="<td class='numeric-cell' ><span style=''>"+value.validShares+"</span></td>";
+                            worker_html +="<td class='numeric-cell'><span style=color:orange>"+value.staleShares+"</span>   </td>";
+                            worker_html +="<td class='numeric-cell'><span style=color:red>"+value.invalidShares+"</span></td></tr>";
+                        });
+                        $("#workers").html(worker_html);
+                        
+                    }
+                });
+
+                //get payouts
+                $.ajax({
+                    url:'https://api.ethermine.org/miner/'+address+'/payouts',
+                    type:'get',
+                    dataType:'json',
+                    success:function(payouts){
+                        var payout_html = "";
+
+                        $.each(payouts.data, function(index, value) {
+                            var d = new Date(value.paidOn*1000);
+                            var duration = d.getHours();
+                            var date = d.getDate() + '/' + (d.getMonth()+1) + '/' + d.getFullYear();
+                            duration = "-";
+                            if(typeof payouts.data[index+1] != "undefined"){
+                                duration = value.paidOn - payouts.data[index+1].paidOn;
+                                duration = (duration/60/60).formatMoney(0, '.', ',')+' Hr';
+                            }
+                            payout_html +="<tr><td>"+date+"</td>";
+                            payout_html +="<td> "+duration+" </td>";
+                            payout_html +="<td>"+(value.amount/1000000000000000000).formatMoney(5, '.', ',')+" ETH</td>";
+                           
+                        });
+                        $("#payouts").html(payout_html);
+                        
+                    }
+                });
+
+
+                //get prices
+                $.ajax({
+                    url:'price.php',
+                    type:'get',
+                    data:{currency:currency},
+                    dataType:'json',
+                    success:function(data){
+                        $('#btc-price').text(data.btc_price.formatMoney(0, '.', ',')+" "+currency);
+                        $('#btc-change').html(data.btc_price_change);
+                        $('#eth-price').text(data.eth_price.formatMoney(0, '.', ',') +" "+currency);
+                        $('#eth-change').html(data.eth_price_change);
+
+                        var earning_day_eth =  (coinsPerMin*1440) ;
+                        var earning_day_thb =  (coinsPerMin*1440) * data.eth_price;
+                        var earning_week_eth =  coinsPerMin*1440*7 ;
+                        var earning_week_thb =  (coinsPerMin*1440*7) * data.eth_price;
+                        var earning_month_eth =  coinsPerMin*1440*30 ;
+                        var earning_month_thb =  (coinsPerMin*1440*30) * data.eth_price;
+
+                        $("#day-eth").html(earning_day_eth.formatMoney(5, '.', ','));
+                        $("#day-thb").html(earning_day_thb.formatMoney(0, '.', ','));
+                        $("#week-eth").html(earning_week_eth.formatMoney(5, '.', ','));
+                        $("#week-thb").html(earning_week_thb.formatMoney(0, '.', ','));
+                        $("#month-eth").html(earning_month_eth.formatMoney(5, '.', ','));
+                        $("#month-thb").html(earning_month_thb.formatMoney(0, '.', ','));
+                    }
+                });
+               
+            }
+        });
+    }
 
     function getData(show_preload=0,pool,address){
 
