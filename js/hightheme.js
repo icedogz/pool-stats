@@ -28,15 +28,15 @@ Highcharts.theme = {
       }
    },
    xAxis: {
-      gridLineColor: '#444444',
+      gridLineColor: '#333333',
       labels: {
          style: {
             color: '#E0E0E3'
          }
       },
-      lineColor: '#444444',
+      lineColor: '#333333',
       minorGridLineColor: '#505053',
-      tickColor: '#444444',
+      tickColor: '#333333',
       title: {
          style: {
             color: '#A0A0A3'
@@ -45,15 +45,15 @@ Highcharts.theme = {
       }
    },
    yAxis: {
-      gridLineColor: '#444444',
+      gridLineColor: '#333333',
       labels: {
          style: {
             color: '#E0E0E3'
          }
       },
-      lineColor: '#444444',
+      lineColor: '#333333',
       minorGridLineColor: '#505053',
-      tickColor: '#444444',
+      tickColor: '#333333',
       tickWidth: 1,
       title: {
          style: {
@@ -104,7 +104,7 @@ Highcharts.theme = {
    },
    labels: {
       style: {
-         color: '#444444'
+         color: '#333333'
       }
    },
 
@@ -136,7 +136,7 @@ Highcharts.theme = {
          },
          states: {
             hover: {
-               fill: '#444444',
+               fill: '#333333',
                stroke: '#000000',
                style: {
                   color: 'white'
