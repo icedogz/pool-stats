@@ -762,7 +762,8 @@ firebase.initializeApp(config);
 
     realtimeMarketcap();
     function realtimeMarketcap(){
-    	firebase.database().ref('/marketcap/data').on('value', function(snapshot) {
+        var currency = $("#currency").val();
+    	firebase.database().ref('/marketcap/'+currency+'/data').on('value', function(snapshot) {
 	    	renderMarketCapList(snapshot.val());
 		
 			myApp.initImagesLazyLoad('.view-marketcap .page-content');
