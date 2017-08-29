@@ -789,7 +789,7 @@ firebase.initializeApp(config);
         	realtimeMarketcap()
         },500)
         $.ajax({
-            url:'https://api.coinmarketcap.com/v1/ticker/?convert='+currency,
+            url:'https://api.coinmarketcap.com/v1/ticker/?limit=300&convert='+currency,
             type:'get',
             dataType:'json',
             cache:false,
