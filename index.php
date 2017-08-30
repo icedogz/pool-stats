@@ -18,7 +18,7 @@ if(!isset($_COOKIE['uniqueID']))
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <meta name="apple-mobile-web-app-status-bar-style" content="#a6e22e">
-    <title>ETH Pool Stats - Track your Ethereum mining pools</title>
+    <title>ETH Pool Stats</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="framework7/css/framework7.ios.colors.min.css">
@@ -27,15 +27,11 @@ if(!isset($_COOKIE['uniqueID']))
     <link rel="stylesheet" href="framework7/css/my-app.css">
 	
     <!-- iPhone -->
-    <link href="favicons/splash320x460.png"
-          media="(device-width: 320px) and (device-height: 480px)
-             and (-webkit-device-pixel-ratio: 1)"
-          rel="apple-touch-startup-image">
+    <link href="favicons/splash320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"rel="apple-touch-startup-image">
     <!-- iPhone (Retina) -->
-    <link href="favicons/splash640x960.png"
-          media="(device-width: 320px) and (device-height: 480px)
-             and (-webkit-device-pixel-ratio: 2)"
-          rel="apple-touch-startup-image">
+    <link href="favicons/splash640x960.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"rel="apple-touch-startup-image">
+    <!-- iPhone 6 -->
+    <link href="favicons/splash750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
