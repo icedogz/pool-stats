@@ -16,6 +16,7 @@ if(!isset($_COOKIE['uniqueID']))
    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
+
     <meta name="apple-mobile-web-app-status-bar-style" content="#a6e22e">
     <title>ETH Pool Stats - Track your Ethereum mining pools</title>
     <!-- Path to Framework7 Library CSS-->
@@ -25,6 +26,7 @@ if(!isset($_COOKIE['uniqueID']))
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="framework7/css/my-app.css">
 	
+    <link rel="apple-touch-startup-image" href="favicons/splash.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
