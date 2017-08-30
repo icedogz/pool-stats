@@ -16,7 +16,7 @@ if(!isset($_COOKIE['uniqueID']))
    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#a6e22e">
     <title>ETH Pool Stats - Track your Ethereum mining pools</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="framework7/css/framework7.ios.min.css">
@@ -254,7 +254,7 @@ if(!isset($_COOKIE['uniqueID']))
                             </table>
                         </div>
 
-                        <div class="content-block-title">Last 10 Payouts</div> 
+                        <div class="content-block-title">Payouts</div> 
                         <div class="data-table card">
                             <table>
                                 <thead>
