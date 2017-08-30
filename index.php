@@ -26,7 +26,9 @@ if(!isset($_COOKIE['uniqueID']))
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="framework7/css/my-app.css">
 	
-    <link rel="apple-touch-startup-image" href="favicons/splash.png">
+    <link rel="apple-touch-startup-image" sizes="640x960" href="favicons/splash360x460.png">
+    <link rel="apple-touch-startup-image" sizes="640x960" href="favicons/splash640x960.png">
+
 	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
