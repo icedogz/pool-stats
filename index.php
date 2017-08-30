@@ -690,7 +690,7 @@ firebase.initializeApp(config);
     	if($("#wallet_address").val()!=""){
 			$$("#btn-view-stats").click();
     	}
-	},1000)
+	},1500)
 
     
 
