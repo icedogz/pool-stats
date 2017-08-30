@@ -16,7 +16,7 @@ if(!isset($_COOKIE['uniqueID']))
    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#a6e22e">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <title>Crypto Mining Pools stats</title>
     <meta name="description" content="Track your mining stats multiple pools supported ethermine,ethpool,etc.ethermine,zcash.flypool">
