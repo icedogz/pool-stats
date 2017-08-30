@@ -16,9 +16,10 @@ if(!isset($_COOKIE['uniqueID']))
    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
-
     <meta name="apple-mobile-web-app-status-bar-style" content="#a6e22e">
-    <title>ETH Pool Stats</title>
+
+    <title>Crypto Mining Pools stats</title>
+    <meta name="description" content="Track your mining stats multiple pools supported ethermine,ethpool,etc.ethermine,zcash.flypool">
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="framework7/css/framework7.ios.colors.min.css">
@@ -118,6 +119,7 @@ if(!isset($_COOKIE['uniqueID']))
                                       <a href="#" class="item-link smart-select">
                                         <select name="pool" id="pool">
                                           <option value="ethermine" selected>ETH - ethermine.org</option>
+                                          <option value="ethpool" >ETH - ethpool.org</option>
                                          
                                         </select>
                                         <div class="item-content">
@@ -600,7 +602,7 @@ firebase.initializeApp(config);
 	var deviceId = '<?php echo $deviceId; ?>';
 	$('.deviceId').text(deviceId);
 
-	var pools = {'ethermine':'ETH - ethermine.org','nanopool-eth' : 'ETH - nanopool.org','nanopool-etc' : 'ETC - nanopool.org'};
+	var pools = {'ethermine':'ETH - ethermine.org','ethpool':'ETH - ethpool.org','nanopool-eth' : 'ETH - nanopool.org','nanopool-etc' : 'ETC - nanopool.org'};
 
     // Initialize App  
     var myApp = new Framework7();
@@ -686,7 +688,7 @@ firebase.initializeApp(config);
 
         setViewStatsHistory(deviceId, pool, address);
 
-        if(pool=="ethermine"){
+        if(pool=="ethermine" || pool=="ethpool"){
             getDataEthermine(1,pool,address);
         }else{
             getData(1,pool,address);
@@ -729,26 +731,38 @@ firebase.initializeApp(config);
             $("#payouts").html(preLoader);
         }
         var currency = $("#currency").val();
-        getEthermineCurrentStats(address);
+        getEthermineCurrentStats(address,pool);
          $("#current-address").val(address);
         $("#current-pool").val(pool);
         
     }
 
-    function getEthermineCurrentStats(address){
+    function getEthermineCurrentStats(address,pool){
         var currency = $("#currency").val();
 
+        var endpoint = "";
+        var coin_currency = "";
+        if(pool=="ethermine"){
+            endpoint = "https://api.ethermine.org";
+            coin_currency = "ETH";
+        }
+        if(pool=="ethpool"){
+            endpoint = "http://api.ethpool.org";
+            coin_currency = "ETH";
+        }
+
+
         $.ajax({
-            url:'https://api.ethermine.org/miner/'+address+'/currentStats',
+            url:endpoint+'/miner/'+address+'/currentStats',
             type:'get',
             cache:true,
             dataType:'json',
             success:function(data){
                 var data = data.data;
-                var balance = parseFloat(data.unpaid/1000000000000000000).formatMoney(5, '.', ',') + ' ETH'
-                var reportedHashRate = parseFloat(data.reportedHashrate/1000000).formatMoney(1, '.', ',')+ ' Mh/s' ;
-                var currentHashrate = parseFloat(data.currentHashrate/1000000).formatMoney(1, '.', ',')+ ' Mh/s' ;
-                var averageHashrate = parseFloat(data.averageHashrate/1000000).formatMoney(1, '.', ',')+ ' Mh/s' ;
+                var balance = parseFloat(data.unpaid/1000000000000000000).formatMoney(5, '.', ',') + ' '+coin_currency
+                var reportedHashRate = bytesToSize(data.reportedHashrate);
+                var currentHashrate = bytesToSize(data.currentHashrate);
+                var averageHashrate = bytesToSize(data.averageHashrate);
                 var coinsPerMin = data.coinsPerMin ;
                 $('#walletaddress').text(address);
                 $('#balance').text(balance);
@@ -758,7 +772,7 @@ firebase.initializeApp(config);
 
                 //get chart
                 $.ajax({
-                    url:'https://api.ethermine.org/miner/'+address+'/history',
+                    url:endpoint+'/miner/'+address+'/history',
                     type:'get',
                     dataType:'json',
                     success:function(history){
@@ -817,7 +831,7 @@ firebase.initializeApp(config);
 
                 //get workers
                 $.ajax({
-                    url:'https://api.ethermine.org/miner/'+address+'/workers',
+                    url:endpoint+'/miner/'+address+'/workers',
                     type:'get',
                     dataType:'json',
                     success:function(workers){
@@ -837,7 +851,7 @@ firebase.initializeApp(config);
 
                 //get payouts
                 $.ajax({
-                    url:'https://api.ethermine.org/miner/'+address+'/payouts',
+                    url:endpoint+'/miner/'+address+'/payouts',
                     type:'get',
                     dataType:'json',
                     success:function(payouts){
@@ -854,7 +868,7 @@ firebase.initializeApp(config);
                             }
                             payout_html +="<tr><td>"+date+"</td>";
                             payout_html +="<td> "+duration+" </td>";
-                            payout_html +="<td>"+(value.amount/1000000000000000000).formatMoney(5, '.', ',')+" ETH</td>";
+                            payout_html +="<td>"+(value.amount/1000000000000000000).formatMoney(5, '.', ',')+" "+coin_currency+"</td>";
                            
                         });
                         $("#payouts").html(payout_html);
@@ -1169,7 +1183,12 @@ firebase.initializeApp(config);
 		    	var address = $$(this).attr('data-address');
 		        $(".nav-pool-name").text($$(this).attr('data-poolname'))
 
-		        getData(1,pool,address);
+                if(pool=="ethermine" || pool=="ethpool"){
+                     getDataEthermine(1,pool,address);
+                }else{
+                     getData(1,pool,address);
+                }
+		       
 
 		        mainView.router.load({pageName: 'pool_report'});
 		    });
@@ -1177,9 +1196,13 @@ firebase.initializeApp(config);
 		});
 		
 	}
-	function resizeIframe(obj) {
-	    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-	  }
+    function bytesToSize(bytes) {
+       var sizes = ['Bytes', 'KH/s', 'MH/s', 'GH/s', 'TH/s'];
+       if (bytes == 0) return '0 MH/s';
+       var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+       return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+    };
+	
 </script>
 
 <script>
