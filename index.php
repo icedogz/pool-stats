@@ -937,6 +937,10 @@ firebase.initializeApp(config);
             data:{miner: address,currency:currency},
             dataType:'json',
             success:function(data){
+
+                var btc_change = data.bx_price.BTC.change>0 ? "<span style='color:#44d844'>(+"+data.bx_price.BTC.change+"%)</span>" : "<span style='color:#ec2828'>("+data.bx_price.BTC.change+"%)</span>";
+                 var eth_change = data.bx_price.ETH.change>0 ? "<span style='color:#44d844'>(+"+data.bx_price.ETH.change+"%)</span>" : "<span style='color:#ec2828'>("+data.bx_price.ETH.change+"%)</span>";
+
                 $('#walletaddress').text(data.wallet_address);
                 $('#balance').text(data.balance);
                 $('#reported-hashrate').text(data.hashrates.reported);
@@ -944,8 +948,8 @@ firebase.initializeApp(config);
                 $('#average-hashrate').text(data.hashrates.average);
                 $('#btc-price').text(data.bx_price.BTC.price);
                 $('#btc-change').html(data.bx_price.BTC.change);
-                $('#eth-price').text(data.bx_price.ETH.price);
-                $('#eth-change').html(data.bx_price.ETH.change);
+                $('#eth-price').text(btc_change);
+                $('#eth-change').html(eth_change);
 
                 var worker_html ="";
                 $.each(data.workers, function(index, value) {
