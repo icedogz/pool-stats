@@ -1199,8 +1199,8 @@ firebase.initializeApp(config);
     function bytesToSize(bytes) {
        var sizes = ['Bytes', 'KH/s', 'MH/s', 'GH/s', 'TH/s'];
        if (bytes == 0) return '0 MH/s';
-       var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-       return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+       var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1000)));
+       return Math.round(bytes / Math.pow(1000, i), 2) + ' ' + sizes[i];
     };
 	
 </script>
