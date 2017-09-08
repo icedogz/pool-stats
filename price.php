@@ -42,7 +42,7 @@ if($currency=="THB"){
 }
 
 $data['btc_price'] = (float)$btc_price  ;
-$data['btc_price_change'] = $btc_price_change ? '<span style="color:#44d844">(+'.$btc_price_change.'%)</span>' : '<span style="color:#ec2828">('.$btc_price_change.'%)</span>';
+$data['btc_price_change'] = $btc_price_change>0 ? '<span style="color:#44d844">(+'.$btc_price_change.'%)</span>' : '<span style="color:#ec2828">('.$btc_price_change.'%)</span>';
 $data['eth_price'] = (float)$eth_price ;
 $data['eth_price_change'] = $eth_price_change>0 ? '<span style="color:#44d844">(+'.$eth_price_change.'%)</span>' : '<span style="color:#ec2828">('.$eth_price_change.'%)</span>';
 
