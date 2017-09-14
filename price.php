@@ -36,14 +36,19 @@ if($currency=="THB" && $coin_currency=="ETH"){
 	$btc = callService('https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert='.$currency,3);
 	$eth = callService('https://api.coinmarketcap.com/v1/ticker/ethereum/?convert='.$currency,3);
 	$etc = callService('https://api.coinmarketcap.com/v1/ticker/ethereum-classic/?convert='.$currency,3);
+	$zec = callService('https://api.coinmarketcap.com/v1/ticker/zcash/?convert='.$currency,3);
 	$btc_price = $btc[0]->{"price_".$currency_field};
 	$btc_price_change = $btc[0]->percent_change_24h;
 	$eth_price = $eth[0]->{"price_".$currency_field};
 	$eth_price_change = $eth[0]->percent_change_24h;
 	$etc_price = $etc[0]->{"price_".$currency_field};
 	$etc_price_change = $etc[0]->percent_change_24h;
+	$zec_price = $zec[0]->{"price_".$currency_field};
+	$zec_price_change = $zec[0]->percent_change_24h;
 	$data['etc_price'] = (float)$etc_price ;
 	$data['etc_price_change'] = $etc_price_change>0 ? '<span style="color:#44d844">(+'.$etc_price_change.'%)</span>' : '<span style="color:#ec2828">('.$etc_price_change.'%)</span>';
+	$data['zec_price'] = (float)$zec_price ;
+	$data['zec_price_change'] = $zec_price_change>0 ? '<span style="color:#44d844">(+'.$zec_price_change.'%)</span>' : '<span style="color:#ec2828">('.$zec_price_change.'%)</span>';
 }
 
 $data['btc_price'] = (float)$btc_price  ;
