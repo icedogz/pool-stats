@@ -23,8 +23,9 @@ function callService($url,$cache=0){
 }
 
 $currency = isset($_GET['currency']) ? $_GET['currency'] : 'THB';
+$coin_currency = isset($_GET['coin_currency']) ? $_GET['coin_currency'] : 'ETH';
 
-if($currency=="THB"){
+if($currency=="THB" && $coin_currency=="ETH"){
 	$bx_price = callService("https://bx.in.th/api/",1);
 	$btc_price = $bx_price->{1}->last_price;
 	$btc_price_change = $bx_price->{1}->change;
@@ -34,11 +35,15 @@ if($currency=="THB"){
 	$currency_field = strtolower($currency);
 	$btc = callService('https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert='.$currency,3);
 	$eth = callService('https://api.coinmarketcap.com/v1/ticker/ethereum/?convert='.$currency,3);
+	$etc = callService('https://api.coinmarketcap.com/v1/ticker/ethereum-classic/?convert='.$currency,3);
 	$btc_price = $btc[0]->{"price_".$currency_field};
 	$btc_price_change = $btc[0]->percent_change_24h;
 	$eth_price = $eth[0]->{"price_".$currency_field};
 	$eth_price_change = $eth[0]->percent_change_24h;
-	
+	$etc_price = $etc[0]->{"price_".$currency_field};
+	$etc_price_change = $etc[0]->percent_change_24h;
+	$data['etc_price'] = (float)$etc_price ;
+	$data['etc_price_change'] = $etc_price_change>0 ? '<span style="color:#44d844">(+'.$etc_price_change.'%)</span>' : '<span style="color:#ec2828">('.$etc_price_change.'%)</span>';
 }
 
 $data['btc_price'] = (float)$btc_price  ;
