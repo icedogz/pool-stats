@@ -25,12 +25,16 @@ function callService($url,$cache=0){
 $currency = isset($_GET['currency']) ? $_GET['currency'] : 'THB';
 $coin_currency = isset($_GET['coin_currency']) ? $_GET['coin_currency'] : 'ETH';
 
-if($currency=="THB" && $coin_currency=="ETH"){
+if($currency=="THB" && ($coin_currency=="ETH" || $coin_currency=="DAS")){
 	$bx_price = callService("https://bx.in.th/api/",1);
 	$btc_price = $bx_price->{1}->last_price;
 	$btc_price_change = $bx_price->{1}->change;
 	$eth_price = $bx_price->{21}->last_price;
 	$eth_price_change = $bx_price->{21}->change;
+	$dash_price = $bx_price->{22}->last_price;
+	$dash_price_change = $bx_price->{22}->change;
+	$data['dash_price'] = (float)$dash_price ;
+	$data['dash_price_change'] = $dash_price_change>0 ? '<span style="color:#44d844">(+'.$dash_price_change.'%)</span>' : '<span style="color:#ec2828">('.$dash_price_change.'%)</span>';
 }else{
 	$currency_field = strtolower($currency);
 	$btc = callService('https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert='.$currency,3);
@@ -55,6 +59,7 @@ $data['btc_price'] = (float)$btc_price  ;
 $data['btc_price_change'] = $btc_price_change>0 ? '<span style="color:#44d844">(+'.$btc_price_change.'%)</span>' : '<span style="color:#ec2828">('.$btc_price_change.'%)</span>';
 $data['eth_price'] = (float)$eth_price ;
 $data['eth_price_change'] = $eth_price_change>0 ? '<span style="color:#44d844">(+'.$eth_price_change.'%)</span>' : '<span style="color:#ec2828">('.$eth_price_change.'%)</span>';
+
 
 
 header('Content-Type: application/json');
